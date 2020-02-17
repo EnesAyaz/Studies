@@ -1,0 +1,148 @@
+SimValueCacheVersionID=1
+$begin 'SimValueInfos'
+	NextUniqueID=8
+	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='Force1.Force_mag'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='Volume(Core)'
+			ValueState(787, 14, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=2
+		$begin 'SimValueParams'
+			QuantityName='Volume(Bar)'
+			ValueState(787, 14, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=3
+		$begin 'SimValueParams'
+			QuantityName='Force_mag'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=4
+		$begin 'SimValueParams'
+			QuantityName='Force_y'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=5
+		$begin 'SimValueParams'
+			QuantityName='Force1.Force_x'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=6
+		$begin 'SimValueParams'
+			QuantityName='Force1.Force_y'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=7
+		$begin 'SimValueParams'
+			QuantityName='Force1.Force_z'
+			ValueState(114, 18, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+$end 'SimValueInfos'
+$begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=51
+			$end 'ContextMap'
+			$begin 'ContextMap'
+				SolutionID=52
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=1
+						SimValueContext(0, 0, 2, 0, false, false, 0, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=0
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'0A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999934.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'100A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999935.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'200A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999936.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'300A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999937.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'400A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999938.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'500A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999939.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=1
+						SimValueContext(0, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=0
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'0A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999940.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'100A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999941.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'200A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999942.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'300A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999943.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'400A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999944.tmp'
+						$end 'MinorVVMap'
+						$begin 'MinorVVMap'
+							MajorVariation='c1=\'500A\' mx=\'1mm\''
+							MinorCacheFile='min26C09752158191999945.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
+$end 'SimValueCache'
