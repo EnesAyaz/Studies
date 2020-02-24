@@ -1,0 +1,177 @@
+$begin 'InterrogationCache'
+	Version=1
+	$begin 'ValidationStatus'
+		$begin 'Options'
+			EntityCheckLevel='Strict'
+			IgnoreUnclassifiedObjects=false
+			SkipIntersectionChecks=false
+		$end 'Options'
+		Status=true
+	$end 'ValidationStatus'
+	$begin 'BodyCaches'
+		$begin '6'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'Properties'
+				Volume='12817.698026646354'
+				Area='32898.75826839231'
+				Valid=true
+			$end 'Properties'
+			$begin 'BoundingBox'
+				Low[3: -100, -100, -0]
+				High[3: 100, 100, 0.80000000000000671]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '6'
+		$begin '27'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'Properties'
+				Volume='21865.484868984946'
+				Area='56121.411163728066'
+				Valid=true
+			$end 'Properties'
+			$begin 'BoundingBox'
+				Low[3: -160, -160, -6.6613381477509392e-15]
+				High[3: 160, 160, 0.80000000000000004]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '27'
+		$begin '66'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -160, -160, -0.80000000000000004]
+				High[3: 160, 160, 6.6613381477509392e-15]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '66'
+		$begin '81'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -100, -100, -0.80000000000000671]
+				High[3: 100, 100, 0]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '81'
+		$begin '126'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -160, -160, -0.80000000000000004]
+				High[3: 160, 160, 6.6613381477509392e-15]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '126'
+		$begin '141'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -100, -100, -0.80000000000000671]
+				High[3: 100, 100, 0]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '141'
+		$begin '156'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 130, -6.6613381477509392e-15]
+				High[3: 0, 160, 0.79999999999999338]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '156'
+		$begin '177'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 70, 0]
+				High[3: 0, 100, 0.80000000000000004]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '177'
+		$begin '198'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 130, -0.79999999999999338]
+				High[3: 0, 160, 6.6613381477509392e-15]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '198'
+		$begin '219'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 70, -0.80000000000000004]
+				High[3: 0, 100, 0]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '219'
+		$begin '240'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 130, -0.79999999999999338]
+				High[3: 0, 160, 6.6613381477509392e-15]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '240'
+		$begin '261'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 70, -0.80000000000000004]
+				High[3: 0, 100, 0]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '261'
+		$begin '299'
+			$begin 'BoundingBox'
+				Low[3: -1440, -1440, -2.4000000000000199]
+				High[3: 1440, 1440, 2.4000000000000199]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '299'
+	$end 'BodyCaches'
+	$begin 'IntersectionCaches'
+	$end 'IntersectionCaches'
+$end 'InterrogationCache'

@@ -1,0 +1,239 @@
+problem 1
+p 0
+attrib
+
+attribute 8
+a 1 6 A_p 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 2 27 A_n 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 3 66 B_n 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 4 81 B_p 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 5 126 Cn 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 6 141 Cp 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   9.99991000000000e-01 v   9.99991000000000e-01 v   9.99991000000000e-01
+stacking none
+v 0
+cond
+v   5.80000000000000e+07 v   5.80000000000000e+07 v   5.80000000000000e+07
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 7 299 Region 1 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   1.00000000000000e+00 v   1.00000000000000e+00 v   1.00000000000000e+00
+stacking none
+v 0
+cond
+v   0.00000000000000e+00 v   0.00000000000000e+00 v   0.00000000000000e+00
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+a 8 0 background 0 0 0 1 0 0 0
+local_cs
+  b_origin
+  x    0.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_x
+  x    1.00000000000000e+00 y    0.00000000000000e+00 z    0.00000000000000e+00
+  b_new_y
+  x    0.00000000000000e+00 y    1.00000000000000e+00 z    0.00000000000000e+00
+  b_type CARTESIAN
+mu
+v   1.00000000000000e+00 v   1.00000000000000e+00 v   1.00000000000000e+00
+stacking none
+v 0
+cond
+v   0.00000000000000e+00 v   0.00000000000000e+00 v   0.00000000000000e+00
+current
+v 0.00000000000000e+00 v 0.00000000000000e+00 v 0.00000000000000e+00
+Hc
+v   0.00000000000000e+00 x0 0 x1 0 x2 0
+end_attribute
+
+bound_types
+bound_type 13
+b_t 1 neuman neumann
+nonTerminal
+b_t 2 Insulating1 neumann
+         cInsulation
+b_t 3 Insulating2 neumann
+         cInsulation
+b_t 4 Insulating3 neumann
+         cInsulation
+b_t 5 Insulating4 neumann
+         cInsulation
+b_t 6 Insulating5 neumann
+         cInsulation
+b_t 7 Insulating6 neumann
+         cInsulation
+b_t 8 A_p  neumann
+         jBranch   -5.00000000000000e+00 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+b_t 9 A_n  neumann
+         jBranch    5.00000000000000e+00 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+b_t 10 B-p  neumann
+         jBranch    1.00000000000000e+01 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+b_t 11 B_n  neumann
+         jBranch   -1.00000000000000e+01 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+b_t 12 C-p  neumann
+         jBranch   -5.00000000000000e+00 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+b_t 13 C_n  neumann
+         jBranch    5.00000000000000e+00 3
+         direction  -1.00000000000000e+00  -0.00000000000000e+00  -0.00000000000000e+00
+         renorm 0.000000e+00
+end_bound_type
+
+bound_opers
+bound_ops      31
+b_op_init
+b_op_face Insulating1 18 1
+b_op_face Insulating1 19 1
+b_op_face Insulating1 20 1
+b_op_face Insulating1 21 1
+b_op_face Insulating2 39 1
+b_op_face Insulating2 40 1
+b_op_face Insulating2 41 1
+b_op_face Insulating2 42 1
+b_op_face Insulating3 82 1
+b_op_face Insulating3 83 1
+b_op_face Insulating3 84 1
+b_op_face Insulating3 85 1
+b_op_face Insulating4 67 1
+b_op_face Insulating4 68 1
+b_op_face Insulating4 69 1
+b_op_face Insulating4 70 1
+b_op_face Insulating5 142 1
+b_op_face Insulating5 143 1
+b_op_face Insulating5 144 1
+b_op_face Insulating5 145 1
+b_op_face Insulating6 127 1
+b_op_face Insulating6 128 1
+b_op_face Insulating6 129 1
+b_op_face Insulating6 130 1
+b_op_face A_p 178 1
+b_op_face A_n 157 1
+b_op_face B-p 220 1
+b_op_face B_n 199 1
+b_op_face C-p 262 1
+b_op_face C_n 241 1
+end_bound_ops
+
+end_bound_info
+
+end_problem
