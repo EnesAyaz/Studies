@@ -1,0 +1,7 @@
+$begin 'ValidationCache'
+	$begin 'OneValidationResult'
+		Variation='airgap=\'5mm\' center_x=\'90mm\' center_y=\'90mm\' condcutor_width=\'20mm\' conductor_width=\'20mm\' currentA=\'10A\' currentB=\'-5A\' currentC=\'-5A\' height=\'100mm\' height_core=\'100mm\' inner_angle=\'40deg\' litz_width=\'5mm\' phaseB=\'5A\' radius=\'30mm\' radius_core=\'30mm\' sweep_angle=\'100deg\''
+		Status=true
+		FileName='VI762D2212158314038323.tmp'
+	$end 'OneValidationResult'
+$end 'ValidationCache'
