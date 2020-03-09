@@ -12,8 +12,8 @@ C_DC_ESL=1e-6;
 
 %% LOAD
 
-RpA=15;
-LpA=80e-6;
+RpA=10;
+LpA=67e-6;
 CpA= 10e-9;
 RpB=10;
 LpB=67e-6;
@@ -26,6 +26,19 @@ CpC= 10e-9;
 
 f_resonance= 1/(2*pi*sqrt(LpA*CpA));
 duty=0.5;
+
+%%
+RpA=12;
+LpA=80e-6;
+CpA= 10e-9;
+RpB=6;
+LpB=50e-6;
+CpB= 12e-9;
+RpC=10;
+LpC=67e-6;
+CpC= 10e-9;
+
+%%
 
 
 
