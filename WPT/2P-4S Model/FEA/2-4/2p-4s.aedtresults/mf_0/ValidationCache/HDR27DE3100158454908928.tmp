@@ -1,0 +1,7 @@
+$begin 'ValidationCache'
+	$begin 'OneValidationResult'
+		Variation='airgap=\'30mm\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\''
+		Status=true
+		FileName='VI27DE3100158454908929.tmp'
+	$end 'OneValidationResult'
+$end 'ValidationCache'
