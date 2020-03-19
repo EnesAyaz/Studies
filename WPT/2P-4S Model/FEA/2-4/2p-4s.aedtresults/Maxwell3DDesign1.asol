@@ -1,19 +1,18 @@
 $begin '$base_index$'
   $begin 'properties'
     all_levels=000000000000
-    time(year=000000002020, month=000000000003, day=000000000018, hour=000000000019, min=000000000051, sec=000000000042)
+    time(year=000000002020, month=000000000003, day=000000000018, hour=000000000023, min=000000000056, sec=000000000046)
     version=000000000000
   $end 'properties'
   $begin '$base_index$'
-    $index$(pos=000000004657, lin=000000000135, lvl=000000000000)
+    $index$(pos=000000004743, lin=000000000091, lvl=000000000000)
   $end '$base_index$'
 $end '$base_index$'
-$begin 'SolutionBlock2'
+$begin 'SolutionBlock23'
 	SolutionName='AdaptivePass'
 	SolutionID=132
-	V=0
+	V=352
 	$begin 'States'
-		F(VID=162, Ver=0)
 	$end 'States'
 	$begin 'Definition'
 		SamplingInterpolation=false
@@ -21,35 +20,18 @@ $begin 'SolutionBlock2'
 		SolutionType=1
 		CenterFreq=0
 	$end 'Definition'
-	$begin 'PAR'
-		NextUniqueID=3
-		MoveBackwards=false
-		$begin 'SubData'
-			ID=0
-			Ver=0
-			PAR(VID=162, Ver=0, File='DV162_SOL132_PAR0_V0.sd')
-		$end 'SubData'
-	$end 'PAR'
-	$begin 'NFSP'
-		$begin 'SubData'
-			ID=10
-			NFSP(VID=162, Ver=0, File='DV162_SOL132_NFSP10_V0.sd')
-		$end 'SubData'
-	$end 'NFSP'
-$end 'SolutionBlock2'
+$end 'SolutionBlock23'
 $begin 'BlockMapName'
 	FileHeader='SolutionBlock1'
-	'SolutionKey(SimSetup=131, Instance=\'SetupDefinition\', Solution=-1, VersionID=0)'='SolutionBlock4'
-	'SolutionKey(SimSetup=131, Instance=\'SolutionDefinition\', Solution=132, VersionID=0)'='SolutionBlock2'
-	'SolutionKey(SimSetup=131, Instance=\'SolutionDefinition\', Solution=133, VersionID=0)'='SolutionBlock3'
-	'SolutionKey(SimSetup=131, Instance=\'airgap=\\\'30mm\\\' conductor_height=\\\'2mm\\\' r_inner=\\\'40mm\\\' r_inner_middle=\\\'70mm\\\' r_outer=\\\'120mm\\\' r_outer_middle=\\\'90mm\\\'\', Solution=-3, VersionID=0)'='SolutionBlock5'
+	'SolutionKey(SimSetup=131, Instance=\'SetupDefinition\', Solution=-1, VersionID=352)'='SolutionBlock25'
+	'SolutionKey(SimSetup=131, Instance=\'SolutionDefinition\', Solution=132, VersionID=352)'='SolutionBlock23'
+	'SolutionKey(SimSetup=131, Instance=\'SolutionDefinition\', Solution=133, VersionID=352)'='SolutionBlock24'
 $end 'BlockMapName'
-$begin 'SolutionBlock3'
+$begin 'SolutionBlock24'
 	SolutionName='LastAdaptive'
 	SolutionID=133
-	V=0
+	V=352
 	$begin 'States'
-		F(VID=162, Ver=0)
 	$end 'States'
 	$begin 'Definition'
 		SamplingInterpolation=false
@@ -57,100 +39,75 @@ $begin 'SolutionBlock3'
 		SolutionType=1
 		CenterFreq=0
 	$end 'Definition'
-	$begin 'Fields'
-		IDDblMap(167, -1)
-		$begin 'DataMap'
-			VID=162
-			Ver=0
-			Field(DblID=167, Dir='DV162_SOL133_V0.Field167/')
-		$end 'DataMap'
-	$end 'Fields'
-	$begin 'PAR'
-		NextUniqueID=3
-		MoveBackwards=false
-		$begin 'SubData'
-			ID=0
-			Ver=0
-			PAR(VID=162, Ver=0, File='DV162_SOL133_PAR0_V0.sd')
-		$end 'SubData'
-	$end 'PAR'
-$end 'SolutionBlock3'
+$end 'SolutionBlock24'
+$begin 'SolutionBlock25'
+	SimSetupID=131
+	SimSetupName='Setup1'
+	VersionID=352
+	SolveSetupID=0
+	$begin 'Profiles'
+		P(VID=309, Ver=352, File='DV309_S131_V352.profile')
+	$end 'Profiles'
+	$begin 'MI'
+	$end 'MI'
+$end 'SolutionBlock25'
 $begin 'SolutionBlock1'
 	ProductName=''
 	CircuitName='Maxwell3DDesign1'
-	VersionID=130
+	VersionID=246
 	PostProcess=false
 	LossLess=true
-	NextUniqueID=199
+	NextUniqueID=382
 	MoveBackwards=false
 	$begin 'VariationIDs'
+		Map(V='airgap=\'30mm\' angle_rotation=\'0deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=308)
+		Map(V='airgap=\'30mm\' angle_rotation=\'120deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=311)
+		Map(V='airgap=\'30mm\' angle_rotation=\'150deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=312)
+		Map(V='airgap=\'30mm\' angle_rotation=\'180deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=313)
+		Map(V='airgap=\'30mm\' angle_rotation=\'210deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=314)
+		Map(V='airgap=\'30mm\' angle_rotation=\'240deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=315)
+		Map(V='airgap=\'30mm\' angle_rotation=\'270deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=316)
+		Map(V='airgap=\'30mm\' angle_rotation=\'300deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=317)
+		Map(V='airgap=\'30mm\' angle_rotation=\'30deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=208)
+		Map(V='airgap=\'30mm\' angle_rotation=\'330deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=318)
+		Map(V='airgap=\'30mm\' angle_rotation=\'360deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=319)
+		Map(V='airgap=\'30mm\' angle_rotation=\'60deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=309)
+		Map(V='airgap=\'30mm\' angle_rotation=\'90deg\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=310)
 		Map(V='airgap=\'30mm\' conductor_height=\'2mm\' r_inner=\'40mm\' r_inner_middle=\'70mm\' r_outer=\'120mm\' r_outer_middle=\'90mm\'', ID=162)
 	$end 'VariationIDs'
 	$begin 'LinkedDataList'
 	$end 'LinkedDataList'
 	$begin 'InitialMeshes'
-		M(VID=162, Ver=130, Dir='DV162_V130.imesh/')
+		M(VID=208, Ver=246, Dir='DV208_V246.imesh/')
+		M(VID=308, Ver=246, Dir='DV308_V246.imesh/')
+		M(VID=309, Ver=246, Dir='DV309_V246.imesh/')
+		M(VID=319, Ver=246, Dir='DV319_V246.imesh/')
 	$end 'InitialMeshes'
 	$begin 'MI'
 		$begin 'SubData'
 			ID=0
-			MI(VID=162, Ver=130, Dir='DV162_MI0_V130.sd/')
+			MI(VID=208, Ver=246, Dir='DV208_MI0_V246.sd/')
+			MI(VID=308, Ver=246, Dir='DV308_MI0_V246.sd/')
+			MI(VID=309, Ver=246, Dir='DV309_MI0_V246.sd/')
+			MI(VID=319, Ver=246, Dir='DV319_MI0_V246.sd/')
 		$end 'SubData'
 	$end 'MI'
 $end 'SolutionBlock1'
-$begin 'SolutionBlock4'
-	SimSetupID=131
-	SimSetupName='Setup1'
-	VersionID=0
-	SolveSetupID=0
-	$begin 'CurrMeshes'
-		IDDblMap(165, -1)
-		$begin 'DataMap'
-			VID=162
-			Ver=0
-			M(DblID=165, Dir='DV162_S131_V0.cmesh165/')
-		$end 'DataMap'
-	$end 'CurrMeshes'
-	$begin 'LastPassNumbers'
-		LP(VID=162, Ver=0, P=10)
-	$end 'LastPassNumbers'
-	$begin 'Profiles'
-		P(VID=162, Ver=0, File='DV162_S131_V0.profile')
-	$end 'Profiles'
-	$begin 'MI'
-		$begin 'SubData'
-			ID=0
-			MI(VID=162, Ver=0, Dir='DV162_S131_MI0_V0.sd/')
-		$end 'SubData'
-	$end 'MI'
-$end 'SolutionBlock4'
-$begin 'SolutionBlock5'
-	ConvSetupName='ms'
-	MaxPasses='10'
-	MinPasses='2'
-	ConvTarget='(1, 1)'
-	ConvTargetConsecPasses='N/A'
-	ConvCurrentConsecPasses='N/A'
-	c(ee=38.8779458109405, tet=2971, de_ee='(38.878, N/A)', p=1, te=4.762895438665463e-07)
-	c(ee=14.82714857357342, tet=3865, de_ee='(14.827, 9.5955)', p=2, de=9.595489609193374, te=4.305872301751574e-07)
-	c(ee=7.167944876620155, tet=5029, de_ee='(7.1679, 3.7713)', p=3, de=3.771298852785159, te=4.143484989033223e-07)
-	c(ee=4.585373831613702, tet=6546, de_ee='(4.5854, 2.7458)', p=4, de=2.745844927066913, te=4.029711316658075e-07)
-	c(ee=3.238421095868244, tet=8518, de_ee='(3.2384, 0.95535)', p=5, de=0.9553511899548258, te=3.991213421642638e-07)
-	c(ee=2.432203176929664, tet=11079, de_ee='(2.4322, 0.6523)', p=6, de=0.6523036482726626, te=3.965178590882915e-07)
-	c(ee=1.592761050047916, tet=14412, de_ee='(1.5928, 0.21396)', p=7, de=0.2139556089169567, te=3.956694868884146e-07)
-	c(ee=1.409628865471907, tet=18741, de_ee='(1.4096, 0.73294)', p=8, de=0.7329381767816272, te=3.927694741651335e-07)
-	c(ee=1.038586181867262, tet=24371, de_ee='(1.0386, 0.32233)', p=9, de=0.3223334572963071, te=3.915034467398525e-07)
-	c(ee=0.7366590834542236, tet=31688, de_ee='(0.73666, 0.13283)', p=10, de=0.1328336522224752, te=3.90983398412971e-07)
-$end 'SolutionBlock5'
+$begin 'OptimetricsResults'
+$end 'OptimetricsResults'
+$begin 'ResponseSurfaceCache'
+	ResponseSurfaceCache()
+$end 'ResponseSurfaceCache'
 $begin '$index$'
 	$begin '$index$'
-		BlockMapName(pos=940, lin=30, lvl=0)
-		SolutionBlock5(pos=3346, lin=117, lvl=0)
-		SolutionBlock2(pos=370, lin=1, lvl=0)
-		SolutionBlock3(pos=1559, lin=37, lvl=0)
-		SolutionBlock4(pos=2787, lin=91, lvl=0)
-		SolutionBlock1(pos=2159, lin=68, lvl=0)
+		ResponseSurfaceCache(pos=4661, lin=88, lvl=0)
+		SolutionBlock23(pos=370, lin=1, lvl=0)
+		BlockMapName(pos=620, lin=14, lvl=0)
+		SolutionBlock24(pos=1014, lin=20, lvl=0)
+		SolutionBlock25(pos=1264, lin=33, lvl=0)
+		SolutionBlock1(pos=1496, lin=44, lvl=0)
+		OptimetricsResults(pos=4607, lin=86, lvl=0)
 		$base_index$(pos=0, lin=1, lvl=0)
-		$index$(pos=4657, lin=135, lvl=0)
+		$index$(pos=4743, lin=91, lvl=0)
 	$end '$index$'
 $end '$index$'
