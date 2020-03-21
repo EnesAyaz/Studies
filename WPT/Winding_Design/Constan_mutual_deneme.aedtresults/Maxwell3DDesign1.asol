@@ -1,19 +1,19 @@
 $begin '$base_index$'
   $begin 'properties'
     all_levels=000000000000
-    time(year=000000002020, month=000000000003, day=000000000021, hour=000000000014, min=000000000054, sec=000000000056)
+    time(year=000000002020, month=000000000003, day=000000000021, hour=000000000016, min=000000000048, sec=000000000035)
     version=000000000000
   $end 'properties'
   $begin '$base_index$'
-    $index$(pos=000000006385, lin=000000000141, lvl=000000000000)
+    $index$(pos=000000008382, lin=000000000142, lvl=000000000000)
   $end '$base_index$'
 $end '$base_index$'
-$begin 'SolutionBlock10'
+$begin 'SolutionBlock38'
 	SolutionName='AdaptivePass'
 	SolutionID=102
-	V=170
+	V=314
 	$begin 'States'
-		F(VID=169, Ver=170)
+		F(VID=311, Ver=314)
 	$end 'States'
 	$begin 'Definition'
 		SamplingInterpolation=false
@@ -22,34 +22,34 @@ $begin 'SolutionBlock10'
 		CenterFreq=0
 	$end 'Definition'
 	$begin 'PAR'
-		NextUniqueID=6
+		NextUniqueID=21
 		MoveBackwards=false
 		$begin 'SubData'
 			ID=0
-			Ver=4
-			PAR(VID=169, Ver=4, File='DV169_SOL102_PAR0_V4.sd')
+			Ver=19
+			PAR(VID=311, Ver=19, File='DV311_SOL102_PAR0_V19.sd')
 		$end 'SubData'
 	$end 'PAR'
 	$begin 'NFSP'
 		$begin 'SubData'
 			ID=10
-			NFSP(VID=169, Ver=170, File='DV169_SOL102_NFSP10_V170.sd')
+			NFSP(VID=311, Ver=314, File='DV311_SOL102_NFSP10_V314.sd')
 		$end 'SubData'
 	$end 'NFSP'
-$end 'SolutionBlock10'
+$end 'SolutionBlock38'
 $begin 'BlockMapName'
 	FileHeader='SolutionBlock1'
-	'SolutionKey(SimSetup=101, Instance=\'SetupDefinition\', Solution=-1, VersionID=170)'='SolutionBlock12'
-	'SolutionKey(SimSetup=101, Instance=\'SolutionDefinition\', Solution=102, VersionID=170)'='SolutionBlock10'
-	'SolutionKey(SimSetup=101, Instance=\'SolutionDefinition\', Solution=103, VersionID=170)'='SolutionBlock11'
-	'SolutionKey(SimSetup=101, Instance=\'air_gap=\\\'10mm\\\' conductor_height=\\\'2mm\\\' conductor_number_p=\\\'10\\\' conductor_number_primer=\\\'10mm\\\' conductor_number_s=\\\'10\\\' distance_primer=\\\'5mm\\\' distance_seconder=\\\'5mm\\\' fer2fer_distance=\\\'25mm\\\' ferrite_distance=\\\'8mm\\\' ferrite_gap=\\\'5mm\\\' ferrite_height=\\\'-0.5mm\\\' primer=\\\'10A\\\' primer_box=\\\'2mm\\\' primer_current=\\\'10\\\' r_inner=\\\'40mm\\\' r_outer=\\\'120mm\\\' rotation_angle=\\\'45deg\\\' seconder_current=\\\'5A\\\'\', Solution=-3, VersionID=170)'='SolutionBlock13'
+	'SolutionKey(SimSetup=101, Instance=\'SetupDefinition\', Solution=-1, VersionID=314)'='SolutionBlock40'
+	'SolutionKey(SimSetup=101, Instance=\'SolutionDefinition\', Solution=102, VersionID=314)'='SolutionBlock38'
+	'SolutionKey(SimSetup=101, Instance=\'SolutionDefinition\', Solution=103, VersionID=314)'='SolutionBlock39'
+	'SolutionKey(SimSetup=101, Instance=\'air_gap=\\\'10mm\\\' conductor_height=\\\'2mm\\\' conductor_number_p=\\\'10\\\' conductor_number_primer=\\\'10mm\\\' conductor_number_s=\\\'10\\\' distance_primer=\\\'0.5mm\\\' distance_seconder=\\\'5mm\\\' fer2fer_distance=\\\'16mm\\\' ferrite_distance=\\\'3mm\\\' ferrite_gap=\\\'2mm\\\' ferrite_height=\\\'-0.5mm\\\' primer=\\\'10A\\\' primer_box=\\\'20mm\\\' primer_current=\\\'10\\\' r_inner=\\\'40mm\\\' r_outer=\\\'120mm\\\' rotation_angle=\\\'45deg\\\' seconder_current=\\\'5A\\\'\', Solution=-3, VersionID=314)'='SolutionBlock41'
 $end 'BlockMapName'
-$begin 'SolutionBlock11'
+$begin 'SolutionBlock39'
 	SolutionName='LastAdaptive'
 	SolutionID=103
-	V=170
+	V=314
 	$begin 'States'
-		F(VID=169, Ver=170)
+		F(VID=311, Ver=314)
 	$end 'States'
 	$begin 'Definition'
 		SamplingInterpolation=false
@@ -60,103 +60,104 @@ $begin 'SolutionBlock11'
 	$begin 'Fields'
 		IDDblMap(137, -1)
 		$begin 'DataMap'
-			VID=169
-			Ver=170
-			Field(DblID=137, Dir='DV169_SOL103_V170.Field137/')
+			VID=311
+			Ver=314
+			Field(DblID=137, Dir='DV311_SOL103_V314.Field137/')
 		$end 'DataMap'
 	$end 'Fields'
 	$begin 'PAR'
-		NextUniqueID=6
+		NextUniqueID=21
 		MoveBackwards=false
 		$begin 'SubData'
 			ID=0
-			Ver=4
-			PAR(VID=169, Ver=4, File='DV169_SOL103_PAR0_V4.sd')
+			Ver=19
+			PAR(VID=311, Ver=19, File='DV311_SOL103_PAR0_V19.sd')
 		$end 'SubData'
 	$end 'PAR'
-$end 'SolutionBlock11'
-$begin 'SolutionBlock12'
+$end 'SolutionBlock39'
+$begin 'SolutionBlock40'
 	SimSetupID=101
 	SimSetupName='Setup1'
-	VersionID=170
+	VersionID=314
 	SolveSetupID=0
 	$begin 'CurrMeshes'
 		IDDblMap(135, -1)
 		$begin 'DataMap'
-			VID=169
-			Ver=170
-			M(DblID=135, Dir='DV169_S101_V170.cmesh135/')
+			VID=311
+			Ver=314
+			M(DblID=135, Dir='DV311_S101_V314.cmesh135/')
 		$end 'DataMap'
 	$end 'CurrMeshes'
 	$begin 'LastPassNumbers'
-		LP(VID=169, Ver=170, P=10)
+		LP(VID=311, Ver=314, P=10)
 	$end 'LastPassNumbers'
 	$begin 'Profiles'
-		P(VID=169, Ver=170, File='DV169_S101_V170.profile')
+		P(VID=311, Ver=314, File='DV311_S101_V314.profile')
 	$end 'Profiles'
 	$begin 'MI'
 		$begin 'SubData'
 			ID=0
-			MI(VID=169, Ver=170, Dir='DV169_S101_MI0_V170.sd/')
+			MI(VID=311, Ver=314, Dir='DV311_S101_MI0_V314.sd/')
 		$end 'SubData'
 	$end 'MI'
-$end 'SolutionBlock12'
+$end 'SolutionBlock40'
 $begin 'SolutionBlock1'
 	ProductName=''
 	CircuitName='Maxwell3DDesign1'
-	VersionID=99
+	VersionID=314
 	PostProcess=false
 	LossLess=true
-	NextUniqueID=200
+	NextUniqueID=346
 	MoveBackwards=false
 	$begin 'VariationIDs'
+		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'0.5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'16mm\' ferrite_distance=\'3mm\' ferrite_gap=\'2mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'20mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=311)
+		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'0.5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'16mm\' ferrite_distance=\'3mm\' ferrite_gap=\'2mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=280)
+		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'16mm\' ferrite_distance=\'8mm\' ferrite_gap=\'2mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=249)
+		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'25mm\' ferrite_distance=\'8mm\' ferrite_gap=\'2mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=208)
 		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'25mm\' ferrite_distance=\'8mm\' ferrite_gap=\'5mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'0deg\' seconder_current=\'5A\'', ID=104)
 		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'25mm\' ferrite_distance=\'8mm\' ferrite_gap=\'5mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'22.5deg\' seconder_current=\'5A\'', ID=138)
 		Map(V='air_gap=\'10mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'25mm\' ferrite_distance=\'8mm\' ferrite_gap=\'5mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=169)
+		Map(V='air_gap=\'20mm\' conductor_height=\'2mm\' conductor_number_p=\'10\' conductor_number_primer=\'10mm\' conductor_number_s=\'10\' distance_primer=\'5mm\' distance_seconder=\'5mm\' fer2fer_distance=\'26mm\' ferrite_distance=\'8mm\' ferrite_gap=\'2mm\' ferrite_height=\'-0.5mm\' primer=\'10A\' primer_box=\'2mm\' primer_current=\'10\' r_inner=\'40mm\' r_outer=\'120mm\' rotation_angle=\'45deg\' seconder_current=\'5A\'', ID=213)
 	$end 'VariationIDs'
 	$begin 'LinkedDataList'
 	$end 'LinkedDataList'
 	$begin 'InitialMeshes'
-		M(VID=104, Ver=99, Dir='DV104_V99.imesh/')
-		M(VID=138, Ver=99, Dir='DV138_V99.imesh/')
-		M(VID=169, Ver=99, Dir='DV169_V99.imesh/')
+		M(VID=311, Ver=314, Dir='DV311_V314.imesh/')
 	$end 'InitialMeshes'
 	$begin 'MI'
 		$begin 'SubData'
 			ID=0
-			MI(VID=104, Ver=99, Dir='DV104_MI0_V99.sd/')
-			MI(VID=138, Ver=99, Dir='DV138_MI0_V99.sd/')
-			MI(VID=169, Ver=99, Dir='DV169_MI0_V99.sd/')
+			MI(VID=311, Ver=314, Dir='DV311_MI0_V314.sd/')
 		$end 'SubData'
 	$end 'MI'
 $end 'SolutionBlock1'
-$begin 'SolutionBlock13'
+$begin 'SolutionBlock41'
 	ConvSetupName='ms'
 	MaxPasses='10'
 	MinPasses='2'
 	ConvTarget='(1, 1)'
 	ConvTargetConsecPasses='N/A'
 	ConvCurrentConsecPasses='N/A'
-	c(p=1, tet=7037, ee=52.52964117082067, te=3.018796988689089e-05, de_ee='(52.53, N/A)')
-	c(p=2, tet=9157, ee=30.07412632830517, de=5.002625258899126, te=2.867777888018043e-05, de_ee='(30.074, 5.0026)')
-	c(p=3, tet=11909, ee=19.52390091283407, de=2.412687601508375, te=2.798587366475033e-05, de_ee='(19.524, 2.4127)')
-	c(p=4, tet=15495, ee=12.82327634937043, de=1.205004690967711, te=2.764864257428179e-05, de_ee='(12.823, 1.205)')
-	c(p=5, tet=20138, ee=7.555374702643913, de=0.8478705037009991, te=2.741421788922074e-05, de_ee='(7.5554, 0.84787)')
-	c(p=6, tet=26181, ee=6.395296580344187, de=0.753339653319356, te=2.720769571521387e-05, de_ee='(6.3953, 0.75334)')
-	c(p=7, tet=34054, ee=43.64286582436392, de=0.6337104629132796, te=2.703527770074895e-05, de_ee='(43.643, 0.63371)')
-	c(p=8, tet=44275, ee=17.68295248961648, de=0.5156944789712318, te=2.689585826627165e-05, de_ee='(17.683, 0.51569)')
-	c(p=9, tet=57560, ee=1.790121976277036, de=0.3097001177578797, te=2.681256176154901e-05, de_ee='(1.7901, 0.3097)')
-	c(p=10, tet=74842, ee=1.298352870498077, de=0.2694889137571904, te=2.674030488010734e-05, de_ee='(1.2984, 0.26949)')
-$end 'SolutionBlock13'
+	c(te=3.624970026935669e-05, ee=65.45694417222566, de_ee='(65.457, N/A)', p=1, tet=8859)
+	c(te=3.58031180995334e-05, ee=43.96382062348486, de=1.231960999690794, de_ee='(43.964, 1.232)', p=2, tet=11515)
+	c(te=3.499647620884416e-05, ee=24.05612030750651, de=2.252993408134901, de_ee='(24.056, 2.253)', p=3, tet=14972)
+	c(te=3.448919059239771e-05, ee=12.34973064482742, de=1.449533414219143, de_ee='(12.35, 1.4495)', p=4, tet=19467)
+	c(te=3.418402461673197e-05, ee=7.987891610666284, de=0.884816287144214, de_ee='(7.9879, 0.88482)', p=5, tet=25315)
+	c(te=3.396287391448087e-05, ee=4.856831856383382, de=0.6469416773789048, de_ee='(4.8568, 0.64694)', p=6, tet=32918)
+	c(te=3.379482575901361e-05, ee=3.165818886918218, de=0.4947995740596285, de_ee='(3.1658, 0.4948)', p=7, tet=42808)
+	c(te=3.370483132627078e-05, ee=2.324385921652323, de=0.2662964839190674, de_ee='(2.3244, 0.2663)', p=8, tet=55653)
+	c(te=3.363127629787044e-05, ee=2.287438373853016, de=0.2182328927514947, de_ee='(2.2874, 0.21823)', p=9, tet=72344)
+	c(te=3.357349807051761e-05, ee=3.889895545571553, de=0.1717990921340526, de_ee='(3.8899, 0.1718)', p=10, tet=94042)
+$end 'SolutionBlock41'
 $begin '$index$'
 	$begin '$index$'
-		SolutionBlock13(pos=5072, lin=123, lvl=0)
-		SolutionBlock10(pos=370, lin=1, lvl=0)
-		BlockMapName(pos=950, lin=30, lvl=0)
-		SolutionBlock11(pos=1919, lin=37, lvl=0)
-		SolutionBlock12(pos=2529, lin=68, lvl=0)
-		SolutionBlock1(pos=3106, lin=94, lvl=0)
+		SolutionBlock41(pos=7072, lin=124, lvl=0)
+		SolutionBlock38(pos=370, lin=1, lvl=0)
+		BlockMapName(pos=954, lin=30, lvl=0)
+		SolutionBlock39(pos=1926, lin=37, lvl=0)
+		SolutionBlock40(pos=2540, lin=68, lvl=0)
+		SolutionBlock1(pos=3117, lin=94, lvl=0)
 		$base_index$(pos=0, lin=1, lvl=0)
-		$index$(pos=6385, lin=141, lvl=0)
+		$index$(pos=8382, lin=142, lvl=0)
 	$end '$index$'
 $end '$index$'
