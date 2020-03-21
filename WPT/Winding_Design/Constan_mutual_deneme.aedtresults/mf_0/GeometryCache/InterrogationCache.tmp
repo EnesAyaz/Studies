@@ -1,0 +1,254 @@
+$begin 'InterrogationCache'
+	Version=1
+	$begin 'ValidationStatus'
+		$begin 'Options'
+			EntityCheckLevel='Strict'
+			IgnoreUnclassifiedObjects=false
+			SkipIntersectionChecks=false
+		$end 'Options'
+		Status=false
+	$end 'ValidationStatus'
+	$begin 'BodyCaches'
+		$begin '10'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -119.73303637676611, -120, -0]
+				High[3: 119.73303637676611, -8, 0.5]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '10'
+		$begin '81'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'Properties'
+				Volume='25383.813275764071'
+				Area='27926.202655605168'
+				Valid=true
+			$end 'Properties'
+			$begin 'BoundingBox'
+				Low[3: -120, -120, -12.999999999999996]
+				High[3: 120, -5, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '81'
+		$begin '534'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'Properties'
+				Volume='0'
+				Area='40.000000000000028'
+				Valid=true
+			$end 'Properties'
+			$begin 'BoundingBox'
+				Low[3: 0, -120, 5]
+				High[3: 0, -99.999999999999986, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '534'
+		$begin '555'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'Properties'
+				Volume='0'
+				Area='40'
+				Valid=true
+			$end 'Properties'
+			$begin 'BoundingBox'
+				Low[3: 0, -60, 5]
+				High[3: 0, -40, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '555'
+		$begin '558'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -120, 5, -12.999999999999996]
+				High[3: 120, 120, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '558'
+		$begin '666'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -119.73303637676611, 8, 0]
+				High[3: 119.73303637676611, 120, 0.5]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '666'
+		$begin '683'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 40, 5]
+				High[3: 0, 60, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '683'
+		$begin '695'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: 0, 99.999999999999986, 5]
+				High[3: 0, 120, 7]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '695'
+		$begin '707'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -119.73303637676611, 8, 25]
+				High[3: 119.73303637676611, 120, 25.5]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '707'
+		$begin '724'
+			$begin 'CheckStatus'
+				CheckLevel=20
+				Status=true
+			$end 'CheckStatus'
+			$begin 'BoundingBox'
+				Low[3: -119.73303637676611, -120, 25]
+				High[3: 119.73303637676611, -8, 25.5]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '724'
+		$begin '971'
+			$begin 'BoundingBox'
+				Low[3: -81.243590883133123, -120.00000000000001, 15]
+				High[3: 81.243590883133152, -31.597964306737303, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '971'
+		$begin '1042'
+			$begin 'BoundingBox'
+				Low[3: 0, -60.000000000000014, 15]
+				High[3: 0, -40.000000000000007, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1042'
+		$begin '1063'
+			$begin 'BoundingBox'
+				Low[3: 0, -120.00000000000003, 15]
+				High[3: 0, -99.999999999999986, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1063'
+		$begin '1069'
+			$begin 'BoundingBox'
+				Low[3: 31.597964306737307, -81.243590883133123, 15]
+				High[3: 120.00000000000001, 81.243590883133152, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1069'
+		$begin '1121'
+			$begin 'BoundingBox'
+				Low[3: -81.243590883133137, 31.597964306737307, 15]
+				High[3: 81.243590883133137, 120.00000000000001, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1121'
+		$begin '1173'
+			$begin 'BoundingBox'
+				Low[3: -120.00000000000001, -81.243590883133137, 15]
+				High[3: -31.59796430673731, 81.243590883133137, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1173'
+		$begin '1226'
+			$begin 'BoundingBox'
+				Low[3: 40.000000000000007, 0, 15]
+				High[3: 60.000000000000014, 0, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1226'
+		$begin '1237'
+			$begin 'BoundingBox'
+				Low[3: 1.0658141036401503e-14, 40, 15]
+				High[3: 1.0658141036401503e-14, 60.000000000000014, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1237'
+		$begin '1248'
+			$begin 'BoundingBox'
+				Low[3: -60.000000000000014, 1.0658141036401503e-14, 15]
+				High[3: -40, 1.0658141036401503e-14, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1248'
+		$begin '1260'
+			$begin 'BoundingBox'
+				Low[3: 99.999999999999986, 0, 15]
+				High[3: 120.00000000000003, 0, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1260'
+		$begin '1271'
+			$begin 'BoundingBox'
+				Low[3: 2.1316282072803006e-14, 100, 15]
+				High[3: 2.1316282072803006e-14, 120.00000000000003, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1271'
+		$begin '1282'
+			$begin 'BoundingBox'
+				Low[3: -120.00000000000003, 2.1316282072803006e-14, 15]
+				High[3: -100, 2.1316282072803006e-14, 17]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1282'
+		$begin '1293'
+			$begin 'BoundingBox'
+				Low[3: -241.53420300475096, -241.53420300475096, -182.70562748477144]
+				High[3: 241.53420300475096, 241.53420300475096, 195.20562748477144]
+				Exact=true
+				Valid=true
+			$end 'BoundingBox'
+		$end '1293'
+	$end 'BodyCaches'
+	$begin 'IntersectionCaches'
+	$end 'IntersectionCaches'
+$end 'InterrogationCache'
