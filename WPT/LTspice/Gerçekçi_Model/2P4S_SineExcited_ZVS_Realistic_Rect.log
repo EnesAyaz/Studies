@@ -1,0 +1,21 @@
+Circuit: * Z:\Github\Studies\WPT\LTspice\Gerçekçi_Model\2P4S_SineExcited_ZVS_Realistic_Rect.asc
+
+.OP point found by inspection.
+
+Date: Tue Mar 31 00:00:08 2020
+Total elapsed time: 0.992 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 170847
+traniter = 170847
+tranpoints = 43655
+accept = 30275
+rejected = 13380
+matrix size = 26
+fillins = 68
+solver = Normal
+Matrix Compiler1: 8.43 KB object code size  1.2/0.6/[0.4]
+Matrix Compiler2: 3.70 KB object code size  0.3/0.4/[0.2]
+
