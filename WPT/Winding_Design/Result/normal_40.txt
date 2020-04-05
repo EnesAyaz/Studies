@@ -1,0 +1,33 @@
+DesignVariation : a='8mm' air_gap='30mm' conductor_height='2mm' conductor_number_p='16' conductor_number_primer='10mm' conductor_number_s='20' distance_primer='2mm' distance_seconder='5mm' fer2fer_distance='35.5mm' ferrite_distance='5mm' ferrite_gap='2mm' ferrite_height='-0.5mm' ferrite_tail='20mm' primer='10A' primer_box='20mm' primer_current='10' r_inner='40mm' r_outer='140mm' rotation_angle='40deg' seconder_current='5A' slope_primer='0deg'
+Solution : Setup1 : LastAdaptive
+Parameter : inductance_matrix
+Inductance Unit: nH
+Flux Unit: Wb
+
+Inductance
+		Current_1	Current_2	Current_3	Current_4	Current_5	Current_6
+	Current_1	108599.21	-8273.60	-6984.65	 2493.07	-3169.93	-21438.10
+	Current_2	-8273.60	108567.42	-3215.71	-21489.70	-6973.45	 2488.40
+	Current_3	-6984.65	-3215.71	61577.38	-4058.74	-2357.24	-4642.09
+	Current_4	 2493.07	-21489.70	-4058.74	60608.02	-4683.54	 -918.11
+	Current_5	-3169.93	-6973.45	-2357.24	-4683.54	61449.13	-4046.13
+	Current_6	-21438.10	 2488.40	-4642.09	 -918.11	-4046.13	60355.58
+
+Inductive Coupling Coefficient
+		Current_1	Current_2	Current_3	Current_4	Current_5	Current_6
+	Current_1	    1.00	   -0.08	   -0.09	    0.03	   -0.04	   -0.26
+	Current_2	   -0.08	    1.00	   -0.04	   -0.26	   -0.09	    0.03
+	Current_3	   -0.09	   -0.04	    1.00	   -0.07	   -0.04	   -0.08
+	Current_4	    0.03	   -0.26	   -0.07	    1.00	   -0.08	   -0.02
+	Current_5	   -0.04	   -0.09	   -0.04	   -0.08	    1.00	   -0.07
+	Current_6	   -0.26	    0.03	   -0.08	   -0.02	   -0.07	    1.00
+
+Flux Linkage
+		FluxLinkage/Wb
+	Current_1	    0.00
+	Current_2	    0.00
+	Current_3	    0.00
+	Current_4	    0.00
+	Current_5	    0.00
+	Current_6	    0.00
+

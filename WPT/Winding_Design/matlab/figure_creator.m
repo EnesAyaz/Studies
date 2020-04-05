@@ -17,12 +17,14 @@ s1p2=[Bended_0(i,j), Bended_10(i,j),Bended_20(i,j) ...
 
 
 figure();
-stairs(angle,-s1p1,'-o');
+stairs(angle,-s1p1,'-or','LineWidth',2);
 hold on;
-stairs(angle,-s1p2,'-p');
+stairs(angle,-s1p2,'-pb','LineWidth',2);
 hold on ;
-stairs(angle,-s1p2-s1p1);
+stairs(angle,-s1p2-s1p1,'m','LineWidth',3);
 legend('with primary 1', ' with primary 2','between both')
+grid on;
+grid minor;
 title('Coupling Coefficient of 1 secondary')
 %%
 
@@ -43,12 +45,12 @@ s2p2=[Bended_0(i,j), Bended_10(i,j),Bended_20(i,j) ...
     Bended_90(i,j)];
 
 
-figure();
-stairs(angle,-s2p1,'-o');
+% figure();
+stairs(angle,-s2p1,'-or','LineWidth',2);
 hold on;
-stairs(angle,-s2p2,'-p');
+stairs(angle,-s2p2,'-pb','LineWidth',2);
 hold on ;
-stairs(angle,-s2p2-s2p1);
+stairs(angle,-s2p2-s2p1,'m','LineWidth',3);
 legend('with primary 1', ' with primary 2','between both')
 title('Coupling Coefficient of 1 secondary')
 %%
@@ -69,12 +71,12 @@ s3p2=[Bended_0(i,j), Bended_10(i,j),Bended_20(i,j) ...
     Bended_90(i,j)];
 
 
-figure();
-stairs(angle,-s3p1,'-o');
+% figure();
+stairs(angle,-s3p1,'-or','LineWidth',2);
 hold on;
-stairs(angle,-s3p2,'-p');
+stairs(angle,-s3p2,'-pb','LineWidth',2);
 hold on ;
-stairs(angle,-s3p2-s3p1);
+stairs(angle,-s3p2-s3p1,'m','LineWidth',3);
 legend('with primary 1', ' with primary 2','between both')
 title('Coupling Coefficient of 1 secondary')
 %%
@@ -96,11 +98,13 @@ s4p2=[Bended_0(i,j), Bended_10(i,j),Bended_20(i,j) ...
     Bended_90(i,j)];
 
 
-figure();
-stairs(angle,-s4p1,'-o');
+% figure();
+stairs(angle,-s4p1,'-or','LineWidth',2);
 hold on;
-stairs(angle,-s4p2,'-p');
+stairs(angle,-s4p2,'-pb','LineWidth',2);
 hold on ;
-stairs(angle,-s4p2-s4p1);
-legend('with primary 1', ' with primary 2','between both')
-title('Coupling Coefficient of 1 secondary')
+stairs(angle,-s4p2-s4p1,'m','LineWidth',3);
+legend('With a primary windings', ' With another primary windings','Resultant(Sum of primary windings)')
+title('Coupling Coefficient between a Secondary Winding and Primary Windings')
+xlabel('Mechanical Angle (Degree)');
+ylabel('Coupling Coefficient')

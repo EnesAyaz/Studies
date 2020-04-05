@@ -10,7 +10,7 @@
 
 %% Initialize variables.
 
-a='Bended_90';
+a='normal_90';
 filename = strcat('Z:\Github\Studies\WPT\Winding_Design\Result\',a,'.txt');
 delimiter = '\t';
 startRow = 16;
@@ -46,7 +46,7 @@ fclose(fileID);
 % script.
 
 %% Create output variable
-Bended_90 = [dataArray{1:end-1}];
+normal_90 = [dataArray{1:end-1}];
 
 %% Clear temporary variables
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
