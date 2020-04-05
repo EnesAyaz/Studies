@@ -1,7 +1,0 @@
-$begin 'CacheDataVersion'
-	DataVersion=5
-$end 'CacheDataVersion'
-$begin 'VariableValues'
-	gap='0.05in'
-	Mag='30A'
-$end 'VariableValues'

@@ -1,7 +1,0 @@
-$begin 'ValidationCache'
-	$begin 'OneValidationResult'
-		Variation='condcutor_height=\'0.8mm\' full_angle=\'360deg\' inner=\'70mm\' inner_outer=\'100mm\' Mag=\'10A\' outer=\'160mm\' outer_inner=\'130mm\''
-		Status=true
-		FileName='VIC9311880158253004319.tmp'
-	$end 'OneValidationResult'
-$end 'ValidationCache'

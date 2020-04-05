@@ -1,7 +1,0 @@
-$begin 'ValidationCache'
-	$begin 'OneValidationResult'
-		Variation='gap=\'0.05in\' Mag=\'30A\''
-		Status=true
-		FileName='VI42B8922815822131888.tmp'
-	$end 'OneValidationResult'
-$end 'ValidationCache'

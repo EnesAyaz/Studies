@@ -1,7 +1,0 @@
-$begin 'ValidationCache'
-	$begin 'OneValidationResult'
-		Variation='c1=\'100A\' mx=\'1mm\''
-		Status=true
-		FileName='VIA069752158186757515.tmp'
-	$end 'OneValidationResult'
-$end 'ValidationCache'
