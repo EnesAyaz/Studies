@@ -4,12 +4,12 @@ clc;
 Vin=90; %V  (rms)
 Vout=100; %V (rms)
 P_o=500; %W   
-Qs=8; % unitless
+Qs=4; % unitless
 f=150e3; %Hz
 res_w=2*pi*f; %rad/sec
-k=0.17; % chosen coupling factor
+k=0.23; % chosen coupling factor
 %% Calculation
-R_L=(5.184*8/pi^2)*2;
+R_L=(10*8/pi^2)*2;
 Vout=sqrt(P_o*R_L); %load resistance
 % R_L=10.3;
 Ls=Qs*R_L/res_w;    % secondary coil inductance
