@@ -1,0 +1,33 @@
+DesignVariation : airgap='23mm' chp='2mm' chs='2mm' f2p='1mm' f2s='1mm' fw='2.4mm' height='200mm' lp='1' ls='1' np='12' ns='16' p2p='2mm' rip='35mm' ris='35mm' rop='120mm' ros='120mm' rotation='240deg' s2s='1mm'
+Solution : Setup1 : LastAdaptive
+Parameter : Inductance
+Inductance Unit: nH
+Flux Unit: Wb
+
+Inductance
+		primer1	primer2	seconder1	seconder2	seconder3	seconder4
+	primer1	79481	-5162.4	10914	16990	5510.9	717.78
+	primer2	-5162.4	79498	5518.1	720.77	10936	16987
+	seconder1	10914	5518.1	69733	-11921	-1235	-11677
+	seconder2	16990	720.77	-11921	69389	-11690	-865.58
+	seconder3	5510.9	10936	-1235	-11690	69676	-11920
+	seconder4	717.78	16987	-11677	-865.58	-11920	69222
+
+Inductive Coupling Coefficient
+		primer1	primer2	seconder1	seconder2	seconder3	seconder4
+	primer1	1	-0.064945	0.1466	0.22878	0.074055	0.009677
+	primer2	-0.064945	1	0.074113	0.0097046	0.14694	0.229
+	seconder1	0.1466	0.074113	1	-0.17138	-0.017717	-0.16808
+	seconder2	0.22878	0.0097046	-0.17138	1	-0.16812	-0.012489
+	seconder3	0.074055	0.14694	-0.017717	-0.16812	1	-0.17164
+	seconder4	0.009677	0.229	-0.16808	-0.012489	-0.17164	1
+
+Flux Linkage
+		FluxLinkage/Wb
+	primer1	7.4732E-05
+	primer2	7.4757E-05
+	seconder1	3.053E-05
+	seconder2	3.1601E-05
+	seconder3	3.0517E-05
+	seconder4	3.1539E-05
+
