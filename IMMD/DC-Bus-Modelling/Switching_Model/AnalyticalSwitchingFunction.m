@@ -32,10 +32,11 @@ w_o=2*pi*fout;
 w_c= 2*pi*fsw;
 The_o=pi/2;
 The_c=0;
+
 %% for SA
 SAA=zeros(size(time_array));
 
-for m=1:20
+for m=1:1000
     for n= -20:20  
         SAA=SAA+ (2/(m*pi))*sin((m+n)*pi/2)*...
                 besselj(n,m*k*pi/2)*...
@@ -51,7 +52,6 @@ end
 SAA= SAA+(1/2)+ (k/2)*cos(w_o*time_array-The_o);
 
 toc;
-
 %%
 figure();
 plot(time_array,SAA,'Linewidth',2);
