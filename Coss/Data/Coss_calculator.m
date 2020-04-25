@@ -5,7 +5,7 @@ load('data.mat');
 L1=150e-6;
 time= Vds532_195.time;
 Vds= Vds532_195.Vds;
-
+%%
 figure();
 plot(time,Vds,'LineWidth',2);
 title('Vds')

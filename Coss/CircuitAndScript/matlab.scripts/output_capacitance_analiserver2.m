@@ -1,6 +1,6 @@
 close all, clear all
 L=150e-6;
-[time1,Vvds1,Vn001] = spicetxtimport('realinduc.txt' ,2, 340);
+[time1,Vvds1,Vn001] = spicetxtimport('realinductor.txt' ,2, 340);
 [time, Vds, Vin ] = resonanceextractor(time1,Vvds1,Vn001);
 dt = gradient(time);
 Vds_dot = gradient(Vds)./dt;
@@ -31,7 +31,7 @@ for i=peak_index: 1:length(time)
     Vdss(i)=Vds(i);
     Css(i)=C(i);
 end
-
+%%
 figure
 semilogy(Vdss,Css*1e12)
 title('Vds vs Css')
@@ -40,7 +40,8 @@ ylabel('Coss(pF)')
 grid on
 ylim([10 1000])
 xlim([0 500])
- samplevalidate(time, Vds_int, Vds_dot , Vds);
+%%
+%  samplevalidate(time, Vds_int, Vds_dot , Vds);
 
 %%
 % [time2,Vvds2,Vn002] = spicetxtimport('resistance.txt' ,2, 199);
