@@ -114,10 +114,10 @@ atand(x(1))
 % % ks=Z/Ls
 
 %%
-Vout2=94.305;
-Vout1=94.565;
-Is2=2.6536;
-Is1=3.1723;
+Vout2=89.83;
+Vout1=89.83;
+Is2=2.7706;
+Is1=2.7706;
 Q2=abs((1i*(Is2*w*Ls)+Vout2))/ Vout2
 
 Q1=(abs((1i*(Is1*w*Ls)+Vout1))/ Vout1)

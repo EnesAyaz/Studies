@@ -7,9 +7,9 @@ rs=0;
 Cs=1/(Ls*w_r*w_r);
 M1= 17.19e-6;
 M2 = M1;
-Ms= -0.5*Ls;
-R1=40*8/(pi^2);
-R2=40*8/(pi^2);
+Ms= 0*Ls;
+R1=80*8/(pi^2);
+R2=80*8/(pi^2);
 
 %%
 len=1e4;
@@ -61,23 +61,23 @@ end
 % plot(f,abs(Vout2));
 
 %%
-figure('name', 'determinant');
-plot(f,phase(deter_anal));
-hold on;
-plot(f,phase(deter),'--');
-xlim([1e5 2e5])
-legend('anal','calc')
+% figure('name', 'determinant');
+% plot(f,phase(deter_anal));
+% hold on;
+% plot(f,phase(deter),'--');
+% xlim([1e5 2e5])
+% legend('anal','calc')
 %% 
-figure();
-plot(f,abs(m1_anal));
-hold on;
-plot(f,abs(m1),'--');
-hold on; 
-xlim([1e5 2e5])
+% figure();
+% plot(f,abs(m1_anal));
+% hold on;
+% plot(f,abs(m1),'--');
+% hold on; 
+% xlim([1e5 2e5])
 % % plot(phase(m1_anal));
 % hold on;
 % plot(phase(m1),'--');
-legend('anal','calc')
+% legend('anal','calc')
 
 %%
 a=find(phase(ip)<0);
@@ -91,19 +91,23 @@ figure();
 plot(f,abs(Z_in2));
 hold on; 
 plot(f,abs(Z_in),'--');
-legend('calc','anal')
+legend(' mag calc','mag anal')
 xlim([100000 200000])
 figure();
 plot(f,phase(Z_in2));
 hold on; 
 plot(f,phase(Z_in), '--');
-legend('calc','anal')
+legend('mag calc','mag anal')
 %%
+% Lp= 107.42e-6;
 % Ls=68.8e-6;
-% Ms=0*Ls;
-% R_L=80;
+% Ms=-0.3*Ls;
+% R_L=40*8/(pi^2);
 % w_r=150e3*2*pi;
+% w=156e3*2*pi;
+% Delta_w= (w^2-w_r^2)/w;
+% % error=(w*Ms)^3-Delta_w*Lp*R_L^2
 % 
-% k= [Ms-Ls 0 (2*w_r^2*Ls)-(R_L^2) 0  -w_r^4];
+% k= [Ms^3 0 -Lp*R_L^2 0 w_r^2*Lp*R_L^2];
 % 
-% roots(k)
+% roots(k)/(2000*pi)
