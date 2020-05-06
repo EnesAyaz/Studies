@@ -1,12 +1,12 @@
 figure;
 subplot(3,1,1);
-% plot(time,capA_cur,'b-','Linewidth',1);
-% ylabel('Current(A)','FontSize',14,'FontWeight','Bold')
-% xlabel('time(sec)','FontSize',14,'FontWeight','Bold')
-
-plot(time,capA_volt,'r-','Linewidth',1);
-ylabel('Voltage(V)','FontSize',14,'FontWeight','Bold')
+plot(time,capA_cur,'b-','Linewidth',1);
+ylabel('Current(A)','FontSize',14,'FontWeight','Bold')
 xlabel('time(sec)','FontSize',14,'FontWeight','Bold')
+
+% plot(time,capA_volt,'r-','Linewidth',1);
+% ylabel('Voltage(V)','FontSize',14,'FontWeight','Bold')
+% xlabel('time(sec)','FontSize',14,'FontWeight','Bold')
 % legend({'Capacitor A Current','Capacitor A Voltage'},'Location','best');
 title('phase A Capacitor Ripple','FontSize',14,'FontWeight','Bold')
 

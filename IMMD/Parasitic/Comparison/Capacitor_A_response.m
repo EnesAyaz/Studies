@@ -199,7 +199,7 @@ figure();
 stem(fA(1:k),capA_cur_mag(1:k));
 hold on;
 stem(fA(1:k),capA(1:k));
-xlim([119000 121000])
+% xlim([119000 121000])
 
 ylabel('Mag','FontSize',14,'FontWeight','Bold')
 xlabel('Frequency','FontSize',14,'FontWeight','Bold')
