@@ -29,7 +29,7 @@ Vinv= [ Vin 0];
 %%
 
 figure('name','Input-Output Current and Voltages');
-vector_script(p0,Is1v,'r',0.2);
+vector_script(p0,Is1v,'r',0.15);
 hold on; 
 % vector_script(p0,Vout1,'m');
 % grid on;
@@ -38,11 +38,14 @@ hold on;
 vector_script(p0,Vinv/10,'b',0.1);
 % vector_script(p0,Vout1v/10,'c',0.1);
 % vector_script(p0,Vout2v/10,'y',0.1);
-vector_script(p0,Is2v,'g',0.1);
+vector_script(p0,Is2v,'g',0.2);
 vector_script(p0,Ipv,'m',0.1);
-grid on;
+plot([0,0], [-100 100],'--k')
+plot([-100,100], [0 0],'--k')
 axis equal;
-% xlim([-5 15]);
+xlim([-5 15]);
+set(gca,'xtick',[])
+set(gca,'ytick',[])
 % ylim([-20 5]);
 % axh = gca; % use current axe
 % linestyle = '-'; % dotted
