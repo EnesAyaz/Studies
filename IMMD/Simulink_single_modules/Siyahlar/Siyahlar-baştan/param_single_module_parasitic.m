@@ -59,8 +59,8 @@ Lload1 = Xload1/(2*pi*ffund);
 Iload1 = Vln1/Z1;
 P = P_module1;
 Idc = P/Vdc;
-Rin = 0.1; % former value was 10
-Lin = 1e-6;
+Rin = 20; % former value was 10
+Lin = 1e-4;
 
 Vin = Vdc + Idc*Rin;
 

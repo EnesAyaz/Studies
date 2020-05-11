@@ -144,4 +144,16 @@ xlabel('time(sec)','FontSize',14,'FontWeight','Bold')
 plot(time,capCurr_1,'r-','Linewidth',1);
 legend({'Capacitor A Current','Capacitor A Voltage'},'Location','best');
 title('phase A Capacitor Ripple','FontSize',14,'FontWeight','Bold')
+%%
 
+figure();
+plot(time,SAIA,'b-','Linewidth',1);
+hold on;
+plot(time,SBIB,'r-','Linewidth',1);
+hold on;
+plot(time,SCIC,'m-','Linewidth',1);
+
+ylabel('Current(A)','FontSize',14,'FontWeight','Bold')
+xlabel('time(sec)','FontSize',14,'FontWeight','Bold')
+legend({'Phase A','Phase B','Phase C'},'Location','best');
+title('Load Current','FontSize',14,'FontWeight','Bold');

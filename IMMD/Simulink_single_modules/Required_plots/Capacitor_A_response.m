@@ -1,7 +1,7 @@
 
 % load('Y:\Github\DATA\Comparison\Data_v3-conection_inductor');
 
-load('Y:\Github\DATA\Comparison\Data_without_parasitic');
+load('Y:\Github\DATA\Comparison\siyahlar\Data_with_2parasitic');
 
 %%
 
@@ -94,45 +94,48 @@ xlim([0 120000])
 w=2*pi*fA;
 
 %% Parameter values
-% LATop  = 03.40e-9;
-% LABot  = 20.25e-9;
-% LAMid  = 01.30e-9;
-% LBTop  = 03.38e-9;
-% LBBot  = 20.38e-9;
-% LBMid  = 01.30e-9;
-% LCTop  = 03.41e-9;
-% LCBot  = 20.94e-9;
-% LCMid  = 01.30e-9;
-% LABTop = 18.30e-9;
-% LABBot = 10.20e-9;
-% LBCTop = 21.84e-9;
-% LBCBot = 11.14e-9;
+LATop  = 03.40e-9;
+LABot  = 20.25e-9;
+LAMid  = 01.30e-9;
+LBTop  = 03.38e-9;
+LBBot  = 20.38e-9;
+LBMid  = 01.30e-9;
+LCTop  = 03.41e-9;
+LCBot  = 20.94e-9;
+LCMid  = 01.30e-9;
+LABTop = 18.30e-9;
+LABBot = 10.20e-9;
+LBCTop = 21.84e-9;
+LBCBot = 11.14e-9;
+
+ESLA = 19e-9;
+ESLB = 19e-9;
+ESLC = 19e-9;
+
+
+% LATop  = 03.40e-19;
+% LABot  = 20.25e-19;
+% LAMid  = 01.30e-19;
+% LBTop  = 03.38e-19;
+% LBBot  = 20.38e-19;
+% LBMid  = 01.30e-19;
+% LCTop  = 03.41e-19;
+% LCBot  = 20.94e-19;
+% LCMid  = 01.30e-19;
+% LABTop = 18.30e-19;
+% LABBot = 10.20e-19;
+% LBCTop = 21.84e-19;
+% LBCBot = 11.14e-19;
 % 
-% ESLA = 19e-9;
-% ESLB = 19e-9;
-% ESLC = 19e-9;
+% ESLA = 19e-19;
+% ESLB = 19e-19;
+% ESLC = 19e-19;
 
-
-LATop  = 03.40e-19;
-LABot  = 20.25e-19;
-LAMid  = 01.30e-19;
-LBTop  = 03.38e-19;
-LBBot  = 20.38e-19;
-LBMid  = 01.30e-19;
-LCTop  = 03.41e-19;
-LCBot  = 20.94e-19;
-LCMid  = 01.30e-19;
-LABTop = 18.30e-19;
-LABBot = 10.20e-19;
-LBCTop = 21.84e-19;
-LBCBot = 11.14e-19;
-
-ESLA = 19e-19;
-ESLB = 19e-19;
-ESLC = 19e-19;
-
-Lin=2e-6;
+Lin=1e-6;
 Rin=0.1;
+
+Rin = 20; % former value was 10
+Lin = 1e-4;
 
 C1A = 5e-6;
 C1B = 5e-6;
@@ -218,7 +221,7 @@ xlim([0 200000])
 
 %% cap A current
 
-capA_cur_new=capA_cur(starting:ending);
+capA_cur_new=-capA_cur(starting:ending);
 yA = fft(capA_cur_new);
 LA=length(yA);
 capA_cur_mag2= abs(yA/LA);
@@ -238,10 +241,10 @@ xlim([0 200000])
 %%
 
 figure();
-stem(fA(1:k),capA_cur_mag(1:k));
+stem(fA(1:k),capA_cur_mag(1:k),'LineWidth',3);
 hold on;
-stem(fA(1:k),capA(1:k));
-% xlim([119000 121000])
+stem(fA(1:k),capA(1:k),'LineWidth',3);
+xlim([239500 240500])
 
 ylabel('Mag','FontSize',14,'FontWeight','Bold')
 xlabel('Frequency','FontSize',14,'FontWeight','Bold')
@@ -249,8 +252,40 @@ legend({'Simulation Result','Impedance Model'},'Location','best');
 title('Capacitor A ')
 
 
+%%
+figure();
 
+stem(fA(1:k),SAIA_mag(1:k)','LineWidth',3);
+hold on;
+stem(fA(1:k),capA(1:k),'LineWidth',3);
+xlim([79500 80500])
 
+ylabel('Mag','FontSize',14,'FontWeight','Bold')
+xlabel('Frequency','FontSize',14,'FontWeight','Bold')
+legend({'Simulation Result','Impedance Model'},'Location','best');
+title(' Switching Legs ')
 
+%%
+figure();
+stem(fA(1:k),SBIB_mag(1:k)','LineWidth',3);
+hold on;
+stem(fA(1:k),capA_cur_mag(1:k),'LineWidth',3);
+xlim([39500 40500])
+
+ylabel('Mag','FontSize',14,'FontWeight','Bold')
+xlabel('Frequency','FontSize',14,'FontWeight','Bold')
+legend({'Simulation Result','Impedance Model'},'Location','best');
+title(' Switching Legs ')
+
+figure();
+stem(fA(1:k),SCIC_mag(1:k)','LineWidth',3);
+hold on;
+stem(fA(1:k),capA(1:k),'LineWidth',3);
+xlim([39500 40500])
+
+ylabel('Mag','FontSize',14,'FontWeight','Bold')
+xlabel('Frequency','FontSize',14,'FontWeight','Bold')
+legend({'Simulation Result','Impedance Model'},'Location','best');
+title(' Switching Legs ')
 
 
