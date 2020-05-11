@@ -1,4 +1,6 @@
-w=2*pi*linspace(0,100000,100)';
+% f=logspace(0,6,10000);
+f=linspace(0,500000,1000);
+w=2*pi*f;
 
 %% Parameter values
 LATop  = 03.40e-9;
@@ -55,7 +57,7 @@ Z2_phB = 1i*w*L2_phB + 1./(1i*w*C1B);
 Z3_phB = Z1_phB.*Z2_phB./(Z1_phB+Z2_phB);
 Z4_phB = Z3_phB + 1i*w*(L3_phB);
 Z6_phB= 1i*w*Lin + Rin;
-Z7=Z4_phB.*Z6_phB./(Z4_phB+Z6_phB);
+Z7_phB=Z4_phB.*Z6_phB./(Z4_phB+Z6_phB);
 Z5_phB = 1i*w*L4_phB + 1./(1i*w*C1C);
 Zeqv_phB = Z4_phB.*Z5_phB./(Z4_phB+Z5_phB);
 %% capacitor A
@@ -63,7 +65,8 @@ capA_phB=(Z5_phB./(Z7_phB+Z5_phB)).*(Z6_phB./(Z4_phB+Z6_phB)).*(Z2_phB./(Z1_phB+
 %% New merged inducances - phC
 L1_phC = LATop + LABot + LABTop + LABBot + ESLA;
 L2_phC = ESLB;
-L3_phC = LBTop + LBBot + LBCTop + LBCBot;
+L3_phC = LBTop + LBBot ;
+L6_phC=LBCTop + LBCBot;
 L4_phC = ESLC;
 L5_phC = LCTop + LCBot;
 %% Calculated impedances - phC
@@ -71,8 +74,30 @@ Z1_phC = 1i*w*L1_phC + 1./(1i*w*C1A);
 Z2_phC = 1i*w*L2_phC + 1./(1i*w*C1B);
 Z3_phC = Z1_phC.*Z2_phC./(Z1_phC+Z2_phC);
 Z4_phC = Z3_phC + 1i*w*(L3_phC);
-Z5_phC = 1i*w*L4_phC + 1./(1i*w*C1C);
-Z6_phC = Z4_phC.*Z5_phC./(Z4_phC+Z5_phC);
+Z5_phC= 1i*w*Lin+Rin;
+Z6_phC=Z4_phC.*Z5_phC./(Z4_phC+Z5_phC);
+Z7_phC =Z6_phC+L6_phC;
+Z8_phC = 1i*w*L4_phC + 1./(1i*w*C1C);
+Z9_phC = Z7_phC.*Z8_phC./(Z7_phC+Z8_phC);
 Zeqv_phC = Z6_phC + 1i*w*L5_phC;
 %% capacitor A
-capA_phC=(Z5_phC./(Z4_phC+Z5_phC)).*(Z2_phC./(Z1_phC+Z2_phC));
+capA_phC=(Z8_phC./(Z7_phC+Z8_phC)).*(Z5_phC./(Z4_phC+Z5_phC)).*(Z2_phC./(Z1_phC+Z2_phC));
+%%
+% figure();
+% semilogx(f/1000,capA_phA);
+% hold on;
+% semilogx(f/1000,capA_phB);
+% hold on;
+% semilogx(f/1000,capA_phC);
+
+%%
+
+figure();
+plot(f/1000,capA_phA);
+hold on;
+plot(f/1000,capA_phB);
+hold on;
+plot(f/1000,capA_phC);
+
+
+

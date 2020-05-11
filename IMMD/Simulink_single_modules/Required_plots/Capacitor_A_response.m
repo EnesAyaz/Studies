@@ -1,9 +1,16 @@
+
+% load('Y:\Github\DATA\Comparison\Data_v3-conection_inductor');
+
+load('Y:\Github\DATA\Comparison\Data_without_parasitic');
+
+%%
+
 ts=time(2)-time(1);
 fs=1/ts;
 number_of_sample= fs/50;
 
-starting=1+5*number_of_sample;
-ending= 1+8*number_of_sample;
+starting=1+1*number_of_sample;
+ending= 1+3*number_of_sample;
 figure('name','Load Current')
 plot(time((starting:ending)),load_cur_A(starting:ending));
 hold on; 
@@ -87,25 +94,44 @@ xlim([0 120000])
 w=2*pi*fA;
 
 %% Parameter values
-LATop  = 03.40e-9;
-LABot  = 20.25e-9;
-LAMid  = 01.30e-9;
-LBTop  = 03.38e-9;
-LBBot  = 20.38e-9;
-LBMid  = 01.30e-9;
-LCTop  = 03.41e-9;
-LCBot  = 20.94e-9;
-LCMid  = 01.30e-9;
-LABTop = 18.30e-9;
-LABBot = 10.20e-9;
-LBCTop = 21.84e-9;
-LBCBot = 11.14e-9;
+% LATop  = 03.40e-9;
+% LABot  = 20.25e-9;
+% LAMid  = 01.30e-9;
+% LBTop  = 03.38e-9;
+% LBBot  = 20.38e-9;
+% LBMid  = 01.30e-9;
+% LCTop  = 03.41e-9;
+% LCBot  = 20.94e-9;
+% LCMid  = 01.30e-9;
+% LABTop = 18.30e-9;
+% LABBot = 10.20e-9;
+% LBCTop = 21.84e-9;
+% LBCBot = 11.14e-9;
+% 
+% ESLA = 19e-9;
+% ESLB = 19e-9;
+% ESLC = 19e-9;
 
-ESLA = 19e-15;
-ESLB = 19e-15;
-ESLC = 19e-15;
 
-Lin=1e-6;
+LATop  = 03.40e-19;
+LABot  = 20.25e-19;
+LAMid  = 01.30e-19;
+LBTop  = 03.38e-19;
+LBBot  = 20.38e-19;
+LBMid  = 01.30e-19;
+LCTop  = 03.41e-19;
+LCBot  = 20.94e-19;
+LCMid  = 01.30e-19;
+LABTop = 18.30e-19;
+LABBot = 10.20e-19;
+LBCTop = 21.84e-19;
+LBCBot = 11.14e-19;
+
+ESLA = 19e-19;
+ESLB = 19e-19;
+ESLC = 19e-19;
+
+Lin=2e-6;
 Rin=0.1;
 
 C1A = 5e-6;
@@ -141,7 +167,7 @@ Z2_phB = 1i*w*L2_phB + 1./(1i*w*C1B);
 Z3_phB = Z1_phB.*Z2_phB./(Z1_phB+Z2_phB);
 Z4_phB = Z3_phB + 1i*w*(L3_phB);
 Z6_phB= 1i*w*Lin + Rin;
-Z7=Z4_phB.*Z6_phB./(Z4_phB+Z6_phB);
+Z7_phB=Z4_phB.*Z6_phB./(Z4_phB+Z6_phB);
 Z5_phB = 1i*w*L4_phB + 1./(1i*w*C1C);
 Zeqv_phB = Z4_phB.*Z5_phB./(Z4_phB+Z5_phB);
 %% capacitor A
@@ -158,9 +184,9 @@ Z1_phC = 1i*w*L1_phC + 1./(1i*w*C1A);
 Z2_phC = 1i*w*L2_phC + 1./(1i*w*C1B);
 Z3_phC = Z1_phC.*Z2_phC./(Z1_phC+Z2_phC);
 Z4_phC = Z3_phC + 1i*w*(L3_phC);
-Z5_pHC= 1i*w*Lin+Rin;
-Z6_pHC=Z4_phC.*Z5_phC./(Z4_phC+Z5_phC);
-Z7_phC =Z6_pHC+L6_phC;
+Z5_phC= 1i*w*Lin+Rin;
+Z6_phC=Z4_phC.*Z5_phC./(Z4_phC+Z5_phC);
+Z7_phC =Z6_phC+L6_phC;
 Z8_phC = 1i*w*L4_phC + 1./(1i*w*C1C);
 Z9_phC = Z7_phC.*Z8_phC./(Z7_phC+Z8_phC);
 Zeqv_phC = Z6_phC + 1i*w*L5_phC;
@@ -181,6 +207,9 @@ xlim([0 120000])
 %%
 k=length(SAIA_mag);
 capA=SAIA_mag(1:k)'.*capA_phA(1:k)+SBIB_mag(1:k)'.*capA_phB(1:k)+SCIC_mag(1:k)'.*capA_phC(1:k);
+capSA=SAIA_mag(1:k)'.*capA_phA(1:k);
+capSB=SBIB_mag(1:k)'.*capA_phB(1:k);
+capSC=SCIC_mag(1:k)'.*capA_phC(1:k);
 figure();
 stem(fA(1:k),capA(1:k));
 ylabel('Mag')
