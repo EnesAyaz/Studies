@@ -131,8 +131,8 @@ ESLC = 19e-9;
 % ESLB = 19e-19;
 % ESLC = 19e-19;
 
-Lin=1e-6;
-Rin=0.1;
+% Lin=1e-6;
+% Rin=0.1;
 
 Rin = 20; % former value was 10
 Lin = 1e-4;
@@ -208,8 +208,23 @@ ylabel('Angle')
 xlabel('Frequency')
 xlim([0 120000])
 %%
-k=length(SAIA_mag);
-capA=SAIA_mag(1:k)'.*capA_phA(1:k)+SBIB_mag(1:k)'.*capA_phB(1:k)+SCIC_mag(1:k)'.*capA_phC(1:k);
+% k=length(SAIA_mag);
+k=16000;
+capA_real=[];
+for i=1:k
+b=SAIA_mag(k)'.*capA_phA(k).* exp(1i*SAIA_angle(k))';+SBIB_mag(k)'.*capA_phB(k).* exp(1i*SBIB_angle(k))'+ SCIC_mag(k)'.*capA_phC(k).* exp(1i*SCIC_angle(k))';
+capA_real=[capA_real b];
+    
+end
+% capA=SAIA_mag(1:k)'.*capA_phA(1:k)+SBIB_mag(1:k)'.*capA_phB(1:k)+SCIC_mag(1:k)'.*capA_phC(1:k);
+% capA_real=SAIA_mag(1:k)'.*capA_phA(1:k).* cos(SAIA_angle(1:k))';+SBIB_mag(1:k)'.*capA_phB(1:k).* cos(SBIB_angle(1:k))' ...
+%     +SCIC_mag(1:k)'.*capA_phC(1:k).* cos(SCIC_angle(1:k))';
+% 
+% capA_imaj=SAIA_mag(1:k)'.*capA_phA(1:k).* sin(SAIA_angle(1:k))';+SBIB_mag(1:k)'.*capA_phB(1:k).* sin(SBIB_angle(1:k))' ...
+%     +SCIC_mag(1:k)'.*capA_phC(1:k).* sin(SCIC_angle(1:k))';
+
+
+capA=abs(capA_real);
 capSA=SAIA_mag(1:k)'.*capA_phA(1:k);
 capSB=SBIB_mag(1:k)'.*capA_phB(1:k);
 capSC=SCIC_mag(1:k)'.*capA_phC(1:k);
@@ -227,6 +242,7 @@ LA=length(yA);
 capA_cur_mag2= abs(yA/LA);
 capA_cur_mag=capA_cur_mag2(1:LA/2+1);
 capA_cur_mag(2:end-1)=2*capA_cur_mag(2:end-1);
+
 P2A_phase= angle(yA/LA);
 capA_cur_angle=P2A_phase(1:LA/2+1);
 fA= fs*(0:(LA/2))/LA;
@@ -244,7 +260,6 @@ figure();
 stem(fA(1:k),capA_cur_mag(1:k),'LineWidth',3);
 hold on;
 stem(fA(1:k),capA(1:k),'LineWidth',3);
-xlim([239500 240500])
 
 ylabel('Mag','FontSize',14,'FontWeight','Bold')
 xlabel('Frequency','FontSize',14,'FontWeight','Bold')
@@ -288,4 +303,37 @@ xlabel('Frequency','FontSize',14,'FontWeight','Bold')
 legend({'Simulation Result','Impedance Model'},'Location','best');
 title(' Switching Legs ')
 
+%%
+figure();
+stem(fA(1:k),SAIA_angle(1:k)'*180/pi,'LineWidth',3);
+hold on;
+stem(fA(1:k),SAIA_mag(1:k)','LineWidth',3);
+stem(fA(1:k),SBIB_angle(1:k)'*180/pi,'LineWidth',3);
+stem(fA(1:k),SCIC_angle(1:k)'*180/pi,'LineWidth',3);
+xlim([39800 40300])
 
+
+figure();
+stem(fA(1:k),SAIA_mag(1:k)','LineWidth',3);
+hold on;
+stem(fA(1:k),SBIB_mag(1:k)','LineWidth',3);
+stem(fA(1:k),SCIC_mag(1:k)','LineWidth',3);
+xlim([39800 40300])
+
+%%
+k=1595;
+b=SAIA_mag(k)'.*capA_phA(k).* exp(1i*SAIA_angle(k))'+SBIB_mag(k)'.*capA_phB(k).* exp(1i*SBIB_angle(k))' ...
+    +SCIC_mag(k)'.*capA_phC(k).* exp(1i*SCIC_angle(k))'
+
+SAIA_mag(k)'.* exp(1i*SAIA_angle(k))';+SBIB_mag(k)'.* exp(1i*SBIB_angle(k))' ...
+    +SCIC_mag(k)'.* exp(1i*SCIC_angle(k))'
+abs(b)
+fA(k)
+
+%%
+
+a=SAIA_mag(1:end)'.*capA_phA(1:end).* exp(1i*SAIA_angle(1:end))';+SBIB_mag(1:end)'.*capA_phB(1:end).* exp(1i*SBIB_angle(1:end))' ...
+    +SCIC_mag(1:end)'.*capA_phC(1:end).* exp(1i*SCIC_angle(1:end))';
+
+a(k)
+stem(fA,SAIA_mag(1:end))
