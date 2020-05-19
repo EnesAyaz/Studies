@@ -7,7 +7,10 @@ number_of_sample= fs/50;
 starting=1+1*number_of_sample;
 ending= 1+3*number_of_sample;
 %%
-capA_cur_new=-capA_cur(starting:ending);
+% capA_cur_new=SAIA(starting:ending);
+% capA_cur_new=SBIB(starting:ending);
+% capA_cur_new=SCIC(starting:ending);
+capA_cur_new=capA_cur(starting:ending);
 yA = fft(capA_cur_new);
 LA=length(yA);
 capA_cur_mag2= abs(yA/LA);
@@ -20,7 +23,10 @@ capA_cur_angle_with=P2A_phase(1:LA/2+1);
 %%
 load('Y:\Github\DATA\Comparison\siyahlar\Data_without_parasitic01ohm');
 %%
-capA_cur_new=-capA_cur(starting:ending);
+% capA_cur_new=SAIA(starting:ending);
+% capA_cur_new=SBIB(starting:ending);
+% capA_cur_new=SCIC(starting:ending);
+capA_cur_new=capA_cur(starting:ending);
 yA = fft(capA_cur_new);
 LA=length(yA);
 capA_cur_mag2= abs(yA/LA);

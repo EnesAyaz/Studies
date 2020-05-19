@@ -45,7 +45,8 @@ C1B = 5e-6;
 C1C = 5e-6;
 
 %%
-w=2*pi*linspace(0,240000,10000);
+% w=2*pi*linspace(0,300000,10000);
+w=2*pi*319900;
 %% New merged inducances - phA
 L1_phA = LATop + LABot + ESLA;
 L2_phA = LABTop;
@@ -93,6 +94,21 @@ Zeqv_phC = Z6_phC + 1i*w*L5_phC;
 capA_phC=(Z5_phC./(Z4_phC+Z5_phC)).*(Z2_phC./(Z1_phC+Z2_phC))
 
 %%
-
-figure();
-
+% f=w/(2000*pi);
+% normal=(1/3)*ones(1,length(f));
+% 
+% figure();
+% plot(f,capA_phA,'b-','Linewidth',3);
+% hold on;
+% plot(f,capA_phB,'r-','Linewidth',3);
+% hold on;
+% plot(f,capA_phC,'m-','Linewidth',3);
+% hold on;
+% plot(f,normal,'k--','Linewidth',3);
+% xlim([265 340])
+% ylabel('|Mag|','FontSize',14,'FontWeight','Bold')
+% xlabel('Frequency(kHz)','FontSize',14,'FontWeight','Bold')
+% legend({'Phase A','Phase B','Phase C','No-parasitic(phA,phB,pHC)'},'Location','best');
+% title('Capacitor A Response','FontSize',14,'FontWeight','Bold');
+% set(gca,'FontSize',20)
+% 

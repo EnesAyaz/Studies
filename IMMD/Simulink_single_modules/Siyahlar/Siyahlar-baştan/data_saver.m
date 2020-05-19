@@ -21,7 +21,7 @@ SAIA= SAIA(:,2);
 SBIB= SBIB(:,2);
 SCIC= SCIC(:,2);
 
-save('Y:\Github\DATA\Comparison\siyahlar\Data_with_parasiticXohm','time','capA_cur','capB_cur','capC_cur','capA_volt','capB_volt','capC_volt', ...
+save('Y:\Github\DATA\Comparison\siyahlar\Data_with_parasitic4375ohm','time','capA_cur','capB_cur','capC_cur','capA_volt','capB_volt','capC_volt', ...
     'InputCurr','InputVoltage','load_cur_A','load_cur_B','load_cur_C','SAIA','SBIB','SCIC');
 
 % load('Data_v3-conection_inductor.mat');
