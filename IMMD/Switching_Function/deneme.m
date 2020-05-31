@@ -1,28 +1,32 @@
-k=0.9;
-f_o=50;
-f_c=4e4;
-The_o=0;
-The_c=pi/3;
-m_max=20;
-n_max=20;
+k=0.9; % modulation index
+f_o=50; % output frequcency(fundamental)
+f_c=4e4; % carrier frequency (switching)
+The_o=2*pi/3; % output phase
+The_c=0; % carrier phase
+m_max=3; % maximum harmonics of carrier
+n_max=5; % The number of sidebands
 
 [f, Mag, Phase] = SwitchingFunction(k,f_o,f_c,The_o,The_c,m_max,n_max);
 
 figure();
 subplot(2,1,1);
-stem(f,Mag);
+stem(f/1000,Mag);
 title('Switching Function');
-xlabel('Freqeuncy');
+xlabel('Freqeuncy(kHz)');
 ylabel('Magnitude')
-xlim([39850 40150])
+set(findall(gcf,'-property','FontSize'),'FontSize',20)
+grid on;
+% xlim([39850 40150])
 % xlim([0 100])
 subplot(2,1,2);
-stem(f,Phase*180/pi);
+stem(f/1000,Phase*180/pi);
 title('Switching Function');
-xlabel('Freqeuncy');
+xlabel('Freqeuncy(kHz)');
 ylabel('Angle(Degree)')
+set(findall(gcf,'-property','FontSize'),'FontSize',20)
+grid on;
 % xlim([0 100])
-xlim([39850 40150])
+% xlim([39850 40150])
 %%
 f_new= 0:f_o:max(f);
 y=(f/f_o)+1;
@@ -101,6 +105,7 @@ Mag_resultant=sqrt(Mag_new_right.*Mag_new_right+Mag_new_left.*Mag_new_left-2*Mag
 Phase_resultant=atan((Mag_new_right.*sin(Phase_new_right)+Mag_new_left.*sin(Phase_new_left))./ ...
                     (Mag_new_right.*cos(Phase_new_right)+Mag_new_left.*cos(Phase_new_left)));
 
+Phase_resultant=mod(Phase_resultant,2*pi);           
 %%
 figure();
 stem(f_new_left,Mag_resultant,'k');
@@ -117,6 +122,17 @@ ylabel('Magnitude')
 figure();
 stem(f_new_left,Phase_resultant*180/pi,'k');
 hold on;
+stem(f_new_left,Phase_new_left*180/pi,'r');
+hold on;
+stem(f_new_left,Phase_new_right*180/pi,'--b')
+title('Switching Function');
+xlabel('Freqeuncy');
+ylabel('Magnitude')
+%%
+
+figure();
+stem(f_new_left,Phase_resultant*180/pi,'k');
+hold on;
 title('Switching Function');
 xlabel('Freqeuncy');
 ylabel('Phase')
@@ -126,10 +142,10 @@ ylabel('Phase')
 k=0.9;
 f_o=50;
 f_c=4e4;
-The_o=pi/4;
-The_c=pi/2;
-m_max=20;
-n_max=20;
+The_o=2*pi/3;
+The_c=0;
+m_max=3;
+n_max=5;
 I_mag=10;
 I_phase=0;
 
@@ -142,7 +158,7 @@ title('Switching Function');
 xlabel('Freqeuncy');
 ylabel('Magnitude')
 % xlim([39850 40150])
-xlim([79650 80550])
+% xlim([79650 80550])
 
 
 figure();
@@ -151,6 +167,38 @@ hold on;
 title('Switching Function');
 xlabel('Freqeuncy');
 ylabel('Phase(Degree)')
-xlim([39850 40150])
+% xlim([39850 40150])
 % xlim([0 200])
+%%
+k=0.9;
+f_o=50;
+f_c=4e4;
+The_c=0;
+m_max=20;
+n_max=20;
+I_mag=10;
+
+
+
+I_phase=0;
+The_o=0;
+[f_resultant, Mag_resultantA, Phase_resultantA] = LegFunction(I_mag,I_phase,k,f_o,f_c,The_o,The_c,m_max,n_max);
+
+
+
+I_phase=-2*pi/3;
+The_o=-2*pi/3;
+[f_resultant, Mag_resultantB, Phase_resultantB] = LegFunction(I_mag,I_phase,k,f_o,f_c,The_o,The_c,m_max,n_max);
+
+
+
+I_phase=2*pi/3;
+The_o=2*pi/3;
+[f_resultant, Mag_resultantC, Phase_resultantC] = LegFunction(I_mag,I_phase,k,f_o,f_c,The_o,The_c,m_max,n_max);
+
+
+
+
+
+
 

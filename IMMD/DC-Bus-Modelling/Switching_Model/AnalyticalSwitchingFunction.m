@@ -43,11 +43,9 @@ for m=1:1000
                 cos(m*(w_c*time_array-The_c)...
                 +n*(w_o*time_array-The_o));
        
-        
-        
+            
     end
 end
-
 
 SAA= SAA+(1/2)+ (k/2)*cos(w_o*time_array-The_o);
 

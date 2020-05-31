@@ -27,6 +27,7 @@ Phase_new_right=[0 0 (Phase_new+I_phase) ];
 Mag_resultant=sqrt(Mag_new_right.*Mag_new_right+Mag_new_left.*Mag_new_left-2*Mag_new_right.*Mag_new_left.*cos(Phase_new_right-Phase_new_left));
 Phase_resultant=atan((Mag_new_right.*sin(Phase_new_right)+Mag_new_left.*sin(Phase_new_left))./ ...
                     (Mag_new_right.*cos(Phase_new_right)+Mag_new_left.*cos(Phase_new_left)));
+Phase_resultant=mod(Phase_resultant,2*pi);        
 
 f_resultant=f_new_left(2:end);
 Mag_resultant(3)=Mag_resultant(3)+Mag_resultant(1);
