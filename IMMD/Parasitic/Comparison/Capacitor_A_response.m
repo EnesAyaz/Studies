@@ -1,9 +1,9 @@
-ts=time(2)-time(1);
+ats=time(2)-time(1);
 fs=1/ts;
 number_of_sample= fs/50;
 
-starting=1+5*number_of_sample;
-ending= 1+8*number_of_sample;
+starting=1+1*number_of_sample;
+ending= 1+2*number_of_sample;
 figure('name','Load Current')
 plot(time((starting:ending)),load_cur_A(starting:ending));
 hold on; 
@@ -183,6 +183,7 @@ capA_cur_mag2= abs(yA/LA);
 capA_cur_mag=capA_cur_mag2(1:LA/2+1);
 capA_cur_mag(2:end-1)=2*capA_cur_mag(2:end-1);
 P2A_phase= angle(yA/LA);
+r
 capA_cur_angle=P2A_phase(1:LA/2+1);
 fA= fs*(0:(LA/2))/LA;
 

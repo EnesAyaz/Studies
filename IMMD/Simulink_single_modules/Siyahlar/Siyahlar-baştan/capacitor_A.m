@@ -1,5 +1,5 @@
 
-load('Y:\Github\DATA\Comparison\siyahlar\Data_without_parasitic50ohm');
+load('Y:\Github\DATA\Comparison\siyahlar\Data_with_parasitic50ohm');
 
 %%
 
