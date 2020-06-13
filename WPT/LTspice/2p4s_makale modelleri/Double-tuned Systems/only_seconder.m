@@ -55,9 +55,9 @@ pretty(simplify(x));
 %%
 
 w=2*pi*150e3;
-ws=2*pi*100e3:2*pi*5e3:2*pi*200e3;
+ws=2*pi*100e3:2*pi*1e3:2*pi*200e3;
 Ls=66e-6;
-RL2=20;
+RL2=20*8/pi^2;
 Q=8;
 RL2=w*Ls/Q;
 L=[];
@@ -69,15 +69,13 @@ R=  [R RL2^2*w^2 ];
 end
 
 figure;
-plot(ws/(2000*pi),L);
+plot(ws/(2000*pi),L,'LineWidth',5);
 hold on;
-plot(ws/(2000*pi),R)
+plot(ws/(2000*pi),R,'LineWidth',5)
 hold on; 
-
-
+title(strcat("Quality is ", string(Q)))
 legend('Inductive Part','Resistive Part');
 
-
-figure();
-
-plot(ws/(2000*pi),L./R);
+% figure();
+% 
+% plot(ws/(2000*pi),L./R);
