@@ -3,8 +3,8 @@ f_o=50; % output frequcency(fundamental)
 f_c=4e4; % carrier frequency (switching)
 The_o=2*pi/3; % output phase
 The_c=0; % carrier phase
-m_max=3; % maximum harmonics of carrier
-n_max=5; % The number of sidebands
+m_max=4; % maximum harmonics of carrier
+n_max=10; % The number of sidebands
 
 [f, Mag, Phase] = SwitchingFunction(k,f_o,f_c,The_o,The_c,m_max,n_max);
 
@@ -101,9 +101,9 @@ ylabel('Magnitude')
 % Phase_resultant=angle(Mag_new_right.*cos(Phase_new_right)+Mag_new_left.*cos(Phase_new_left));
 
 
-Mag_resultant=sqrt(Mag_new_right.*Mag_new_right+Mag_new_left.*Mag_new_left-2*Mag_new_right.*Mag_new_left.*cos(Phase_new_right-Phase_new_left));
-Phase_resultant=atan((Mag_new_right.*sin(Phase_new_right)+Mag_new_left.*sin(Phase_new_left))./ ...
-                    (Mag_new_right.*cos(Phase_new_right)+Mag_new_left.*cos(Phase_new_left)));
+% Mag_resultant=sqrt(Mag_new_right.*Mag_new_right+Mag_new_left.*Mag_new_left-2*Mag_new_right.*Mag_new_left.*cos(Phase_new_right-Phase_new_left));
+% Phase_resultant=atan((Mag_new_right.*sin(Phase_new_right)+Mag_new_left.*sin(Phase_new_left))./ ...
+%                     (Mag_new_right.*cos(Phase_new_right)+Mag_new_left.*cos(Phase_new_left)));
 
 Phase_resultant=mod(Phase_resultant,2*pi);           
 %%
