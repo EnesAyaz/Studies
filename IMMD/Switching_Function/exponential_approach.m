@@ -8,8 +8,8 @@ f_o=50; % output frequcency(fundamental)
 f_c=4e4; % carrier frequency (switching)
 The_o=0; % output phase
 The_c=0.125; % carrier phase
-m_max=4; % maximum harmonics of carrier
-n_max=10; % The number of sidebands
+m_max=8; % maximum harmonics of carrier
+n_max=20; % The number of sidebands
 
 [f, Mag, Phase] = SwitchingFunction(k,f_o,f_c,The_o,The_c,m_max,n_max);
 
@@ -102,7 +102,7 @@ fA = [-flip(fA(2:end)) fA ];
 
 %%
 figure();
-i=160;
+i=40;
 stem(f_new_rl/1000,Mag_resultant,'r','LineWidth',3);
 hold on;
 stem(fA/1000,SAIA_mag,'b','LineWidth',3);

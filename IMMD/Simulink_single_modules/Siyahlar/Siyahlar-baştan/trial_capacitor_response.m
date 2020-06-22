@@ -148,11 +148,205 @@ capA_angle= [ flip(capA_angle2(1:(LA/2)+1)); flip(capA_angle2((LA/2)+1:end))];
 fA= fs*(0:(LA/2))/LA;
 fA = [-flip(fA(2:end)) fA ];
 
+% %%
+% i=39;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=79;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=119;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=159;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=199;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=239;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% i=279;
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([i i+2]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([i i+2]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
+% 
+% %%
+% figure();
+% subplot(1,2,1)
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Parasitic Model');
+% grid on;
+% xlim([-300 300]);
+% subplot(1,2,2)
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([-300 300]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% title('Simulation Result');
+% grid on;
+% suptitle(strcat("Between ",string(-300)," kHz and ",string(300)," kHz"))
+% 
+% %%
+% figure();
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% hold on;
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([0 300]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% legend ('Parasitic Model','Simulation Result');
+% grid on;
+% title(strcat("Between ",string(0)," kHz and ",string(300)," kHz"))
+% 
+% %%
+% figure();
+% stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+% hold on;
+% stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+% xlim([261 263]);
+% set(gca,'fontsize', 18)
+% xlabel('Frequency(kHz)');
+% ylabel('|Mag|');
+% legend ('Parasitic Model','Simulation Result');
+% grid on;
+% title(strcat("Between ",string(261)," kHz and ",string(263)," kHz"))
+
+%%
 %%
 i=39;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -160,7 +354,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -173,7 +367,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=79;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -181,7 +375,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -194,7 +388,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=119;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -202,7 +396,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -215,7 +409,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=159;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -223,7 +417,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -236,7 +430,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=199;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -244,7 +438,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -257,7 +451,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=239;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -265,7 +459,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -278,7 +472,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 i=279;
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -286,7 +480,7 @@ title('Parasitic Model');
 grid on;
 xlim([i i+2]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([i i+2]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -298,7 +492,7 @@ suptitle(strcat("Between ",string(i)," kHz and ",string(i+2)," kHz"))
 %%
 figure();
 subplot(1,2,1)
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
 ylabel('|Mag|');
@@ -306,7 +500,7 @@ title('Parasitic Model');
 grid on;
 xlim([-300 300]);
 subplot(1,2,2)
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([-300 300]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -317,9 +511,9 @@ suptitle(strcat("Between ",string(-300)," kHz and ",string(300)," kHz"))
 
 %%
 figure();
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 hold on;
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([0 300]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
@@ -330,9 +524,9 @@ title(strcat("Between ",string(0)," kHz and ",string(300)," kHz"))
 
 %%
 figure();
-stem(w/(2000*pi),abs(response_overall),'r','LineWidth',4);
+stem(w/(2000*pi),angle(response_overall),'r','LineWidth',4);
 hold on;
-stem(w/(2000*pi),capA_mag,'b','LineWidth',4);
+stem(w/(2000*pi),capA_angle,'b','LineWidth',4);
 xlim([261 263]);
 set(gca,'fontsize', 18)
 xlabel('Frequency(kHz)');
