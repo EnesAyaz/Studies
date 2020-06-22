@@ -1,6 +1,6 @@
-load('inductance_matrix1');
+load('inductance_matrix');
 
-load('coupling_coeff1');
+load('coupling_coeff');
 
 %% 
 numberOfangles=length(inductance_matrix.angles);
