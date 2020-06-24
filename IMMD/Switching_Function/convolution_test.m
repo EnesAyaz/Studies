@@ -1,11 +1,13 @@
 fsw=4e4;
-carrier_phase=pi;
+% carrier_phase=pi+pi/4;
+carrier_phase=pi/2;
 sampleTime=1e-8;
 ModulationIndex=0.9;
 ffund=50;
-fundemental_phase=-2*pi/3;
+fundemental_phase=pi/2+2*pi/3;
 Phase_Current=10;
-load_phase=pi/2+pi/3;
+load_phase=pi/2+pi/4;
+%%
 sim('switching_simulink',0.04);
 %%
 time=Phase_current.time;
@@ -39,12 +41,12 @@ phase_current_FFT_mag(abs(phase_current_FFT_mag)<threshold)=0;
 % ylabel('|P1(f)|')
 % xlim([0 200])
 %%
-figure();
-plot(f,180*phase_current_FFT_angle/pi) 
-title('Single-Sided Amplitude Spectrum of X(t)')
-xlabel('f (Hz)')
-xlim([0 300])
-ylabel('Phase <Angle')
+% figure();
+% plot(f,180*phase_current_FFT_angle/pi) 
+% title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('f (Hz)')
+% xlim([0 300])
+% ylabel('Phase <Angle')
 %%
 L=length(leg_current);
 leg_current_FFT_mag=fft(leg_current);
@@ -124,7 +126,7 @@ carrier_FFT_mag=fft(carrier);
 carrier_FFT_mag=abs(carrier_FFT_mag/L);
 carrier_FFT_mag=carrier_FFT_mag(1:L/2+1);
 carrier_FFT_mag(2:end-1)=2*carrier_FFT_mag(2:end-1);
-f_c = (1/sampleTime)*(0:(L/2))/L;
+f_c1 = (1/sampleTime)*(0:(L/2))/L;
 
 
 carrier_FFT_angle=fft(carrier);
@@ -141,18 +143,19 @@ carrier_FFT_mag(abs(carrier_FFT_mag)<threshold)=0;
 % title('Single-Sided Amplitude Spectrum of X(t)')
 % xlabel('f (Hz)')
 % ylabel('|P1(f)|')
-% xlim([0 300])
-% xlim([39750 40250])
-% xlim([79500 80500])
-% xlim([119500 120500])
+% % xlim([0 300])
+% % xlim([39750 40250])
+% % xlim([79500 80500])
+% % xlim([119500 120500])
 
 %%
 % figure();
-% plot(f_c,180*carrier_FFT_angle/pi) 
+% plot(f_c1,180*carrier_FFT_angle/pi) 
 % title('Single-Sided Amplitude Spectrum of X(t)')
 % xlabel('f (Hz)')
 % % xlim([0 300])
 % ylabel('Phase <Angle')
+% xlim([38000 42000])
 
 %% 
 L=length(switchingFunc);
@@ -231,10 +234,10 @@ leg_current_real_angle =angle(leg_current_right_mag.*exp(1i*leg_current_right_an
 % xlim([79500 80500])
 % xlim([119500 120500])
 %%
-figure();
-stem(f,leg_current_FFT_mag,'r') 
+% figure();
+% stem(f,leg_current_FFT_mag,'r') 
+% % xlim([-100 300])
 % xlim([-100 300])
-xlim([-100 300])
 % xlim([39750 40250])
 % xlim([79500 80500])
 % xlim([119500 120500])
@@ -253,7 +256,9 @@ k=ModulationIndex; % modulation index
 f_o=ffund; % output frequcency(fundamental)
 f_c=fsw; % carrier frequency (switching)
 The_o=-pi/2+fundemental_phase; % output phase
-The_c=pi+carrier_phase-0.0552; % carrier phase
+% The_c=pi+carrier_phase-0.0552; % carrier phase
+% The_c=(-pi-carrier_phase-0.0552)+pi/2; % carrier phase
+The_c=-carrier_phase;
 m_max=8; % maximum harmonics of carrier
 n_max=20; % The number of sidebands
 
@@ -306,66 +311,280 @@ Phase_resultant(2)=I_phase;
 
 %%
 figure();
-stem(f,leg_current_FFT_mag,'r') 
+stem(f,leg_current_FFT_mag,'r','LineWidth',3) 
 hold on; 
-stem(f_new_right_2,Mag_resultant,'--b') 
+stem(f_new_right_2,Mag_resultant,'--b','LineWidth',3) 
 title('Single-Sided Amplitude Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('|P1(f)|')
-xlim([-100 300])
-% xlim([0 300])
+legend('Simulation','Analytic');
+% xlim([-100 300])
+% % xlim([0 300])
+% xlim([39750 40250])
+% xlim([79500 80500])
+xlim([0 300000])
+%%
+figure();
+
+subplot(2,2,1)
+stem(f,leg_current_FFT_mag,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,Mag_resultant,'--b','LineWidth',3) 
+title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('|P1(f)|')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
+xlim([0 300])
+
+
+subplot(2,2,2)
+stem(f,leg_current_FFT_mag,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,Mag_resultant,'--b','LineWidth',3) 
+title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('|P1(f)|')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
 xlim([39750 40250])
+
+
+subplot(2,2,3)
+stem(f,leg_current_FFT_mag,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,Mag_resultant,'--b','LineWidth',3) 
+title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('|P1(f)|')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
 xlim([79500 80500])
+
+subplot(2,2,4)
+stem(f,leg_current_FFT_mag,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,Mag_resultant,'--b','LineWidth',3) 
+title('Single-Sided Amplitude Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('|P1(f)|')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
+xlim([119500 120500])
+
+
+% 
+% xlim([0 300])
+% xlim([39750 40250])
+% xlim([79500 80500])
 % xlim([119500 120500])
+
+%%
+% threshold=max(abs(Mag_resultant)/100);
+% Phase_resultant(abs(Mag_resultant)<threshold)=0; % determines the low-amplitude threshold
+% 
+% 
+% 
+% figure();
+% stem(f,180*leg_current_FFT_angle/pi,'r') 
+% hold on; 
+% stem(f_new_right_2,180*Phase_resultant/pi,'--b') 
+% title('Single-Sided Amplitude Spectrum of X(t)')
+% xlabel('f (Hz)')
+% ylabel('Angle')
+% % % xlim([-100 300])
+% xlim([-100 300])
+% xlim([39750 40250])
+% % xlim([79500 80500])
+% % xlim([119500 120500])
 
 %%
 threshold=max(abs(Mag_resultant)/100);
 Phase_resultant(abs(Mag_resultant)<threshold)=0; % determines the low-amplitude threshold
 
-
-
 figure();
-stem(f,180*leg_current_FFT_angle/pi,'r') 
+subplot(2,2,1)
+stem(f,180*leg_current_FFT_angle/pi,'r','LineWidth',3) 
 hold on; 
-stem(f_new_right_2,180*Phase_resultant/pi,'--b') 
-title('Single-Sided Amplitude Spectrum of X(t)')
+stem(f_new_right_2,180*Phase_resultant/pi,'--b','LineWidth',3) 
+title('Single-Sided Phase Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('Angle')
-% % xlim([-100 300])
-xlim([-100 300])
-xlim([39750 40250])
-% xlim([79500 80500])
-% xlim([119500 120500])
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
+xlim([0 300])
 
-%%
-
-threshold=max(abs(Mag)/100);
-Phase(abs(Mag)<threshold)=0; % determines the low-amplitude threshold
-
-figure();
-stem(f_1,180*Phase/pi,'r') 
+subplot(2,2,2)
+stem(f,180*leg_current_FFT_angle/pi,'r','LineWidth',3) 
 hold on; 
-stem(f,180*switchingFunc_FFT_angle/pi,'--b') 
-title('Single-Sided Amplitude Spectrum of X(t)')
+stem(f_new_right_2,180*Phase_resultant/pi,'--b','LineWidth',3) 
+title('Single-Sided Phase Spectrum of X(t)')
 xlabel('f (Hz)')
 ylabel('Angle')
-xlim([-100 300])
-xlim([-100 300])
-xlim([39750 40250])
-% xlim([79500 80500])
-% xlim([119500 120500])
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
 
-%%
-% 
-figure();
-stem(f_1,180*Mag/pi,'r') 
-hold on; 
-hold on; 
-stem(f,180*switchingFunc_FFT_mag/pi,'--b') 
-% xlim([-100 300])
-xlim([-100 300])
 xlim([39750 40250])
+
+
+
+subplot(2,2,3)
+stem(f,180*leg_current_FFT_angle/pi,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,180*Phase_resultant/pi,'--b','LineWidth',3) 
+title('Single-Sided Phase Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('Angle')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
+
 xlim([79500 80500])
+
+
+
+subplot(2,2,4)
+stem(f,180*leg_current_FFT_angle/pi,'r','LineWidth',3) 
+hold on; 
+stem(f_new_right_2,180*Phase_resultant/pi,'--b','LineWidth',3) 
+title('Single-Sided Phase Spectrum of X(t)')
+xlabel('f (Hz)')
+ylabel('Angle')
+legend('Simulation','Analytic');
+set(gca,'FontSize',18);
 xlim([119500 120500])
 
+
+%%
+
+% threshold=max(abs(Mag)/100);
+% Phase(abs(Mag)<threshold)=0; % determines the low-amplitude threshold
+% 
+% figure();
+% stem(f_1,180*Phase/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_angle/pi,'--b','LineWidth',3) 
+% title('Single-Sided Phase Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('Angle(Degree)')
+% legend('Analytic','Simulation')
+% % xlim([-100 300])
+% % xlim([-100 300])
+% % xlim([39750 40250])
+% % xlim([79500 80500])
+% % xlim([119500 120500])
+% xlim([0 240000])
+% set(gca,'FontSize',18);
+% %%
+% threshold=max(abs(Mag)/100);
+% Phase(abs(Mag)<threshold)=0; % determines the low-amplitude threshold
+% 
+% figure();
+% 
+% subplot(2,2,1)
+% stem(f_1,180*Phase/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_angle/pi,'--b','LineWidth',3) 
+% title('Single-Sided Phase Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('Angle(Degree)')
+% legend('Analytic','Simulation')
+% set(gca,'FontSize',18);
+% xlim([0 300])
+% 
+% subplot(2,2,2)
+% stem(f_1,180*Phase/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_angle/pi,'--b','LineWidth',3) 
+% title('Single-Sided Phase Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('Angle(Degree)')
+% legend('Analytic','Simulation')
+% set(gca,'FontSize',18);
+% xlim([39750 40250])
+% 
+% subplot(2,2,3)
+% stem(f_1,180*Phase/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_angle/pi,'--b','LineWidth',3) 
+% title('Single-Sided Phase Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('Angle(Degree)')
+% legend('Analytic','Simulation')
+% set(gca,'FontSize',18);
+% xlim([79500 80500])
+% 
+% subplot(2,2,4)
+% stem(f_1,180*Phase/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_angle/pi,'--b','LineWidth',3) 
+% title('Single-Sided Phase Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('Angle(Degree)')
+% legend('Analytic','Simulation')
+% set(gca,'FontSize',18);
+% xlim([119500 120500])
+% 
+% 
+% %%
+% % 
+% figure();
+% stem(f_1,180*Mag/pi,'r','LineWidth',3) 
+% hold on; 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_mag/pi,'--b','LineWidth',3) 
+% title('Single-Sided Amplitude Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('|Mag|')
+% set(gca,'FontSize',18);
+% 
+% 
+% % xlim([-100 300])
+% % xlim([-100 300])
+% % xlim([39750 40250])
+% % xlim([79500 80500])
+% % xlim([119500 120500])
+% xlim([0 300000])
+% 
+% %%
+% figure();
+% 
+% subplot(2,2,1)
+% stem(f_1,Mag,'r','LineWidth',3) 
+% hold on; 
+% stem(f,switchingFunc_FFT_mag,'--b','LineWidth',3) 
+% title('Single-Sided Amplitude Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('|Mag|')
+% set(gca,'FontSize',18);
+% xlim([0 300])
+% 
+% subplot(2,2,2)
+% stem(f_1,180*Mag/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_mag/pi,'--b','LineWidth',3) 
+% title('Single-Sided Amplitude Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('|Mag|')
+% set(gca,'FontSize',18);
+% xlim([39750 40250])
+% 
+% subplot(2,2,3)
+% stem(f_1,180*Mag/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_mag/pi,'--b','LineWidth',3) 
+% title('Single-Sided Amplitude Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('|Mag|')
+% set(gca,'FontSize',18);
+% xlim([79500 80500])
+% 
+% subplot(2,2,4)
+% stem(f_1,180*Mag/pi,'r','LineWidth',3) 
+% hold on; 
+% stem(f,180*switchingFunc_FFT_mag/pi,'--b','LineWidth',3) 
+% title('Single-Sided Amplitude Spectrum of Switching Function')
+% xlabel('f (Hz)')
+% ylabel('|Mag|')
+% set(gca,'FontSize',18);
+% xlim([119500 120500])
 
