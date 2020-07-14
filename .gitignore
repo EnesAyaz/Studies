@@ -1,2 +1,18 @@
 
 WPT/Winding_Design/2p-4s/2p-4s-bended.aedtresults/
+
+IMMD/Multi-module/Parallel/slprj/
+
+IMMD/Multi-module/Series/slprj/
+
+WPT/LTspice/2p4s_makale modelleri/.log
+
+WPT/LTspice/2p4s_makale modelleri/.op.raw
+
+WPT/LTspice/2p4s_makale modelleri/.raw
+
+*.log
+
+*.raw
+
+IMMD/Switching_Function/slprj/
