@@ -1,4 +1,4 @@
-load('FA150.mat');
+load('MA150.mat');
 figure();
 
 subplot(3,1,1)
