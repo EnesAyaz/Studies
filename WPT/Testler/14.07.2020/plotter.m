@@ -1,15 +1,15 @@
 load('Full_DATA.mat');
 
 %%
-timeTx= time_MA150;
-timeRx1=time_MA150;
-timeRx2=time_MA150;
-IinVin=MA150Vin;
-Iin=MA150Iin;
-Is1Vin=MA150Vin;
-Is1=MA150Is1;
-Is2Vin=MA150Vin;
-Is2=MA150Is2;
+timeTx= time_FA150;
+timeRx1=time_FA150;
+timeRx2=time_FA150;
+IinVin=FA150Vin;
+Iin=FA150Iin;
+Is1Vin=FA150Vin;
+Is1=FA150Is1;
+Is2Vin=FA150Vin;
+Is2=FA150Is2;
 
 figure();
 subplot(3,1,1)

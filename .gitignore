@@ -16,3 +16,9 @@ WPT/LTspice/2p4s_makale modelleri/.raw
 *.raw
 
 IMMD/Switching_Function/slprj/
+
+WPT/LTspice/2p4s_makale modelleri/Series-Paralel/slprj/
+
+*.net
+
+*.plt
