@@ -2,7 +2,7 @@ clc;
 clear all;
 close all;
 %% load data 
-load('Y:\Github\DATA\Comparison\siyahlar\Data_without_parasitic50ohm');
+load('Y:\Github\DATA\Comparison\siyahlar\Data_with_parasitic50ohm');
 %% crop the data 
 ts=time(2)-time(1);
 fs=1/ts;

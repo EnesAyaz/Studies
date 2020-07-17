@@ -22,3 +22,11 @@ WPT/LTspice/2p4s_makale modelleri/Series-Paralel/slprj/
 *.net
 
 *.plt
+
+IMMD/Switching_Function/New Folder/analytically_leg_current.mat
+
+IMMD/Final-Parasitic-Switching-Function/Parasitic/CapParasitic.mat
+
+IMMD/Final-Parasitic-Switching-Function/Parasitic/capWihoutParasitic.mat
+
+IMMD/Final-Parasitic-Switching-Function/Leg_current/slprj/
