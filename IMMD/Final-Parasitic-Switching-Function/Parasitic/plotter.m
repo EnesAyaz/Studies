@@ -108,7 +108,7 @@ set(gca,'fontsize', 18)
 hold on;
 stem(w_without/(2000*pi),capA_mag_without,'b','LineWidth',2);
 hold on;
-stem(w_without/(2000*pi),abs(response_overall_par),'k','LineWidth',2);
+stem(w_without/(2000*pi),abs(response_overall_par),'g','LineWidth',2);
 xlim([i j]);
 set(gca,'fontsize', 18)
 xlabel('Parasitic Model and Without-parasitic Model');
