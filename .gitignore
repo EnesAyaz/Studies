@@ -58,3 +58,5 @@ WPT/DSP/Led_Blink_PWM/ornek_proje/F2837xD_Headers_nonBIOS_cpu1.cmd
 WPT/DSP/Led_Blink_PWM/ornek_proje/ornek_targetconf.ccxml
 
 TI/
+
+WPT/Testler/Makale_2/Experiment/
