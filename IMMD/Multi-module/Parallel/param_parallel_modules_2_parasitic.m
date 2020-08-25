@@ -25,10 +25,12 @@ C1A = 5e-6;
 C1B = 5e-6;
 C1C = 5e-6;
 %% Connector Inductance
+connector_res=1e-3;
+connector_ind=0.6e-6;
 connector_res1 = 1e-3;
 connector_ind1=0.6e-6;
 connector_res2 = 1e-3;
-connector_ind2=0.6e-6;
+connector_ind2=1.2e-6;
 %% Yes ESL and ESR
 ESLA = 19e-9;
 ESLB = 19e-9;
