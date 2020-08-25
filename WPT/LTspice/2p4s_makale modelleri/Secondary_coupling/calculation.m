@@ -36,6 +36,21 @@ Is2= 2.6536*sqrt(2);
 Vout= (Is1+Is2)*20*8/(pi^2);
 Ip_f= Vout*(Is1+Is2)/Vin;
 
+%%
+
+w=2*pi*150e3;
+Lp= 82e-6;
+Ls=66e-6;
+M1= 1.4713e-05;
+M2 = 1.3242e-05;
+Vin=127;
+Is1= 5*sqrt(2);
+Is2= 1.7*sqrt(2);
+Vout= (Is1+Is2)*20*8/(pi^2);
+Ip_f= Vout*(Is1+Is2)/Vin;
+
+
+
 
 
 %%
@@ -78,8 +93,9 @@ C2= Vout*sind(beta)-w*M2*Ip_f;
 A=[A1, B1; A2, B2];
 inv_A=inv(A);
 x=inv_A*[C1;C2];
-x(2)/Ls
-atand(x(1))
+x(2)/Ls;
+x(1)/Ls;
+atand(x(1));
 
 
 %%
