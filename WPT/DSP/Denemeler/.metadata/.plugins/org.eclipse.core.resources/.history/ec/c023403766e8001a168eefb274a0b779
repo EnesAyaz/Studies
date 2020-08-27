@@ -15,7 +15,6 @@ void EPwm1(void); // Complementary 2 tane pwm üretiliyor. Bu üretilen iki pwm he
 void EPwm2(void); // Complementary 2 tane pwm üretiliyor. Bu 2PWM frequency veya phase e göre EWPM1 e göre deðiþiyor.
 void EPwm4(void); // Complementary 2 tane pwm üretiliyor. Bu 2PWM frequency veya phase e göre EWPM1 e göre deðiþiyor.
 void EPwm5(void); // Complementary 2 tane pwm üretiliyor. Bu 2PWM frequency veya phase e göre EWPM1 e göre deðiþiyor.
-void EPwm6(void);
 void ConfigureGPIO(void);// GPIO pinlerinin ayarlarýný yapýyorum.
 //BT Function temelleri
 void ScibBackgroundTaskReceive(void);
@@ -215,7 +214,6 @@ Verror_index=0;
     EPwm2();
     EPwm4();
     EPwm5();
-    EPwm6();
     EPwm3Regs.ETSEL.bit.SOCAEN = 1;  //enable SOCA
     EPwm3Regs.TBCTL.bit.CTRMODE = 0; //unfreeze, and enter up count mode
 
@@ -269,17 +267,9 @@ EALLOW;
     GpioCtrlRegs.GPAGMUX1.bit.GPIO8=0;
     GpioCtrlRegs.GPAMUX1.bit.GPIO8=1; //Epwm5A gpio8 secildi
 
-
     GpioCtrlRegs.GPAPUD.bit.GPIO9=1; // pull-up disable
     GpioCtrlRegs.GPAGMUX1.bit.GPIO9=0;
     GpioCtrlRegs.GPAMUX1.bit.GPIO9=1; //Epwm5B gpio9 secildi
-
-    GpioCtrlRegs.GPAPUD.bit.GPIO10=1; // pull-up disable
-    GpioCtrlRegs.GPAGMUX1.bit.GPIO10=0;
-    GpioCtrlRegs.GPAMUX1.bit.GPIO10=1; //Epwm6A gpio10 secildi
-
-
-
 ////////Çalýþma sýrasýnda bakýlacak GPIOLAR
     //GpioCtrlRegs.GPAPUD.bit.OVP_LED=1;
     GpioCtrlRegs.GPAGMUX2.bit.OVP_LED=0;
@@ -491,7 +481,7 @@ void EPwm5(void)
     EPwm5Regs.CMPCTL.bit.SHDWBMODE = 1;
     EPwm5Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
     EPwm5Regs.AQCTLA.bit.CAU = AQ_SET;      //set high
-    EPwm5Regs.AQCTLA.bit.CAD = AQ_CLEAR;    // Set low
+  EPwm5Regs.AQCTLA.bit.CAD = AQ_CLEAR;    // Set low
     EPwm5Regs.AQCTLB.bit.CAU = AQ_CLEAR;    //set low
     EPwm5Regs.AQCTLB.bit.CAD = AQ_SET;      //set high
     EPwm5Regs.DBCTL.bit.OUT_MODE = 3;
@@ -508,39 +498,7 @@ void EPwm5(void)
     EPwm5Regs.TBPHS.bit.TBPHS= 0;   // 1/3 phase shift
 #endif
     EDIS;
-
 }
-
-
-void EPwm6(void)
-{
-    EALLOW;
-    EPwm6Regs.TBCTL.all = 0x00;
-    EPwm6Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN;  // Set counter to be up-down
-    EPwm6Regs.TBCTL.bit.CLKDIV = 0;
-    EPwm6Regs.TBCTL.bit.HSPCLKDIV =0;
-    EPwm6Regs.TBPRD = pwmclk_frequency/switching_frequency/2;  /*period is set to be 176khz (for up down count)*/
-
-    EPwm6Regs.CMPCTL.all = 0x00;
-    EPwm6Regs.CMPCTL.bit.SHDWAMODE = CC_SHADOW;         //only active registers are used
-    EPwm6Regs.CMPCTL.bit.LOADAMODE = CC_CTR_ZERO;
-    EPwm6Regs.CMPCTL.bit.SHDWBMODE = 1;
-    EPwm6Regs.CMPCTL.bit.LOADBMODE = CC_CTR_ZERO;
-
-    EPwm6Regs.CMPA.bit.CMPA = EPwm1Regs.TBPRD / 2; //EPWM1A için seçildi
-
-
-    EPwm6Regs.AQCTLA.all = 0x00;
-    EPwm6Regs.AQCTLA.bit.CAU = AQ_SET;      //set high
-    EPwm6Regs.AQCTLA.bit.CAD = AQ_CLEAR;    //Set low
-
-
-    EDIS;
-}
-
-
-
-
 
 void ConfigureEPWM(void) //ADC de kullanýyorum
 {
@@ -667,10 +625,7 @@ EPwm2Regs.TBPHS.bit.TBPHS= EPwm2Regs.TBPRD*(cnt/120);
                   {AdcaResults_freq=-20000;}
 
 
-         EPwm6Regs.CMPA.bit.CMPA = EPwm1Regs.TBPRD *(0.1-AdcaResults_freq*0.00004); //EPWM1A için seçildi
-
-
-        EPwm1Regs.TBPRD=0.5*((float)pwmclk_frequency)/((float)switching_frequency+AdcaResults_freq);
+    EPwm1Regs.TBPRD=0.5*((float)pwmclk_frequency)/((float)switching_frequency+AdcaResults_freq);
         EPwm1Regs.CMPA.bit.CMPA=EPwm1Regs.TBPRD/2;
         EPwm1Regs.CMPB.bit.CMPB=EPwm1Regs.TBPRD/2;
 

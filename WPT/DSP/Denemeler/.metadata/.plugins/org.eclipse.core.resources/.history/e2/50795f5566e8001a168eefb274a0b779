@@ -215,7 +215,6 @@ Verror_index=0;
     EPwm2();
     EPwm4();
     EPwm5();
-    EPwm6();
     EPwm3Regs.ETSEL.bit.SOCAEN = 1;  //enable SOCA
     EPwm3Regs.TBCTL.bit.CTRMODE = 0; //unfreeze, and enter up count mode
 
@@ -519,7 +518,7 @@ void EPwm6(void)
     EPwm6Regs.TBCTL.bit.CTRMODE = TB_COUNT_UPDOWN;  // Set counter to be up-down
     EPwm6Regs.TBCTL.bit.CLKDIV = 0;
     EPwm6Regs.TBCTL.bit.HSPCLKDIV =0;
-    EPwm6Regs.TBPRD = pwmclk_frequency/switching_frequency/2;  /*period is set to be 176khz (for up down count)*/
+    EPwm6Regs.TBPRD = pwmclk_frequency/switching_frequency/2;  /*period is set to be 10khz (for up down count)*/
 
     EPwm6Regs.CMPCTL.all = 0x00;
     EPwm6Regs.CMPCTL.bit.SHDWAMODE = CC_SHADOW;         //only active registers are used
@@ -665,9 +664,6 @@ EPwm2Regs.TBPHS.bit.TBPHS= EPwm2Regs.TBPRD*(cnt/120);
             {AdcaResults_freq=0;}
          if(AdcaResults_freq<=(-20000))
                   {AdcaResults_freq=-20000;}
-
-
-         EPwm6Regs.CMPA.bit.CMPA = EPwm1Regs.TBPRD *(0.1-AdcaResults_freq*0.00004); //EPWM1A için seçildi
 
 
         EPwm1Regs.TBPRD=0.5*((float)pwmclk_frequency)/((float)switching_frequency+AdcaResults_freq);

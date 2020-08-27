@@ -667,9 +667,6 @@ EPwm2Regs.TBPHS.bit.TBPHS= EPwm2Regs.TBPRD*(cnt/120);
                   {AdcaResults_freq=-20000;}
 
 
-         EPwm6Regs.CMPA.bit.CMPA = EPwm1Regs.TBPRD *(0.1-AdcaResults_freq*0.00004); //EPWM1A için seçildi
-
-
         EPwm1Regs.TBPRD=0.5*((float)pwmclk_frequency)/((float)switching_frequency+AdcaResults_freq);
         EPwm1Regs.CMPA.bit.CMPA=EPwm1Regs.TBPRD/2;
         EPwm1Regs.CMPB.bit.CMPB=EPwm1Regs.TBPRD/2;
