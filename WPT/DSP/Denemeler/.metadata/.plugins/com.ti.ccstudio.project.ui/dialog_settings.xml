@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.ti.ccstudio.project.ui.internal.wizards.project.ProjectSettingsPage">
+		<item key="CCS.CONNECTION" value=""/>
+		<item key="CCS.TARGET" value="devices/f28379d.xml"/>
+		<section name="1">
+			<item key="CCS.TOOL_CHAIN" value=""/>
+			<item key="CCS.RUNTIME_SUPPORT_LIB" value="null"/>
+			<item key="CCS.TOOL_VERSION" value=""/>
+			<item key="CCS.LINKER_COMMAND_FILE" value="null"/>
+			<item key="CCS.DEVICE_ENDIANNESS" value=""/>
+			<item key="CCS.OUTPUT_FORMAT" value=""/>
+			<item key="CCS.OUTPUT_TYPE" value="executable"/>
+		</section>
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.preferences.DynamicPreferencePageManager">
+	</section>
+</section>

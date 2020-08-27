@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ornek_proje/epwm_deadband.c&apos; to &apos;epwm_deadband_activeLow.c&apos;" description="Rename resource &apos;epwm_deadband.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="epwm_deadband.c" name="epwm_deadband_activeLow.c" stamp="1596630306631" updateReferences="true"/>
+</session>

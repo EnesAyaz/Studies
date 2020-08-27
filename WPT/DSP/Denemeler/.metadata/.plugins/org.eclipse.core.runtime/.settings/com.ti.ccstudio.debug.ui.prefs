@@ -1,0 +1,8 @@
+MODULES_CODE_OFFSET=
+MODULES_DATA_OFFSET=
+MODULES_MRU_PATH=Y\:\\Github\\Studies\\WPT\\DSP\\Led_Blink_PWM\\ornek_proje\\Debug\\ornek_proje.out\#THREAD_IDS\#Texas Instruments XDS100v2 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.1=C\:\\Users\\enes_\\OneDrive\\Desktop\\ornek_ws\\ornek_proje\\Debug\\ornek_proje.out\#THREAD_IDS\#Texas Instruments XDS100v2 USB Debug Probe_0/C28xx_CPU1
+MODULES_MRU_PATH.2=\#SYM_\#(,)path\=C\:\\Users\\enes_\\OneDrive\\Desktop\\ornek_ws\\ornek_proje\\Debug\\ornek_proje.out
+eclipse.preferences.version=1
+symbolAutoCompleteHistory<seperator>org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser<seperator>IO<seperator>Texas\ Instruments\ XDS100v2\ USB\ Debug\ Probe_0\\C28xx_CPU1=GpioCtrlRegs.GPAPUD.bit.GPIO1
+useAnnotationsPrefPage=true
