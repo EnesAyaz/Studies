@@ -367,7 +367,7 @@ grid on;
 
 %%
 figure();
-subplot(2,1,1);
+
 plot(P2S150kHzDC(:,1)/1000,(P2S150kHzDC(:,2)),'Color','r','LineWidth',2)
 hold on;
 plot(P2S150kHzxC(:,1)/1000,(P2S150kHzxC(:,2)),'Color','g','LineWidth',2)
@@ -376,19 +376,20 @@ plot(P2S135kHzDC(:,1)/1000,(P2S135kHzDC(:,2)),'Color','b','LineWidth',2)
 hold on;
 plot(P2S135kHzxC(:,1)/1000,(P2S135kHzxC(:,2)),'Color','k','LineWidth',2)
 
-title({'Frequency Response','Full-Aligned Condition'} ,'FontWeight','bold' ...
-    ,'Interpreter','latex','FontSize',12)
+% title({'Frequency Response','Full-Aligned Condition'} ,'FontWeight','bold' ...
+%     ,'Interpreter','latex','FontSize',12)
 lgnd=legend({'150kHz Decoupled','150kHz Cross-Coupled','135kHz Decoupled', ...
     '135kHz Cross-Coupled'},'FontSize',10,'Box','off');
 set(lgnd,'color','none');
 ylabel('Gain (dB)' ,'FontWeight','bold' ...
     ,'Interpreter','latex','FontSize',12)
-xticklabels([])
+xlabel('Frequency(kHz)','FontWeight','bold' ...
+    ,'Interpreter','latex','FontSize',12)
 xlim([130 170])
-
+ylim([-6 3])
 grid on;
 
-subplot(2,1,2);
+figure();
 plot(P2S150kHzDC(:,1)/1000,(P2S150kHzDC(:,2)),'Color','r','LineWidth',2)
 hold on;
 plot(P2S150kHzxC(:,1)/1000,(P2S150kHzxC(:,2)),'Color','g','LineWidth',2)
@@ -397,7 +398,7 @@ plot(P2S165kHzDC(:,1)/1000,(P2S165kHzDC(:,2)),'Color','b','LineWidth',2)
 hold on;
 plot(P2S165kHzxC(:,1)/1000,(P2S165kHzxC(:,2)),'Color','k','LineWidth',2)
 
-lgnd=legend({'150kHz Decoupled','150kHz Cross-Coupled','165 khZ Decoupled', ...
+lgnd=legend({'150kHz Decoupled','150kHz Cross-Coupled','165kHz Decoupled', ...
     '165kHz Cross-Coupled'},'FontSize',10,'Box','off');
 set(lgnd,'color','none');
 ylabel('Gain (dB)' ,'FontWeight','bold' ...
@@ -406,6 +407,7 @@ xlabel('Frequency(kHz)','FontWeight','bold' ...
     ,'Interpreter','latex','FontSize',12)
 
 xlim([130 170])
+ylim([-6 5])
 grid on;
 
 
