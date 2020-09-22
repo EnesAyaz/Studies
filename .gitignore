@@ -108,3 +108,13 @@ WPT/DSP/SPI_denemeleri/ornek_proje/.project
 WPT/Winding_Design/Eddy_current_solution/eddy_current.aedtresults/
 
 WPT/Winding_Design/Three-Coil/2p-4s-bended.aedtresults/
+
+WPT/PFC/Matlab/ACtoDC_WPT_Voltage_grt_rtw/
+
+*.autosave
+
+WPT/PFC/Matlab/slprj/
+
+WPT/PFC/Matlab/ACtoDC_WPT.slxc
+
+WPT/PFC/Matlab/ACtoDC_WPT_Voltage.exe
