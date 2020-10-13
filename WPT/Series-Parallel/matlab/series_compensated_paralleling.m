@@ -6,7 +6,7 @@ Cs= 1/(wo^2*Ls);
 RL= 16;
 M=17e-6;
 %% 
-a1=0.05;
+a1=0.2;
 M1=M*(1+a1);
 M2=M*(1-a1);
 RL1=[];
@@ -43,8 +43,8 @@ figure();
 plot(wRL/(2*pi),abs(RL1),'LineWidth',3);
 hold on; 
 RL2= 1./(1/RL-1./abs(RL1));
-plot(wRL/(2*pi),abs(RL2),'--','LineWidth',3);
-ylim([16 40])
+plot(wRL/(2*pi),RL2,'--','LineWidth',3);
+ylim([16 80])
     
     %%
 
