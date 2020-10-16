@@ -122,3 +122,5 @@ WPT/PFC/Matlab/ACtoDC_WPT_Voltage.exe
 WPT/Winding_Design/PCB/2p-4s-bended.aedtresults/
 
 WPT/PFC/Matlab/Design_Code/slprj/
+
+WPT/Motor-Power-Transfer/RL-inverter/slprj/

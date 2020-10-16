@@ -2,7 +2,7 @@
 fsw = 150e3;
 ffund = 50;
 frms = 50;
-ModulationIndex1 = 0.9;
+ModulationIndex1 = 0.8;
 Vdc = 270;
 Module1Phase=0;
 
@@ -42,15 +42,17 @@ Tfinal = 60e-3;
 SampleTime = 1e-3*(1/fsw);
 
 %% 
-fr=fsw;
+ModulationIndex2=1-ModulationIndex1;
+k2=5;
+fr=fsw/k2;
 wr=2*pi*fr;
-Lp=82e-6;
-Ls=66e-6;
+Lp=82e-6*k2;
+Ls=66e-6*k2;
 k=0.2;
 M=k*sqrt(Lp*Ls);
 Cp=1/(wr^2*Lp);
 Cs=1/(wr^2*Lp);
-
+RL=50; 
 
 
 
