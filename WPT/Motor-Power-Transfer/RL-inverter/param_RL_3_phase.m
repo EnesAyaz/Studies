@@ -43,7 +43,7 @@ SampleTime = 1e-3*(1/fsw);
 
 %% 
 ModulationIndex2=1-ModulationIndex1;
-k2=5;
+k2=1;
 fr=fsw/k2;
 wr=2*pi*fr;
 Lp=82e-6*k2;
