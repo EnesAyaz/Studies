@@ -20,7 +20,7 @@ RL= 16;
 M=12e-6; %% bu yüzden mutual? indirdim primer ak?m gereksinimi artt? 
 
 
-k=0;
+k=1;
 % M1=M*(1+a1);
 % M2=M*(1-a1);
 RL1=[];
