@@ -9,21 +9,23 @@ b=2*(1+k)^2*RL;
 c=-4*k*Zs^2-(1+k)^2*RL^2;
 
 ans=solve(a*RL1^2+ b*RL1+ c,RL1)
-
+kx=[];
 %%
 fo=150e3;
 wo=2*pi*150e3;
-Ls=17e-6; %% adityadan farkl? olarak asl?nda Quality 4 den 1e indirdim
+Ls=22e-6; %% adityadan farkl? olarak asl?nda Quality 4 den 1e indirdim
 Cs= 1/(wo^2*Ls);
-RL= 32;
-M=12e-6; %% bu yüzden mutual? indirdim primer ak?m gereksinimi artt? 
+RL= 64;
+M=9.7e-6; %% bu yüzden mutual? indirdim primer ak?m gereksinimi artt? 
 
-k=1;
+
+k=0.0001;
+% kx=[kx ((2*k)/(1+k))]
 % M1=M*(1+a1);
 % M2=M*(1-a1);
 RL1=[];
  wRL=[];
-for  f=1e5:1e3:3e5
+for  f=1e5:1e3:2e5
     w=2*pi*f;
    wRL=[wRL w];
      Zs=abs((1i*w*Ls)/(1-w^2*Cs*Ls));
@@ -34,11 +36,15 @@ for  f=1e5:1e3:3e5
    
 end
 
-RL1(RL1>=32)=32;
 
-plot(wRL/(2*pi),RL1,'LineWidth',3);
+RL1(RL1>=64)=64;
+plot(wRL/(2*pi),RL1/32,'LineWidth',3);
 hold on; 
-% plot(wRL/(2*pi),RL-RL1,'LineWidth',3);
+plot(wRL/(2*pi),(RL-RL1)/32,'--','LineWidth',3);
+hold on;
+
+%%
+line([1e5 2e5], [32 32],'LineWidth',3)
 %%
 legend('k=0','k=0.05','k=0.1','k=0.2','k=0.4','k=0.6','k=0.8','k=1')
 

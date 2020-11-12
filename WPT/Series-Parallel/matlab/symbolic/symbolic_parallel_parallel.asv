@@ -19,7 +19,7 @@ Cs= 1/(wo^2*Ls);
 RL= 16;
 M=9.7e-6; %% bu yüzden mutual? indirdim primer ak?m gereksinimi artt? 
 
-k=0;
+k=0.4;
 % 0.95 0.90 0.80 0.4 0
 % kx=[kx ((1-k)/(2))]
 % M1=M*(1+a1);
