@@ -81,7 +81,7 @@ f= f_sample*(0:(L/2))/L;
 PWM_mag(PWM_mag<0.1)=nan;
 figure();
 stem(f/1000,PWM_mag,'LineWidth',2);
-xlim([0 1.2*f_switch/1000])
+xlim([0 3*f_switch/1000])
 % set(gca,'XTick',0:f_fund:2*f_switch)
 % set(gca,'XTickLabel',0:1:1600)
 xlabel('Frequency(kHz)');
@@ -119,7 +119,7 @@ m_xy=[m_xy m_resonant];
 
 
 %%
-figure();
-plot(m_xy,x,'LineWidth',3);
-hold on;
-plot(m_xy,x1,'LineWidth',3);
+% figure();
+% plot(m_xy,x,'LineWidth',3);
+% hold on;
+% plot(m_xy,x1,'LineWidth',3);
