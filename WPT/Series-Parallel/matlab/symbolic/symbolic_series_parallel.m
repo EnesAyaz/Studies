@@ -20,7 +20,7 @@ RL= 16;
 M=17e-6; 
 
 
-k=0;
+k=0.20
 % 0.95 0.90 0.80 0.4 0
 % kx=[kx ((1-k)/(2))]
 % M1=M*(1+a1);
@@ -34,11 +34,11 @@ for  f=1e5:1e3:2e5
      Rx=  (RL*Zs^2 + RL*Zs*((- RL*k^2 + Zs*k + RL)*(RL*k^2 + Zs*k - RL))^(1/2))/(- RL^2*k^2 + RL^2 + Zs^2);
 %  Rx= (RL*Zs^2 - RL*Zs*((- RL*k^2 + Zs*k + RL)*(RL*k^2 + Zs*k - RL))^(1/2))/(- RL^2*k^2 + RL^2 + Zs^2);
  
- 
     RL1=[RL1 Rx];
 
    
 end
+
 
 
 RL1(RL1<16)=16;
@@ -76,4 +76,4 @@ set(axes1,'XTick',...
 % Create legend
 set(legend,'FontSize',15,'FontName','Times New Roman','Location','best');
 
-
+%%

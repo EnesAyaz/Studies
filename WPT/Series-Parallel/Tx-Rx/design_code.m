@@ -38,9 +38,9 @@ M=10^6*M;
 
 Vin=90; %V  (rms)
 P_o=500; %W   
-f=150e3; %Hz
+f=160e3; %Hz
 w=2*pi*f; %rad/sec
-k=0.23; % chosen coupling factor
+k=0.20; % chosen coupling factor
 
 %% paralllel compensated
 R_L=(20*8/pi^2)*2; %% single module R_L

@@ -8,7 +8,7 @@ clc;
 Vin=12; %V  (rms) % smaller coefficient
 P_o=48; %W   
 Qs=2.5; % unitless
-f=80e3; %Hz
+f=40e3; %Hz
 w=2*pi*f; %rad/sec
 k=0.20; % chosen coupling factor
 Vout=24; %V (rms)
