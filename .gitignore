@@ -31,6 +31,9 @@ WPT/Series-Parallel/Tx-Rx/.raw
 WPT/Series-Parallel/Tx-Rx/.opt.raw
 WPT/Series-Parallel/Tx-Rx/.log
 
+WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/.raw
+WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/.opt.raw
+WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/.log
 
 
 IMMD/Final-Parasitic-Switching-Function/Parasitic/capWihoutParasitic.mat
