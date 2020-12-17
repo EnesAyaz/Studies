@@ -27,6 +27,12 @@ IMMD/Switching_Function/New Folder/analytically_leg_current.mat
 
 IMMD/Final-Parasitic-Switching-Function/Parasitic/CapParasitic.mat
 
+WPT/Series-Parallel/Tx-Rx/.raw
+WPT/Series-Parallel/Tx-Rx/.opt.raw
+WPT/Series-Parallel/Tx-Rx/.log
+
+
+
 IMMD/Final-Parasitic-Switching-Function/Parasitic/capWihoutParasitic.mat
 
 IMMD/Final-Parasitic-Switching-Function/Leg_current/slprj/
