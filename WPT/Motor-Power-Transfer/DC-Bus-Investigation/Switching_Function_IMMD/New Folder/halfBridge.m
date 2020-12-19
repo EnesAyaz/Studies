@@ -1,8 +1,10 @@
-function [f, Mag, Phase] = SwitchingFunction(k,f_o,f_c,The_o,The_c,m_max,n_max)
+function [f, Mag, Phase] = halfBridge(k,f_o,f_c,The_o,The_c,m_max,n_max)
+
 f=[];
 Mag=[];
 Phase =[];
-The_o=-The_o;
+
+
 for m=1:m_max
     for n= -n_max:n_max  
         f =[f m*f_c+n*f_o ];

@@ -1,4 +1,5 @@
 function [f, Mag, Phase] = SwitchingFunction(k,f_o,f_c,The_o,The_c,m_max,n_max)
+
 f=[];
 Mag=[];
 Phase =[];

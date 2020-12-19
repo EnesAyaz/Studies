@@ -1,11 +1,10 @@
 clear all;
 
-
-Pin=8000;
-Pout=7200;
+Pin=500;
+Pout=500;
 R_L=40.5;
-Vout=540;
-Vin=540;
+Vout=100;
+Vin=100;
 f_0=20000;
 w_0=2*pi*f_0;
 Iout=Vout/R_L;
@@ -13,7 +12,7 @@ Iin=Pin/Vin;
 kpr=0.1;
 krs=0.35;
 Qs=1;
-
+%%
 k_irip=0.4;
 Ir=Iin*k_irip;
 Mrs=Vout/(w_0*Ir);
@@ -27,7 +26,7 @@ kc=(1/Qt)*sqrt(1-1/(4*Qt^2));
 Cp=1/(w_0^2*Lp);
 Cr=1/(w_0^2*Lr);
 Cs=1/(w_0^2*Ls);
-
+%%
 Lr=Lr*1e3;
 Ls=Ls*1e3;
 Lp=Lp*1e3;
