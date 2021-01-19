@@ -1,4 +1,3 @@
-load('normal_airgap.mat')
 load('bended_airgap.mat')
 %%
 
@@ -25,22 +24,31 @@ seconder3=[seconder2(10:end),seconder2(1:9)];
 seconder4=[seconder3(10:end),seconder3(1:9)];
 
 % figure()
+figure()
+p1=plot(bended_angle(1:end-1),bended_p1_total(1:end-1),'-pr','LineWidth',1.5);
+p1.Color(4) = 0.5;
 hold on;
-plot(bended_angle(1:end-1),seconder1,'-pb','LineWidth',2);
+p2=plot(bended_angle(1:end-1),bended_p2_total(1:end-1),'-pg','LineWidth',1.5);
+p2.Color(4) = 0.5;
 hold on;
-plot(bended_angle(1:end-1),seconder2,'-or','LineWidth',2);
+plot(bended_angle(1:end-1),seconder1,'-ok','LineWidth',2);
+hold on;
+plot(bended_angle(1:end-1),seconder2,'-ob','LineWidth',2);
 hold on;
 % plot(bended_angle(1:end-1),seconder3,'-c*','LineWidth',1);
 % hold on;
 % plot(bended_angle(1:end-1),seconder4,'-gs','LineWidth',1);
 xlim([0 360])
 
-ylabel({''},'FontName','Times New Roman');
+ylabel({'Coupling Coefficient'},'FontName','Times New Roman');
 xlabel({'Mechanical Angle(^\circ)'},'FontName','Times New Roman');
-set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
-    [0 45 90 135 180 225 270 315 360]);
-ylim([0 0.25])
+set(gca,'FontName','Times New Roman','FontSize',15,'XTick',...
+    [0 45 90 135 180 225 270 315 350]);
 % grid on;
+legend({'Tx1-Rx1','Tx2-Rx1','Rx1-Resultant','Rx2-Resultant'},'FontName','Times New Roman','FontSize',12);
+% ylim([0 1])
+set(legend,'Location','best');
+
 %% Delta M 
 
 figure()
@@ -63,44 +71,27 @@ bended_p1_total1=bended_p1_total(1:end-1)+[bended_p1_total(10:end-1),bended_p1_t
     [bended_p1_total(28:end-1),bended_p1_total(1:27)];
 %% primer grafiği böyle olucak
 figure()
-plot(bended_angle(1:end-1),bended_p1_total(1:end-1),'LineWidth',3);
+p1=plot(bended_angle(1:end-1),bended_p1_total(1:end-1),'-pm','LineWidth',1.5);
+p1.Color(4) = 0.5;
 hold on;
-plot(bended_angle(1:end-1),[bended_p1_total(9:end-1),bended_p1_total(1:8)],'LineWidth',3);
+p2=plot(bended_angle(1:end-1),[bended_p1_total(9:end-1),bended_p1_total(1:8)],'-pr','LineWidth',1.5);
 hold on;
-plot(bended_angle(1:end-1),[bended_p1_total(18:end-1),bended_p1_total(1:17)],'LineWidth',3);
+p2.Color(4) = 0.5;
+p3=plot(bended_angle(1:end-1),[bended_p1_total(18:end-1),bended_p1_total(1:17)],'-pb','LineWidth',1.5);
 hold on;
-plot(bended_angle(1:end-1),  [bended_p1_total(27:end-1),bended_p1_total(1:26)],'LineWidth',3);
+p3.Color(4) = 0.5;
+p4=plot(bended_angle(1:end-1),  [bended_p1_total(27:end-1),bended_p1_total(1:26)],'-pg','LineWidth',1.5);
 hold on;
-plot(bended_angle(1:end-1),bended_p1_total1/2,'-pb','LineWidth',3);
+p4.Color(4) = 0.5;
+plot(bended_angle(1:end-1),bended_p1_total1,'k','LineWidth',2);
 hold on;
-% plot(bended_angle(1:end-1),[bended_p1_total1(19:end),bended_p1_total1(1:18)]/2,'-or','LineWidth',2);
-% xlim([0 360])
-
-ylabel({'Normalized Airgap Flux Density'},'FontName','Times New Roman');
-xlabel({'Mechanical Angle(^\circ)'},'FontName','Times New Roman');
-set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
-    [0 45 90 135 180 225 270 315 360]);
-% ylim([0 1])
-
-
-
-%%
-
-normal_p1_total=normal_p1_total/max(normal_p1_total);
-normal_p2_total=normal_p2_total/max(normal_p2_total);
-figure()
-plot(normal_angle,normal_p1_total,'-or','LineWidth',3);
-hold on;
-plot(normal_angle,normal_p2_total,'-pb','LineWidth',3);
-hold on ;
-plot(normal_angle,normal_p2_total+normal_p1_total,'k','LineWidth',4);
-hold on ;
+plot(bended_angle(1:end-1),[bended_p1_total1(19:end),bended_p1_total1(1:18)],'ko','LineWidth',1);
 xlim([0 360])
 
-
-ylabel({'Normalized Airgap Flux Density'},'FontName','Times New Roman');
+ylabel({'Coupling Coefficient'},'FontName','Times New Roman');
 xlabel({'Mechanical Angle(^\circ)'},'FontName','Times New Roman');
-set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
-    [0 45 90 135 180 225 270 315 360]);
-legend('Tx1','Tx2','Resultant');
+set(gca,'FontName','Times New Roman','FontSize',15,'XTick',...
+    [0 45 90 135 180 225 270 315 350]);
+legend({'Tx1-Rx1','Tx1-Rx2','Tx1-Rx3','Tx1-Rx4','Tx1-Resultant','Tx2-Resultant'},'FontName','Times New Roman','FontSize',12);
+% ylim([0 1])
 set(legend,'Location','best');

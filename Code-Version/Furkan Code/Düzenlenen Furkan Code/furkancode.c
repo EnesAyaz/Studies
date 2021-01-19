@@ -62,16 +62,24 @@ extern void GPIO_SetupXINT4Gpio(Uint16);
 
 // Buck Conversion Parameters
 
+// Burayı değiştiricem  switching_frequency, input_voltage, output_voltage and duty cycle ayarlanacak
+
 #define input_voltage 	180
 #define output_voltage 	144
-volatile float duty_op = 0.303;
-#define switching_frequency 450000           // Hz
+//volatile float duty_op = 0.303;
+volatile float duty_op = 0.5;
+//#define switching_frequency 450000           // Hz
+#define switching_frequency 40000
 #define dead_time           100             // ns
 
-#define DPT 1; // BUCK or DPT or SCTEST
+// #define DPT 1; // BUCK or DPT or SCTEST
+#define BUCK 1; // BUCK or DPT or SCTEST
+//BUCK SEÇİCEM
 #define PB_DEACTIVE 1; // PB_ACTIVE or PB_DEACTIVE
+// Bu ne oluyor , nr yapmam lazım
 #define ADC_ACT 1;
 #define BOOST 1;
+// Boost modunu kapatmam lazım mı
 #ifdef BUCK
 #define SOFTSTART 1
 #endif
@@ -143,7 +151,7 @@ int main(void)
     PieVectTable.TIMER1_INT = &cpu_timer1_isr;
     PieVectTable.TIMER2_INT = &cpu_timer2_isr;
     PieVectTable.EPWM3_TZ_INT = &epwm3_tzint_isr;
-#ifdef ADC_ACT
+#ifdef ADC_ACT  // Noluyor bu tam olarak
     PieVectTable.ADCA2_INT = &adca2_isr;
     PieVectTable.ADCB2_INT = &adcb2_isr;
 #endif
@@ -154,7 +162,7 @@ int main(void)
     PieCtrlRegs.PIEIER1.bit.INTx7 = 1;
     PieCtrlRegs.PIEIER12.bit.INTx1 = 1; //for XINT3
     PieCtrlRegs.PIEIER12.bit.INTx2 = 1; //for XINT4
-#ifdef ADC_ACT
+#ifdef ADC_ACT // Noluyor bu tam olarak
     PieCtrlRegs.PIEIER10.bit.INTx2 = 1; // for ADCA2
     PieCtrlRegs.PIEIER10.bit.INTx6 = 1; // for ADCB2
 #endif
@@ -672,7 +680,8 @@ void InitEpwm2(void)
 
     EPwm2Regs.TBCTL.bit.PHSEN = 1;
     EPwm2Regs.TBCTL.bit.SYNCOSEL = 0; //SYNCIN
-    EPwm2Regs.TBCTL.bit.PHSDIR = 0;
+  //  EPwm2Regs.TBCTL.bit.PHSDIR = 0; bura da 180 derece ya da CAU, CAD değiştirilebilir
+    EPwm2Regs.TBCTL.bit.PHSDIR = EPwm2Regs.TBPRD ;
     EPwm2Regs.TBPHS.bit.TBPHS = (pwmclk_frequency) / (switching_frequency) /2;          // Phase is 180
     EPwm2Regs.TBCTL.bit.SWFSYNC = 1;
 
