@@ -1,8 +1,8 @@
-% before code start, unzip to raw_data
+% before code start, unzip to raw_data, drive linkinde bulabilirsin
 %% Load data
 clear all;
 clc;
-load('raw_data.mat');
+load('D:\GoogleDrive\WPT-Testler\27.10.2020\raw_data.mat');
 %% envelope creation 
 len1=length(is1); % is1 and is4 same length and time vector
 x1=1:len1/1000:len1; %  it determines the how much data points are used for envelope
@@ -81,7 +81,7 @@ xlim([time1(starting1) time1(ending1)])
 set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
     linspace(time1(starting1),time1(ending1),9),'XTickLabel',...
     {'0','45','90','135','180','225','270','315','360'},'YTick',...
-    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-2','-1','0','1','2'});
+    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-4','-2','0','2','4'});
 
 ylabel('Current (A)','FontSize',12);
 xlabel('Mechanical Angle (\circ)','FontSize',12);
@@ -101,7 +101,7 @@ xlim([time4(starting1) time4(ending1)])
 set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
     linspace(time4(starting1),time4(ending1),9),'XTickLabel',...
     {'0','45','90','135','180','225','270','315','360'},'YTick',...
-    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-2','-1','0','1','2'});
+    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-4','-2','0','2','4'});
 
 ylabel('Current (A)','FontSize',12);
 xlabel('Mechanical Angle (\circ)','FontSize',12);
@@ -119,7 +119,7 @@ xlim([time2(starting2) time2(ending2)])
 set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
     linspace(time2(starting2),time2(ending2),9),'XTickLabel',...
     {'0','45','90','135','180','225','270','315','360'},'YTick',...
-    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-2','-1','0','1','2'});
+    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-4','-2','0','2','4'});
 
 ylabel('Current (A)','FontSize',12);
 xlabel('Mechanical Angle (\circ)','FontSize',12);
@@ -136,7 +136,7 @@ xlim([time3(starting2) time3(ending2)])
 set(gca,'FontName','Times New Roman','FontSize',12,'XTick',...
     linspace(time3(starting2),time3(ending2),9),'XTickLabel',...
     {'0','45','90','135','180','225','270','315','360'},'YTick',...
-    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-2','-1','0','1','2'});
+    [-0.4 -0.2 0 0.2 0.4],'YTickLabel',{'-4','-2','0','2','4'});
 
 ylabel('Current (A)','FontSize',12);
 xlabel('Mechanical Angle (\circ)','FontSize',12);
