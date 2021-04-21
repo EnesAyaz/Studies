@@ -150,7 +150,6 @@ WPT/Motor-Power-Transfer/Winding_Design/z_symetric.aedtresults/
 
 WPT/Winding_Design/Constan_mutual_deneme.aedtresults/
 
-*.mat
 
 WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/results/series compensation/series-compensation-series_Tx-Rx_aligned
 
@@ -158,7 +157,6 @@ WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/results/series
 
 WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/results/series compensation/spice_result.asv
 
-*.txt
 
 WPT/Series-Parallel/Tx-Rx/journal_gain_plot/Third_Section/ltspice/series-compensation-series_Tx-Rx_aligned
 

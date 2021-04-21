@@ -58,8 +58,10 @@ end
 % end
 %%
 [x,y] = meshgrid(wRL/2000/pi,kx);
+subplot(1,2,1);
 mesh(y,x,RL1k)
-
-
-
+view([0 90])
+subplot(1,2,2);
+mesh(y,x,64-RL1k)
+view([0 90])
 

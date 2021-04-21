@@ -43,11 +43,11 @@ RL1k(RL1k<16)=16;
 
 
 
-for i=1:length(kx)
-plot3(kx(i)*ones(size(wRL)),wRL/2000/pi,RL1k(i,:))
-hold on;
-
-end
+% for i=1:length(kx)
+% plot3(kx(i)*ones(size(wRL)),wRL/2000/pi,RL1k(i,:))
+% hold on;
+% 
+% end
 %%
 % RL1k(RL1k==64)=NaN;
 % i=1;
@@ -58,6 +58,23 @@ end
 % end
 
 %%
-
+RL2k=1./((1/16)-(1./RL1k));
 [x,y] = meshgrid(wRL/2000/pi,kx);
-mesh(y,x,RL1k)
+% mesh(y,x,RL1k)
+figure();
+set(gcf,'position', [100 100 600 300])
+subplot(1,2,1)
+contour(x,y,100*100./RL1k,'LineWidth',1,'ShowText','on')
+ylim([0 1.1])
+subplot(1,2,2)
+contour(x,y,100*100./RL2k,'LineWidth',1,'ShowText','on')
+ylim([0 1.1])
+%%
+
+figure();
+set(gcf,'position', [100 100 600 300])
+subplot(1,2,1)
+contourf(x,y,16./RL1k,'LineWidth',3)
+
+subplot(1,2,2)
+contourf(x,y,16./RL2k,'LineWidth',3)

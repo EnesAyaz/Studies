@@ -20,7 +20,7 @@ M=17e-6;
 
 
 RL1k=[];
-for k=0.00001:0.01:1
+for k=0:0.01:1
  kx=[kx k];
  RL1=[];
  wRL=[];
@@ -39,11 +39,10 @@ end
 RL1k(RL1k>=64)=64;
 %%
 
-for i=1:length(kx)
-plot3(kx(i)*ones(size(wRL)),wRL/2000/pi,RL1k(i,:))
-hold on;
-
-end
+% for i=1:length(kx)
+% plot3(kx(i)*ones(size(wRL)),wRL/2000/pi,RL1k(i,:))
+% hold on;
+% end
 %%
 % RL1k(RL1k==64)=NaN;
 % i=1;
@@ -56,7 +55,17 @@ end
 %%
 
 [x,y] = meshgrid(wRL/2000/pi,kx);
-mesh(y,x,RL1k)
+figure();
+set(gcf,'position', [100 100 600 300])
+subplot(1,2,1)
+contourf(x,y,RL1k/64,'LineWidth',3)
+
+subplot(1,2,2)
+contourf(x,y,(64-RL1k)/64,'LineWidth',3)
+
+%%
+% createfigure(x, y, RL1k/64, (64-RL1k)/64)
+
 %%
 % % Create zlabel
 % zlabel({'Normalized Power (P/P_{rated})'});
