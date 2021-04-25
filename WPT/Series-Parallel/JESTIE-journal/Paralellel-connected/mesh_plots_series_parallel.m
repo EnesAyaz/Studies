@@ -102,3 +102,16 @@ colorbar(axes1,'Ticks',[50 55 60 65 70 75 80 85 90 95 100],...
     'FontSize',12,...
     'FontName','Times New Roman');
 % colorbar.Title.String='Percentage(%)'
+%%
+
+wo=1;
+DeltaM=0.5;
+k=(1-DeltaM);
+Qrx=3.2;
+w=115/150;
+a=(Qrx*(w^2-wo^2))/(w*wo);
+b=(1-k^2);
+c=1/((b/a^2)+1);
+d=k^2- (((1-k^2)^2)/a^2);
+Rx=c+ ((sqrt(d))/((b/a^2)+1));
+100/Rx

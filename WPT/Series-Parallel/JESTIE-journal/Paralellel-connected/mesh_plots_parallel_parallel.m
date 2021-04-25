@@ -56,7 +56,7 @@ RL1k=[];
 DeltaMx=[];
 wo=1;
 Qrx=0.7717;
-Qrx=2;
+% Qrx=2;
 for DeltaM=0:0.01:1
  DeltaMx=[DeltaMx, DeltaM];
  k=(1-DeltaM);
@@ -106,4 +106,17 @@ colorbar(axes1,'Ticks',[50 55 60 65 70 75 80 85 90 95 100],...
     'FontName','Times New Roman');
 % colorbar.Title.String='Percentage(%)'
 
+%%
+DeltaM=0.3;
+Qrx=0.7717;
+Qrx=0.7717;
+k=(1-DeltaM);
+wo=1;
+w=170/150;
+a=(w*wo)/(Qrx*(w^2-wo^2));
+b=(1-k^2);
+c=1/((b/a^2)+1);
+d=k^2- (((1-k^2)^2)/a^2);
+Rx=c+((sqrt(d))/((b/a^2)+1))
+100/Rx
 

@@ -5,7 +5,7 @@ L_unequal =[84e-6, 180.2e-6,186.8e-6; ...
 
 M_unequal= [L_unequal(1,1), (L_unequal(1,2)-L_unequal(1,1)-L_unequal(2,2))/2 ,(L_unequal(1,3)-L_unequal(1,1)-L_unequal(3,3))/2 ;...
            NaN,     L_equal(2,2), NaN ; ...
-           NaN,   NaN,   L_equal(3,3)] 
+           NaN,   NaN,   L_equal(3,3)];
 %% Define 
 f= [120,130,140,150,160,170,180];
 Vin=[30,30,30,30,30,30,30];
@@ -35,7 +35,7 @@ Iin_series=[ 0.26 0.72 1.67 1.72 1.2 0.72 0.44 ];
 
 module_t_voltage_series=[18.67 35.9 58.91 61.8 51.21 39.37 30.40];
 
-module__current_series=[25.4 51.2 82.5 81.4 71.5 54.5 40.5];
+module_1_current_series=[25.4 51.2 82.5 81.4 71.5 54.5 40.5];
 
 
 module_2_current_series=[25.9 51 81.2 85 70.5 54 42];
@@ -51,6 +51,8 @@ figure();
 plot(f,module_1_power_series)
 hold on;
 plot(f,module_2_power_series)
+hold on;
+plot(f,100*module_2_power_series./(module_1_power_series+module_2_power_series))
 %%
 
 %% Parallel Module
@@ -71,5 +73,6 @@ figure();
 plot(f,module_1_power_parallel)
 hold on;
 plot(f,module_2_power_parallel)
-
+hold on;
+plot(f,100*module_2_power_parallel./(module_2_power_parallel+module_1_power_parallel))
 

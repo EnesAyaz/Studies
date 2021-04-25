@@ -78,13 +78,12 @@ RL1k=[RL1k ; RL1];
 end 
 RL1k(RL1k>=1)=1;
 
-%%
 figure1=figure();
 
 axes1 = axes('Parent',figure1);
 hold(axes1,'on');
 
-[x,y] = meshgrid(wRL,DeltaMx);
+[x,y] = meshgrid(wRL,kx);
 contourf(x,y,abs(RL1k)*100);
 hold on;
 
