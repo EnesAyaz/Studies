@@ -51,7 +51,7 @@ hold on;
 view([0 90])
 xlim([0.67 1.3333])
 s.FaceColor = 'flat';
-% s.FaceAlpha='0.8';
+s.FaceAlpha='0.6';
 s.EdgeColor='none';
 xlabel('Normalized Frequency($f_r$)','Interpreter','Latex','Fontname','Times new roman'...
     , 'FontSize',14)
