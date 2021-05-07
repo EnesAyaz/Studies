@@ -1,6 +1,6 @@
 
 %% Source parameters
-fsw = 44e3;
+fsw = 40e3;
 ffund = 50;
 frms = 50;
 ModulationIndex1 = 0.9;
@@ -96,4 +96,4 @@ C1C = 5e-6;
 
 %% Run Simulink 
 Tfinal = 60e-3;
-SampleTime = 4.4e-8;
+SampleTime = 1e-8;

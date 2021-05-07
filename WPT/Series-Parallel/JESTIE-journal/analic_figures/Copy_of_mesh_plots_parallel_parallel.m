@@ -11,7 +11,7 @@ for DeltaM=0:0.01*M:1*M
  DeltaMx=[DeltaMx, DeltaM/M];
  RL1=[];
  wRL=[];
-for  f=1e5:1e3:2e5
+for  f=1e5:1e2:2e5
    w=2*pi*f;
    wRL=[wRL w/wo];
    Zrx=1i*w*Ls+1/(1i*w*Cs);
@@ -32,8 +32,14 @@ set(gcf, 'Position',  [100, 100, 600, 300])
 axes1 = axes('Parent',figure1);
 hold(axes1,'on');
 [x,y] = meshgrid(wRL,DeltaMx);
-contourf(x,y,100./abs(RL1k));
+s=mesh(x,y,100./abs(RL1k));
 hold on;
+view([0 90])
+xlim([0.67 1.3333])
+s.FaceColor = 'flat';
+alphaVal = 1;
+s.FaceAlpha='1';
+s.EdgeColor='none';
 
 xlabel('Normalized Frequency($f_r$)','Interpreter','Latex','Fontname','Times new roman'...
     , 'FontSize',14)
@@ -44,11 +50,17 @@ set(axes1,'XTick',[0.7 0.8 0.9 1 1.1 1.2 1.3],'YTick',...
     [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]);
 colormap('jet');
 % Create colorbar
-colorbar(axes1,'Ticks',[50 55 60 65 70 75 80 85 90 95 100],...
+c=colorbar(axes1,'Ticks',[50 55 60 65 70 75 80 85 90 95 100],...
     'TickLabels',{'50','55','60','65','70','75','80','85','90','95','100'},...
     'Limits',[50 100],...
     'FontSize',12,...
     'FontName','Times New Roman');
+drawnow;
+% Make the colorbar transparent
+cdata = c.Face.Texture.CData;
+cdata(end,:) = uint8(alphaVal * cdata(end,:));
+c.Face.Texture.ColorType = 'truecoloralpha';
+c.Face.Texture.CData = cdata;
 
 % Create textbox
 annotation(figure1,'textbox',...
