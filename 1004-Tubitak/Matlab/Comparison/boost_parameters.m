@@ -13,11 +13,17 @@ Vcap=Vin;
 Rcoil=1e-3;
 Lcoil=2.058e-3;
 Lcoilss=0.129e-3*4;
+Lcoilss=0.129e-3;
 Lcoilsp=0.517e-3*2;
+Lcoilsp=0.517e-3;
 
 %%
 fsw=10e3;
 ModuleAPhase=0; % degree
-ModuleBPhase=0; % degree
-ModuleCPhase=180; % degree
-ModuleDPhase=180; % degree
+ModuleBPhase=180; % degree
+ModuleCPhase=90; % degree
+ModuleDPhase=270; % degree
+%%
+
+fsw=50e3;
+
