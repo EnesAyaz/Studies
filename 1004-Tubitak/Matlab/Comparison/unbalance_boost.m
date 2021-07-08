@@ -22,7 +22,7 @@ Lcoilsp=0.517e-3*2;
 %%
 %%fsw=10e3;
 ModuleAPhase=0; % degree
-ModuleBPhase=180; % degree
+ModuleBPhase=90; % degree
 %%
 
 fsw=50e3;
