@@ -1,4 +1,4 @@
-sampleTime=5e-7;
+sampleTime=5e-8;
 Vout=1200; 
 Vin=900;
 D=(1-Vin/Vout);
@@ -21,8 +21,8 @@ Lcoilsp=0.517e-3;
 fsw=10e3;
 ModuleAPhase=0; % degree
 ModuleBPhase=180; % degree
-ModuleCPhase=90; % degree
-ModuleDPhase=270; % degree
+ModuleCPhase=180; % degree
+ModuleDPhase=180; % degree
 %%
 
 fsw=50e3;
