@@ -1,5 +1,5 @@
 sampleTime=5e-8;
-Vout=1200; 
+Vout=1500; 
 Vin=900;
 D=(1-Vin/Vout);
 Rin=1e-3;
@@ -22,7 +22,7 @@ fsw=10e3;
 ModuleAPhase=0; % degree
 ModuleBPhase=180; % degree
 ModuleCPhase=180; % degree
-ModuleDPhase=180; % degree
+ModuleDPhase=0; % degree
 %%
 
 fsw=50e3;
