@@ -2,7 +2,7 @@
 m=2:1:10;
 i=1 % nu8mber of failured modules
 
-figure1 = figure( 'Position', [0 0 500 300]);
+figure1 = figure( 'Position', [0 0 600 300]);
 
 % Create axes
 axes1 = axes('Parent',figure1);
