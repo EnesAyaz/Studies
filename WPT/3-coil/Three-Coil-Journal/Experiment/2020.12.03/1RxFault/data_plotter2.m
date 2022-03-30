@@ -9,7 +9,7 @@ rms_tx2=rms(i_tx2(1:31780,1));
 rms_r=rms(i_res(1:31780,1));
 
 %%
-figure1 = figure('Position', [0 0 400 200]);
+figure1 = figure('Position', [0 0 380 178]);
 axes1 = axes('Parent',figure1,'YTick',[-10 -7.5 -5 -2.5 0 2.5 5 7.5 10]);
 % set(axes1,'FontName','Times New Roman','FontSize',10,'GridAlpha',0.5,...
 %     'XTick',[0 1 2 3 4 5 6 7 8 9 10],'ZColor',[0 0 0]);
@@ -29,7 +29,7 @@ ylabel('Current(A)','FontSize',16,'FontName','Times New Roman',...
 
 ylim(axes1,[-10 10]);
 
-set(axes1,'YColor',[0 0 0],'YTick',[-10 -7.5 -5 -2.5 0 2.5 5 7.5 10]);
+set(axes1,'YColor',[0 0 0],'YTick',[-10 -5 0  5 10]);
 
 yyaxis(axes1,'right');
 plot(t_vin*1e6,20*vin-100,'DisplayName','Vin','LineWidth',2,'Color',[0 0 0]);
@@ -37,7 +37,7 @@ plot(t_vin*1e6,20*vin-100,'DisplayName','Vin','LineWidth',2,'Color',[0 0 0]);
 ylabel('Voltage(V)','FontSize',16,'FontName','Times New Roman',...
     'Interpreter','latex');
 set(axes1,'YColor',[0 0 0],'YTick',...
-    [-150 -112.5 -75 -37.5 0 37.5 75 112.5 150]);
+    [-150  -75 0 75 150]);
 
 ylim(axes1,[-150 150]);
 
@@ -46,17 +46,17 @@ box(axes1,'on');
 grid(axes1,'on');
 hold(axes1,'off');
 
-legend1 = legend(axes1,'show');
-set(legend1,...
-    'Position',[0.640069872290127 0.209204405734087 0.146800001068115 0.287666673088074],...
-    'FontSize',14,...
-    'EdgeColor','none');
-xlabel('time($\mu s$)','FontSize',16,'FontName','Times New Roman',...
-    'Interpreter','latex');
+% legend1 = legend(axes1,'show');
+% set(legend1,...
+%     'Position',[0.640069872290127 0.209204405734087 0.146800001068115 0.287666673088074],...
+%     'FontSize',14,...
+%     'EdgeColor','none');
+% xlabel('time($\mu s$)','FontSize',16,'FontName','Times New Roman',...
+%     'Interpreter','latex');
 %%
 
-figure1 = figure('Position', [0 0 347 200]);
-axes1 = axes('Parent',figure1,'YTick',[-10 -7.5 -5 -2.5 0 2.5 5 7.5 10]);
+figure1 = figure('Position', [0 0 341 208]);
+axes1 = axes('Parent',figure1,'YTick',[-10  -5  0  5 10]);
 set(axes1,'FontName','Times New Roman','FontSize',14,'GridAlpha',0.5,...
     'XTick',[0 1 2 3 4 5 6 7 8 9 10],'ZColor',[0 0 0]);
 hold(axes1,'on');
