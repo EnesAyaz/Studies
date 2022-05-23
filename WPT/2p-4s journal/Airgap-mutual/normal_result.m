@@ -120,4 +120,8 @@ plot(normal_angle,normal_p1_total,'-or','LineWidth',2);
 hold on;
 plot(normal_angle,normal_p2_total,'-pb','LineWidth',2);
 hold on ;
-
+%%
+plot(normal_angle,normal_p2_total+normal_p1_total,'-pb','LineWidth',2);
+xlabel('Mechanical Angle (Degree)');
+ylabel('Coupling Coefficient')
+hold on ;
