@@ -77,6 +77,36 @@ xlim([-4e-6 7e-6])
 
 % xlim([-0.1e-6 0.5e-6])
 
+%%
+figure1 = figure;
+axes1 = axes('Parent',figure1,...
+    'Position',[0.13 0.113333333333333 0.775 0.815],...
+    'YTick',[-5 -2.5 0 2.5 5 7.5 10 12.5 15]);
+hold(axes1,'on');
+%%%%%
+colororder([0 0.447 0.741]);
+yyaxis(axes1,'left');
+plot(VDS.time*1e6, VDS.data,'Color',[0 0 1]);
+ylabel('Vds (V)');
+set(axes1,'YColor',[0 0 1],'YTick',[-5 -2.5 0 2.5 5 7.5 10 12.5 15]);
+%%%%%
+yyaxis(axes1,'right');
+plot(VGS.time*1e6, VGS.data,'Color',[1 0 0]);
+ylabel('Vgs (V)');
+set(axes1,'YColor',[1 0 0],'YTick',[-10 -5 0 5 10 15 20 25]);
+xlabel({'Time ($\mu s$)'},'FontSize',16,'Interpreter','latex');
+
+grid(axes1,'on');
+hold(axes1,'off');
+set(axes1,'FontName','Times New Roman','FontSize',16,'GridAlpha',0.5,...
+    'GridColor',[0 0 0],'XTickLabel',{'4','4.1','4.2','4.3','4.4','4.5' });
+% 
+xlim([0 0.5])
+
+
+% xlim([-0.1e-6 0.5e-6])
+
+
 %% Waveforms 
 
 %% VFB IRES Itx
@@ -130,9 +160,9 @@ ylabel('$V_{FB}$ (V)','Interpreter','latex');
 set(axes1,'YColor',[0 0 1]);
 %%%%%
 yyaxis(axes1,'left');
-plot(Itx.time, Itx.data,'-','Color',[1 0 0],'LineWidth',1);
+plot(Itx.time, Itx.data*10,'-','Color',[1 0 0],'LineWidth',1);
 hold on;
-plot(Ires.time, Ires.data,':','Color',[1 0 0],'LineWidth',2);
+plot(Ires.time, Ires.data*10,':','Color',[1 0 0],'LineWidth',2);
 ylabel(' $I_{Tx}$ / $I_{Res}$ (A)','Interpreter','latex');
 set(axes1,'YColor',[1 0 0]);
 xlabel({'Time ($\mu s$)'},'FontSize',16,'Interpreter','latex');
@@ -206,16 +236,16 @@ hold(axes1,'on');
 %%%%%
 % colororder([0 0.447 0.741]);
 
-plot(Irx1.time, Irx1.data,'-','Color',[1 0 0],'LineWidth',2);
+plot(Irx1.time, Irx1.data*10,'-','Color',[1 0 0],'LineWidth',2);
 hold on;
-plot(Irx2.time, Irx2.data,'-','Color',[0 0 1],'LineWidth',1);
+plot(Irx2.time, Irx2.data*10,'-','Color',[0 0 1],'LineWidth',1);
 hold on;
-plot(Irx3.time, -Irx3.data,'-','Color',[1 0 1],'LineWidth',1);
+plot(Irx3.time, -Irx3.data*10,'-','Color',[1 0 1],'LineWidth',1);
 hold on;
-plot(Irx4.time, -Irx4.data,'-','Color',[0 0 0],'LineWidth',2);
+plot(Irx4.time, -Irx4.data*10,'-','Color',[0 0 0],'LineWidth',2);
 
 ylabel(' $I_{Rx}$ (A)','Interpreter','latex');
-set(axes1,'YColor',[0 0 0],'YTick',[-0.5 -0.25 0 0.25 0.5]);
+set(axes1,'YColor',[0 0 0],'YTick',[-5 -2.5 0 2.5 5]);
 xlabel({'Time ($\mu s$)'},'FontSize',16,'Interpreter','latex');
 legend('$I_{Rx1}$','$I_{Rx2}$','$I_{Rx3}$','$I_{Rx4}$','Interpreter','latex',...
     'FontSize',14,...
