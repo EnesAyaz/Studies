@@ -42,6 +42,10 @@ Z=Zp*Zs*Zr+w^2*(Zs*M1^2+Zp*M2^2);
 
 
 
+%%
+
+
+
 
 % wr=[real(w(I)/w0) ];
 % wi=[imag(w(I)/w0) ];
