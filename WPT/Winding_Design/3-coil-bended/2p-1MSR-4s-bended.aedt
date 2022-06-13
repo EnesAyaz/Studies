@@ -230,7 +230,7 @@ $begin 'AnsoftProject'
 		$begin 'TemperatureSettings'
 			IncludeTemperatureDependence=false
 			EnableFeedback=false
-			Temperatures(70, '22cel', 211, '22cel', 353, '22cel', 470, '22cel', 566, '22cel', 643, '22cel', 654, '22cel', 776, '22cel', 1258, '22cel', 1331, '22cel', 1334, '22cel', 1410, '22cel', 1486, '22cel', 1563, '22cel', 1658, '22cel', 1753, '22cel', 1849, '22cel', 1860, '22cel', 1871, '22cel', 1882, '22cel', 4133, '22cel', 4142, '22cel', 4151, '22cel')
+			Temperatures(70, '22cel', 211, '22cel', 353, '22cel', 470, '22cel', 566, '22cel', 643, '22cel', 654, '22cel', 776, '22cel', 1258, '22cel', 1331, '22cel', 1334, '22cel', 1410, '22cel', 1486, '22cel', 1563, '22cel', 1658, '22cel', 1753, '22cel', 1849, '22cel', 1860, '22cel', 1871, '22cel', 1882, '22cel', 4133, '22cel', 4142, '22cel', 4151, '22cel', 4197, '22cel', 4227, '22cel')
 		$end 'TemperatureSettings'
 		ObjsEnabledForDeformation()
 		ComputeIncrementalMatrix=false
@@ -261,15 +261,16 @@ $begin 'AnsoftProject'
 				VariableProp('airgap', 'UD', '', '50mm')
 				VariableProp('s2s', 'UD', '', '1mm')
 				VariableProp('ris', 'UD', '', '35mm')
-				VariableProp('chs', 'UD', '', '2.4mm')
+				VariableProp('chs', 'UD', '', '1.2mm')
 				VariableProp('ns', 'UD', '', '16')
 				VariableProp('ls', 'UD', '', '1')
 				VariableProp('ros', 'UD', '', '132mm')
 				VariableProp('f2s', 'UD', '', '4mm')
 				VariableProp('height', 'UD', '', '200mm')
 				VariableProp('rotation', 'UD', '', '0deg')
+				VariableProp('a', 'UD', '', '69mm')
 			$end 'Properties'
-			VariableOrders[18: 'p2p', 'rip', 'np', 'chp', 'lp', 'rop', 'fw', 'f2p', 'airgap', 's2s', 'ris', 'chs', 'ns', 'ls', 'ros', 'f2s', 'height', 'rotation']
+			VariableOrders[19: 'p2p', 'rip', 'np', 'chp', 'lp', 'rop', 'fw', 'f2p', 'airgap', 's2s', 'ris', 'chs', 'ns', 'ls', 'ros', 'f2s', 'height', 'rotation', 'a']
 			$begin 'Editor3D Doc Preferences'
 				'Plane Background'=true
 				BackgroundColor1=16777215
@@ -287,7 +288,7 @@ $begin 'AnsoftProject'
 			WorkingCS=1
 			$begin 'GeometryCore'
 				BlockVersionID=3
-				DataVersion=69
+				DataVersion=73
 				NativeKernel='ACIS'
 				NativeKernelVersionID=13
 				Units='mm'
@@ -304,7 +305,7 @@ $begin 'AnsoftProject'
 							IDServerObjectTypeID=0
 							IDServerRangeMin=0
 							IDServerRangeMax=2146483647
-							NextUniqueID=4196
+							NextUniqueID=4254
 							MoveBackwards=false
 						$end 'AnsoftRangedIDServer'
 						$begin 'AnsoftRangedIDServer'
@@ -469,7 +470,7 @@ $begin 'AnsoftProject'
 								Name='primary1'
 								Flags=''
 								Color='(255 0 0)'
-								Transparency=0
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -882,7 +883,7 @@ $begin 'AnsoftProject'
 								Name='CurrP1'
 								Flags=''
 								Color='(255 0 0)'
-								Transparency=0.67
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -1217,7 +1218,7 @@ $begin 'AnsoftProject'
 								Name='primary2'
 								Flags=''
 								Color='(255 0 0)'
-								Transparency=0
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -1349,7 +1350,7 @@ $begin 'AnsoftProject'
 								Name='CurrP2'
 								Flags=''
 								Color='(255 0 0)'
-								Transparency=0.67
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -1414,8 +1415,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='middle_ferrite'
 								Flags=''
-								Color='(0 0 64)'
-								Transparency=0
+								Color='(0 0 0)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -1541,8 +1542,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='secondary1'
 								Flags=''
-								Color='(255 0 128)'
-								Transparency=0
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -1654,272 +1655,272 @@ $begin 'AnsoftProject'
 													ID=1034
 													EdgeFaces(760, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -132.978180014728, 52.4, 0)
-														TolVt(3.4, -94.5692257101661, 52.4, 0)
+														TolVt(2.2, -132.994545341844, 51.2, 0)
+														TolVt(2.2, -113.793616840671, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -113.773702862447, 52.4)
+													EdgeMidPoint(2.2, -123.394081091257, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=1035
 													EdgeFaces(760, 779)
 													$begin 'EdTolVts'
-														TolVt(94.5692257101661, -3.4, 52.4, 0)
-														TolVt(132.978180014728, -3.4, 52.4, 0)
+														TolVt(113.793616840671, -2.2, 51.2, 0)
+														TolVt(132.994545341844, -2.2, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(113.773702862447, -3.4, 52.4)
+													EdgeMidPoint(123.394081091257, -2.2, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=1036
 													EdgeFaces(761, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -132.978180014728, 50, 0)
-														TolVt(3.4, -132.978180014728, 52.4, 0)
+														TolVt(2.2, -132.994545341844, 50, 0)
+														TolVt(2.2, -132.994545341844, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -132.978180014728, 51.2)
+													EdgeMidPoint(2.2, -132.994545341844, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=1037
 													EdgeFaces(761, 779)
 													$begin 'EdTolVts'
-														TolVt(132.978180014728, -3.4, 52.4, 0)
-														TolVt(132.978180014728, -3.4, 50, 0)
+														TolVt(132.994545341844, -2.2, 51.2, 0)
+														TolVt(132.994545341844, -2.2, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(132.978180014728, -3.4, 51.2)
+													EdgeMidPoint(132.994545341844, -2.2, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=1038
 													EdgeFaces(759, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -94.5692257101661, 52.4, 0)
-														TolVt(3.4, -94.5692257101661, 50, 0)
+														TolVt(2.2, -113.793616840671, 51.2, 0)
+														TolVt(2.2, -113.793616840671, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -94.5692257101661, 51.2)
+													EdgeMidPoint(2.2, -113.793616840671, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=1039
 													EdgeFaces(759, 779)
 													$begin 'EdTolVts'
-														TolVt(94.5692257101661, -3.4, 50, 0)
-														TolVt(94.5692257101661, -3.4, 52.4, 0)
+														TolVt(113.793616840671, -2.2, 50, 0)
+														TolVt(113.793616840671, -2.2, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(94.5692257101661, -3.4, 51.2)
+													EdgeMidPoint(113.793616840671, -2.2, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
 													ID=1040
 													EdgeFaces(778, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -74.3607524497943, 50, 0)
-														TolVt(3.4, -94.5692257101661, 50, 0)
+														TolVt(2.2, -55.1867142388243, 50, 0)
+														TolVt(2.2, -113.793616840671, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -84.4649890799802, 50)
+													EdgeMidPoint(2.2, -84.4901655397474, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
 													ID=1041
 													EdgeFaces(741, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -74.3607524497943, 50, 0)
-														TolVt(3.4, -74.3607524497943, 52.4, 0)
+														TolVt(2.2, -55.1867142388243, 50, 0)
+														TolVt(2.2, -55.1867142388243, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -74.3607524497943, 51.2)
+													EdgeMidPoint(2.2, -55.1867142388243, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=8
 													ID=1042
 													EdgeFaces(740, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -74.3607524497943, 52.4, 0)
-														TolVt(3.4, -36, 52.4, 0)
+														TolVt(2.2, -55.1867142388243, 51.2, 0)
+														TolVt(2.2, -36, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -55.1803762248972, 52.4)
+													EdgeMidPoint(2.2, -45.5933571194121, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=9
 													ID=1043
 													EdgeFaces(778, 1008)
 													$begin 'EdTolVts'
-														TolVt(3.4, -132.978180014728, 50, 0)
-														TolVt(3.4, -133, 50, 0)
+														TolVt(2.2, -132.994545341844, 50, 0)
+														TolVt(2.2, -133, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(3.4, -132.989090007364, 50)
+													EdgeMidPoint(2.2, -132.997272670922, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=10
 													ID=1044
 													EdgeFaces(743, 781)
 													$begin 'EdTolVts'
-														TolVt(36, -1, 52.4, 0)
+														TolVt(36, -1, 51.2, 0)
 														TolVt(36, -1, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(36, -1, 51.2)
+													EdgeMidPoint(36, -1, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=11
 													ID=1045
 													EdgeFaces(780, 781)
 													$begin 'EdTolVts'
-														TolVt(36, -1, 88.4, 0)
-														TolVt(36, -1, 52.4, 0)
+														TolVt(36, -1, 69.2, 0)
+														TolVt(36, -1, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(36, -1, 70.4)
+													EdgeMidPoint(36, -1, 60.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=12
 													ID=1046
 													EdgeFaces(778, 779)
 													$begin 'EdTolVts'
-														TolVt(133, -3.4, 50, 0)
-														TolVt(132.978180014728, -3.4, 50, 0)
+														TolVt(133, -2.2, 50, 0)
+														TolVt(132.994545341844, -2.2, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(132.989090007364, -3.4, 50)
+													EdgeMidPoint(132.997272670922, -2.2, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=13
 													ID=1047
 													EdgeFaces(740, 779)
 													$begin 'EdTolVts'
-														TolVt(36, -3.4, 52.4, 0)
-														TolVt(74.3607524497943, -3.4, 52.4, 0)
+														TolVt(36, -2.2, 51.2, 0)
+														TolVt(55.1867142388243, -2.2, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(55.1803762248972, -3.4, 52.4)
+													EdgeMidPoint(45.5933571194121, -2.2, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=14
 													ID=1048
 													EdgeFaces(741, 779)
 													$begin 'EdTolVts'
-														TolVt(74.3607524497943, -3.4, 52.4, 0)
-														TolVt(74.3607524497943, -3.4, 50, 0)
+														TolVt(55.1867142388243, -2.2, 51.2, 0)
+														TolVt(55.1867142388243, -2.2, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(74.3607524497943, -3.4, 51.2)
+													EdgeMidPoint(55.1867142388243, -2.2, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=15
 													ID=1049
 													EdgeFaces(778, 779)
 													$begin 'EdTolVts'
-														TolVt(94.5692257101661, -3.4, 50, 0)
-														TolVt(74.3607524497943, -3.4, 50, 0)
+														TolVt(113.793616840671, -2.2, 50, 0)
+														TolVt(55.1867142388243, -2.2, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(84.4649890799802, -3.4, 50)
+													EdgeMidPoint(84.4901655397474, -2.2, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=16
 													ID=1050
 													EdgeFaces(740, 780)
 													$begin 'EdTolVts'
-														TolVt(36, -1, 52.4, 0)
-														TolVt(36, -3.4, 52.4, 0)
+														TolVt(36, -1, 51.2, 0)
+														TolVt(36, -2.2, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(36, -2.2, 52.4)
+													EdgeMidPoint(36, -1.6, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=17
 													ID=1051
 													EdgeFaces(740, 1007)
 													$begin 'EdTolVts'
-														TolVt(3.4, -36, 52.4, 0)
-														TolVt(1, -36, 52.4, 0)
+														TolVt(2.2, -36, 51.2, 0)
+														TolVt(1, -36, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(2.2, -36, 52.4)
+													EdgeMidPoint(1.6, -36, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=18
 													ID=1052
 													EdgeFaces(743, 1006)
 													$begin 'EdTolVts'
-														TolVt(1, -36, 52.4, 0)
+														TolVt(1, -36, 51.2, 0)
 														TolVt(1, -36, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(1, -36, 51.2)
+													EdgeMidPoint(1, -36, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=19
 													ID=1053
 													EdgeFaces(1006, 1007)
 													$begin 'EdTolVts'
-														TolVt(1, -36, 88.4, 0)
-														TolVt(1, -36, 52.4, 0)
+														TolVt(1, -36, 69.2, 0)
+														TolVt(1, -36, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(1, -36, 70.4)
+													EdgeMidPoint(1, -36, 60.2)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=1054
-													VtPos(3.4, -94.5692257101661, 52.4)
+													VtPos(2.2, -113.793616840671, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=1055
-													VtPos(3.4, -132.978180014728, 52.4)
+													VtPos(2.2, -132.994545341844, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=1056
-													VtPos(132.978180014728, -3.4, 52.4)
+													VtPos(132.994545341844, -2.2, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=1057
-													VtPos(94.5692257101661, -3.4, 52.4)
+													VtPos(113.793616840671, -2.2, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=1058
-													VtPos(3.4, -132.978180014728, 50)
+													VtPos(2.2, -132.994545341844, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=1059
-													VtPos(132.978180014728, -3.4, 50)
+													VtPos(132.994545341844, -2.2, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=1060
-													VtPos(3.4, -94.5692257101661, 50)
+													VtPos(2.2, -113.793616840671, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
 													ID=1061
-													VtPos(94.5692257101661, -3.4, 50)
+													VtPos(113.793616840671, -2.2, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=8
 													ID=1062
-													VtPos(3.4, -74.3607524497943, 50)
+													VtPos(2.2, -55.1867142388243, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=9
 													ID=1063
-													VtPos(3.4, -74.3607524497943, 52.4)
+													VtPos(2.2, -55.1867142388243, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=10
 													ID=1064
-													VtPos(3.4, -36, 52.4)
+													VtPos(2.2, -36, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=11
 													ID=1065
-													VtPos(36, -3.4, 52.4)
+													VtPos(36, -2.2, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=12
 													ID=1066
-													VtPos(74.3607524497943, -3.4, 52.4)
+													VtPos(55.1867142388243, -2.2, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=13
 													ID=1067
-													VtPos(74.3607524497943, -3.4, 50)
+													VtPos(55.1867142388243, -2.2, 50)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -2105,102 +2106,102 @@ $begin 'AnsoftProject'
 													ID=2986
 													EdgeFaces(1078, 1133)
 													$begin 'EdTolVts'
-														TolVt(150.747487458054, -9.7, 58.7, 0)
-														TolVt(36, -9.7, 58.7, 0)
+														TolVt(150.812382665786, -8.5, 57.5, 0)
+														TolVt(36, -8.5, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(93.3737437290269, -9.7, 58.7)
+													EdgeMidPoint(93.4061913328932, -8.5, 57.5)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=2987
 													EdgeFaces(1076, 1133)
 													$begin 'EdTolVts'
-														TolVt(150.747487458054, -9.7, 56.4, 0)
-														TolVt(150.747487458054, -9.7, 58.7, 0)
+														TolVt(150.812382665786, -8.5, 55.2, 0)
+														TolVt(150.812382665786, -8.5, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(150.747487458054, -9.7, 57.55)
+													EdgeMidPoint(150.812382665786, -8.5, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=2988
 													EdgeFaces(1078, 1134)
 													$begin 'EdTolVts'
-														TolVt(36, -9.7, 58.7, 0)
-														TolVt(36, -7.4, 58.7, 0)
+														TolVt(36, -8.5, 57.5, 0)
+														TolVt(36, -6.2, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(36, -8.55, 58.7)
+													EdgeMidPoint(36, -7.35, 57.5)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=2989
 													EdgeFaces(1076, 1264)
 													$begin 'EdTolVts'
-														TolVt(9.7, -150.747487458054, 56.4, 0)
-														TolVt(9.7, -150.747487458054, 58.7, 0)
+														TolVt(8.5, -150.812382665786, 55.2, 0)
+														TolVt(8.5, -150.812382665786, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(9.7, -150.747487458054, 57.55)
+													EdgeMidPoint(8.5, -150.812382665786, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=2990
 													EdgeFaces(1078, 1263)
 													$begin 'EdTolVts'
-														TolVt(9.7, -36, 58.7, 0)
-														TolVt(7.4, -36, 58.7, 0)
+														TolVt(8.5, -36, 57.5, 0)
+														TolVt(6.2, -36, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(8.55, -36, 58.7)
+													EdgeMidPoint(7.35, -36, 57.5)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=2991
 													EdgeFaces(1078, 1264)
 													$begin 'EdTolVts'
-														TolVt(9.7, -150.747487458054, 58.7, 0)
-														TolVt(9.7, -36, 58.7, 0)
+														TolVt(8.5, -150.812382665786, 57.5, 0)
+														TolVt(8.5, -36, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(9.7, -93.3737437290269, 58.7)
+													EdgeMidPoint(8.5, -93.4061913328932, 57.5)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=2992
-													VtPos(36, -9.7, 58.7)
+													VtPos(36, -8.5, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=2993
-													VtPos(150.747487458054, -9.7, 58.7)
+													VtPos(150.812382665786, -8.5, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=2994
-													VtPos(150.747487458054, -9.7, 56.4)
+													VtPos(150.812382665786, -8.5, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=2995
-													VtPos(36, -7.4, 58.7)
+													VtPos(36, -6.2, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=2996
-													VtPos(9.7, -150.747487458054, 56.4)
+													VtPos(8.5, -150.812382665786, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=2997
-													VtPos(9.7, -150.747487458054, 58.7)
+													VtPos(8.5, -150.812382665786, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=2998
-													VtPos(7.4, -36, 58.7)
+													VtPos(6.2, -36, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
 													ID=2999
-													VtPos(9.7, -36, 58.7)
+													VtPos(8.5, -36, 57.5)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -2271,8 +2272,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='CurrS1'
 								Flags=''
-								Color='(64 64 64)'
-								Transparency=0.6
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -2322,8 +2323,8 @@ $begin 'AnsoftProject'
 											FaceId=1312
 											EdgeId=1317
 											VertexId=1325
-											BoundingBoxLow[3: 67.1851947190609, -94.3380951166243, 50]
-											BoundingBoxHigh[3: 94.3380951166243, -67.1851947190609, 52.4]
+											BoundingBoxLow[3: 80.7616449178426, -94.3380951166243, 50]
+											BoundingBoxHigh[3: 94.3380951166243, -80.7616449178426, 51.2]
 										$end 'BodyGeomTopoForSeparate'
 									$end 'OperationIdentity'
 								$end 'Operation'
@@ -2694,8 +2695,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='secondary2'
 								Flags=''
-								Color='(128 0 0)'
-								Transparency=0
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -2797,8 +2798,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='secondary3'
 								Flags=''
-								Color='(64 0 128)'
-								Transparency=0
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -2900,8 +2901,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='secondary4'
 								Flags=''
-								Color='(0 255 0)'
-								Transparency=0
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3003,8 +3004,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='CurrS2'
 								Flags=''
-								Color='(64 64 64)'
-								Transparency=0.6
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3106,8 +3107,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='CurrS3'
 								Flags=''
-								Color='(64 64 64)'
-								Transparency=0.6
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3209,8 +3210,8 @@ $begin 'AnsoftProject'
 							$begin 'Attributes'
 								Name='CurrS4'
 								Flags=''
-								Color='(64 64 64)'
-								Transparency=0.6
+								Color='(128 128 255)'
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3375,7 +3376,7 @@ $begin 'AnsoftProject'
 								Name='Cylinder6'
 								Flags=''
 								Color='(128 255 255)'
-								Transparency=0
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3545,7 +3546,7 @@ $begin 'AnsoftProject'
 								Name='Cylinder7'
 								Flags=''
 								Color='(0 0 0)'
-								Transparency=0
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3607,7 +3608,7 @@ $begin 'AnsoftProject'
 								Name='Cylinder8'
 								Flags=''
 								Color='(128 255 255)'
-								Transparency=0
+								Transparency=0.2
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
@@ -3712,6 +3713,133 @@ $begin 'AnsoftProject'
 									BlankOperation=4150
 									NumToolOperations=1
 									ToolOperations(4175)
+								$end 'Operation'
+							$end 'Operations'
+						$end 'GeometryPart'
+						$begin 'GeometryPart'
+							$begin 'Attributes'
+								Name='middle_ferrite1'
+								Flags=''
+								Color='(0 0 0)'
+								Transparency=0.2
+								PartCoordinateSystem=1
+								UDMId=-1
+								GroupId=-1
+								MaterialValue='"ferrite"'
+								SurfaceMaterialValue='""'
+								SolveInside=true
+								ShellElement=false
+								ShellElementThickness='0mm'
+								IsMaterialEditable=true
+								UseMaterialAppearance=false
+								IsLightweight=false
+								IsAlwaysHidden=false
+							$end 'Attributes'
+							$begin 'Operations'
+								$begin 'Operation'
+									OperationType='Box'
+									ID=4196
+									ReferenceCoordSystemID=1
+									$begin 'BoxParameters'
+										KernelVersion=13
+										XPosition='ris'
+										YPosition='-0.5mm'
+										ZPosition='a'
+										XSize='ros-ris'
+										YSize='1mm'
+										ZSize='-(chs*ns)/ls'
+									$end 'BoxParameters'
+									ParentPartID=4197
+									ReferenceUDMID=-1
+									IsSuppressed=false
+									$begin 'OperationIdentity'
+										$begin 'Topology'
+											NumLumps=1
+											NumShells=1
+											NumFaces=6
+											NumWires=0
+											NumLoops=6
+											NumCoedges=24
+											NumEdges=12
+											NumVertices=8
+										$end 'Topology'
+										BodyID=4197
+										StartFaceID=4198
+										StartEdgeID=4204
+										StartVertexID=4216
+										NumNewFaces=6
+										NumNewEdges=12
+										NumNewVertices=8
+										FaceNameAndIDMap()
+										EdgeNameAndIDMap()
+										VertexNameAndIDMap()
+									$end 'OperationIdentity'
+								$end 'Operation'
+								$begin 'CloneToOperation'
+									OperationType='DuplicateMirror'
+									ID=4224
+									ReferenceCoordSystemID=1
+									$begin 'DuplicateToMirrorParameters'
+										DuplicateMirrorBaseX='0mm'
+										DuplicateMirrorBaseY='0mm'
+										DuplicateMirrorBaseZ='0mm'
+										DuplicateMirrorNormalX='-1mm'
+										DuplicateMirrorNormalY='0mm'
+										DuplicateMirrorNormalZ='0mm'
+									$end 'DuplicateToMirrorParameters'
+									ParentPartID=4197
+									ReferenceUDMID=-1
+								$end 'CloneToOperation'
+								$begin 'Operation'
+									OperationType='Unite'
+									ID=4225
+									$begin 'UniteParameters'
+										KernelVersion=13
+										KeepOriginals=false
+										BlankPart=4197
+										NumToolParts=1
+										ToolParts(4227)
+									$end 'UniteParameters'
+									ParentPartID=4197
+									ReferenceUDMID=-1
+									IsSuppressed=false
+									$begin 'OperationIdentity'
+										$begin 'Topology'
+											NumLumps=2
+											NumShells=2
+											NumFaces=12
+											NumWires=0
+											NumLoops=12
+											NumCoedges=48
+											NumEdges=24
+											NumVertices=16
+										$end 'Topology'
+										BodyID=-1
+										StartFaceID=-1
+										StartEdgeID=-1
+										StartVertexID=-1
+										NumNewFaces=0
+										NumNewEdges=0
+										NumNewVertices=0
+										FaceNameAndIDMap()
+										EdgeNameAndIDMap()
+										VertexNameAndIDMap()
+										$begin 'GeomTopolBasedOperationIdentityHelper'
+											$begin 'NewFaces'
+											$end 'NewFaces'
+											$begin 'NewEdges'
+											$end 'NewEdges'
+											$begin 'NewVertices'
+											$end 'NewVertices'
+										$end 'GeomTopolBasedOperationIdentityHelper'
+										$begin 'MergedFaces'
+										$end 'MergedFaces'
+										$begin 'MergedEdges'
+										$end 'MergedEdges'
+									$end 'OperationIdentity'
+									BlankOperation=4196
+									NumToolOperations=1
+									ToolOperations(4226)
 								$end 'Operation'
 							$end 'Operations'
 						$end 'GeometryPart'
@@ -5349,13 +5477,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=92.16
-															FcUVMid(55.2, -0.999999999999998, 51.2)
+															Area=23.04
+															FcUVMid(45.6, -0.999999999999999, 50.6)
 															$begin 'FcTolVts'
 																TolVt(36, -1, 50, 0)
-																TolVt(36, -1, 52.4, 0)
-																TolVt(74.4, -0.999999999999996, 52.4, 0)
-																TolVt(74.4, -0.999999999999996, 50, 0)
+																TolVt(36, -1, 51.2, 0)
+																TolVt(55.2, -0.999999999999998, 51.2, 0)
+																TolVt(55.2, -0.999999999999998, 50, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -5588,13 +5716,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=92.16
-															FcUVMid(113.8, -1, 51.2)
+															Area=23.0400000000001
+															FcUVMid(123.4, -1, 50.6)
 															$begin 'FcTolVts'
 																TolVt(133, -1, 50, 0)
-																TolVt(133, -1, 52.4, 0)
-																TolVt(94.6, -1, 52.4, 0)
-																TolVt(94.6, -1, 50, 0)
+																TolVt(133, -1, 51.2, 0)
+																TolVt(113.8, -1, 51.2, 0)
+																TolVt(113.8, -1, 50, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -5892,11 +6020,11 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(2, 2, 2, 2)
 														$begin 'FaceGeometry'
-															Area=505.796417227958
-															FcUVMid(36, -1, 57.55)
+															Area=505.796417227956
+															FcUVMid(36, -1, 56.35)
 															$begin 'FcTolVts'
-																TolVt(36, -1, 56.4, 0)
-																TolVt(36, -1, 58.7, 0)
+																TolVt(36, -1, 55.2, 0)
+																TolVt(36, -1, 57.5, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -5908,30 +6036,30 @@ $begin 'AnsoftProject'
 													ID=1226
 													EdgeFaces(1077, 1225)
 													$begin 'EdTolVts'
-														TolVt(36, -1, 56.4, 0)
+														TolVt(36, -1, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(-34, -0.999999999999996, 56.4)
+													EdgeMidPoint(-34, -0.999999999999996, 55.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=1227
 													EdgeFaces(1078, 1225)
 													$begin 'EdTolVts'
-														TolVt(36, -1, 58.7, 0)
+														TolVt(36, -1, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(-34, -1, 58.7)
+													EdgeMidPoint(-34, -1, 57.5)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=1228
-													VtPos(36, -1, 56.4)
+													VtPos(36, -1, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=1229
-													VtPos(36, -1, 58.7)
+													VtPos(36, -1, 57.5)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -5997,13 +6125,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=265.543100992728
-															FcUVMid(7.4, -93.1366433868306, 57.55)
+															Area=265.186045856996
+															FcUVMid(6.2, -93.2606991666283, 56.35)
 															$begin 'FcTolVts'
-																TolVt(7.4, -150.863404472206, 56.4, 0)
-																TolVt(7.4, -150.863404472206, 58.7, 0)
-																TolVt(7.4, -35.4098823014552, 58.7, 0)
-																TolVt(7.4, -35.4098823014552, 56.4, 0)
+																TolVt(6.2, -150.909839570323, 55.2, 0)
+																TolVt(6.2, -150.909839570323, 57.5, 0)
+																TolVt(6.2, -35.6115587629335, 57.5, 0)
+																TolVt(6.2, -35.6115587629335, 55.2, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -6014,13 +6142,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=265.543100992728
-															FcUVMid(7.4, 91.1366433868306, 57.55)
+															Area=265.186045856996
+															FcUVMid(6.2, 91.2606991666283, 56.35)
 															$begin 'FcTolVts'
-																TolVt(7.4, 148.863404472206, 58.7, 0)
-																TolVt(7.4, 148.863404472206, 56.4, 0)
-																TolVt(7.4, 33.4098823014552, 56.4, 0)
-																TolVt(7.4, 33.4098823014552, 58.7, 0)
+																TolVt(6.2, 148.909839570323, 57.5, 0)
+																TolVt(6.2, 148.909839570323, 55.2, 0)
+																TolVt(6.2, 33.6115587629335, 55.2, 0)
+																TolVt(6.2, 33.6115587629335, 57.5, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -6032,122 +6160,122 @@ $begin 'AnsoftProject'
 													ID=1232
 													EdgeFaces(1076, 1230)
 													$begin 'EdTolVts'
-														TolVt(7.4, -150.863404472206, 58.7, 0)
-														TolVt(7.4, -150.863404472206, 56.4, 0)
+														TolVt(6.2, -150.909839570323, 57.5, 0)
+														TolVt(6.2, -150.909839570323, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, -150.863404472206, 57.55)
+													EdgeMidPoint(6.2, -150.909839570323, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=1233
 													EdgeFaces(1078, 1230)
 													$begin 'EdTolVts'
-														TolVt(7.4, -35.4098823014552, 58.7, 0)
-														TolVt(7.4, -150.863404472206, 58.7, 0)
+														TolVt(6.2, -35.6115587629335, 57.5, 0)
+														TolVt(6.2, -150.909839570323, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, -93.1366433868306, 58.7)
+													EdgeMidPoint(6.2, -93.2606991666283, 57.5)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=1234
 													EdgeFaces(1225, 1230)
 													$begin 'EdTolVts'
-														TolVt(7.4, -35.4098823014552, 56.4, 0)
-														TolVt(7.4, -35.4098823014552, 58.7, 0)
+														TolVt(6.2, -35.6115587629335, 55.2, 0)
+														TolVt(6.2, -35.6115587629335, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, -35.4098823014552, 57.55)
+													EdgeMidPoint(6.2, -35.6115587629335, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=1235
 													EdgeFaces(1077, 1230)
 													$begin 'EdTolVts'
-														TolVt(7.4, -150.863404472206, 56.4, 0)
-														TolVt(7.4, -35.4098823014552, 56.4, 0)
+														TolVt(6.2, -150.909839570323, 55.2, 0)
+														TolVt(6.2, -35.6115587629335, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, -93.1366433868306, 56.4)
+													EdgeMidPoint(6.2, -93.2606991666283, 55.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=1236
 													EdgeFaces(1076, 1231)
 													$begin 'EdTolVts'
-														TolVt(7.4, 148.863404472206, 56.4, 0)
-														TolVt(7.4, 148.863404472206, 58.7, 0)
+														TolVt(6.2, 148.909839570323, 55.2, 0)
+														TolVt(6.2, 148.909839570323, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, 148.863404472206, 57.55)
+													EdgeMidPoint(6.2, 148.909839570323, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=1237
 													EdgeFaces(1077, 1231)
 													$begin 'EdTolVts'
-														TolVt(7.4, 33.4098823014552, 56.4, 0)
-														TolVt(7.4, 148.863404472206, 56.4, 0)
+														TolVt(6.2, 33.6115587629335, 55.2, 0)
+														TolVt(6.2, 148.909839570323, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, 91.1366433868306, 56.4)
+													EdgeMidPoint(6.2, 91.2606991666283, 55.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
 													ID=1238
 													EdgeFaces(1225, 1231)
 													$begin 'EdTolVts'
-														TolVt(7.4, 33.4098823014552, 58.7, 0)
-														TolVt(7.4, 33.4098823014552, 56.4, 0)
+														TolVt(6.2, 33.6115587629335, 57.5, 0)
+														TolVt(6.2, 33.6115587629335, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, 33.4098823014552, 57.55)
+													EdgeMidPoint(6.2, 33.6115587629335, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
 													ID=1239
 													EdgeFaces(1078, 1231)
 													$begin 'EdTolVts'
-														TolVt(7.4, 148.863404472206, 58.7, 0)
-														TolVt(7.4, 33.4098823014552, 58.7, 0)
+														TolVt(6.2, 148.909839570323, 57.5, 0)
+														TolVt(6.2, 33.6115587629335, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(7.4, 91.1366433868306, 58.7)
+													EdgeMidPoint(6.2, 91.2606991666283, 57.5)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=1240
-													VtPos(7.4, -150.863404472206, 56.4)
+													VtPos(6.2, -150.909839570323, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=1241
-													VtPos(7.4, -150.863404472206, 58.7)
+													VtPos(6.2, -150.909839570323, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=1242
-													VtPos(7.4, -35.4098823014552, 58.7)
+													VtPos(6.2, -35.6115587629335, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=1243
-													VtPos(7.4, -35.4098823014552, 56.4)
+													VtPos(6.2, -35.6115587629335, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=1244
-													VtPos(7.4, 148.863404472206, 58.7)
+													VtPos(6.2, 148.909839570323, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=1245
-													VtPos(7.4, 148.863404472206, 56.4)
+													VtPos(6.2, 148.909839570323, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=1246
-													VtPos(7.4, 33.4098823014552, 56.4)
+													VtPos(6.2, 33.6115587629335, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
 													ID=1247
-													VtPos(7.4, 33.4098823014552, 58.7)
+													VtPos(6.2, 33.6115587629335, 57.5)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -6209,13 +6337,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=265.543100992728
-															FcUVMid(93.1366433868306, -7.4, 57.55)
+															Area=265.186045856996
+															FcUVMid(93.2606991666283, -6.2, 56.35)
 															$begin 'FcTolVts'
-																TolVt(150.863404472206, -7.4, 56.4, 0)
-																TolVt(35.4098823014552, -7.4, 56.4, 0)
-																TolVt(35.4098823014552, -7.4, 58.7, 0)
-																TolVt(150.863404472206, -7.4, 58.7, 0)
+																TolVt(150.909839570323, -6.2, 55.2, 0)
+																TolVt(35.6115587629335, -6.2, 55.2, 0)
+																TolVt(35.6115587629335, -6.2, 57.5, 0)
+																TolVt(150.909839570323, -6.2, 57.5, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -6227,62 +6355,62 @@ $begin 'AnsoftProject'
 													ID=1249
 													EdgeFaces(1077, 1248)
 													$begin 'EdTolVts'
-														TolVt(35.4098823014552, -7.4, 56.4, 0)
-														TolVt(150.863404472206, -7.4, 56.4, 0)
+														TolVt(35.6115587629335, -6.2, 55.2, 0)
+														TolVt(150.909839570323, -6.2, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(93.1366433868306, -7.4, 56.4)
+													EdgeMidPoint(93.2606991666283, -6.2, 55.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=1250
 													EdgeFaces(1225, 1248)
 													$begin 'EdTolVts'
-														TolVt(35.4098823014552, -7.4, 58.7, 0)
-														TolVt(35.4098823014552, -7.4, 56.4, 0)
+														TolVt(35.6115587629335, -6.2, 57.5, 0)
+														TolVt(35.6115587629335, -6.2, 55.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(35.4098823014552, -7.4, 57.55)
+													EdgeMidPoint(35.6115587629335, -6.2, 56.35)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=1251
 													EdgeFaces(1078, 1248)
 													$begin 'EdTolVts'
-														TolVt(150.863404472206, -7.4, 58.7, 0)
-														TolVt(35.4098823014552, -7.4, 58.7, 0)
+														TolVt(150.909839570323, -6.2, 57.5, 0)
+														TolVt(35.6115587629335, -6.2, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(93.1366433868306, -7.4, 58.7)
+													EdgeMidPoint(93.2606991666283, -6.2, 57.5)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=1252
 													EdgeFaces(1076, 1248)
 													$begin 'EdTolVts'
-														TolVt(150.863404472206, -7.4, 56.4, 0)
-														TolVt(150.863404472206, -7.4, 58.7, 0)
+														TolVt(150.909839570323, -6.2, 55.2, 0)
+														TolVt(150.909839570323, -6.2, 57.5, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(150.863404472206, -7.4, 57.55)
+													EdgeMidPoint(150.909839570323, -6.2, 56.35)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=1253
-													VtPos(150.863404472206, -7.4, 56.4)
+													VtPos(150.909839570323, -6.2, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=1254
-													VtPos(35.4098823014552, -7.4, 56.4)
+													VtPos(35.6115587629335, -6.2, 55.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=1255
-													VtPos(35.4098823014552, -7.4, 58.7)
+													VtPos(35.6115587629335, -6.2, 57.5)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=1256
-													VtPos(150.863404472206, -7.4, 58.7)
+													VtPos(150.909839570323, -6.2, 57.5)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -6476,13 +6604,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=92.1600000000002
-															FcUVMid(39.3251875403109, -39.3251875403109, 51.2)
+															Area=23.0399999999999
+															FcUVMid(32.53696244092, -32.53696244092, 50.6)
 															$begin 'FcTolVts'
-																TolVt(52.9016377390926, -52.9016377390926, 52.4, 0)
-																TolVt(25.7487373415292, -25.7487373415292, 52.4, 0)
+																TolVt(39.3251875403109, -39.3251875403109, 51.2, 0)
+																TolVt(25.7487373415292, -25.7487373415292, 51.2, 0)
 																TolVt(25.7487373415292, -25.7487373415292, 50, 0)
-																TolVt(52.9016377390926, -52.9016377390926, 50, 0)
+																TolVt(39.3251875403109, -39.3251875403109, 50, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -6493,12 +6621,12 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=92.1600000000003
-															FcUVMid(80.7616449178426, -80.7616449178426, 51.2)
+															Area=23.0400000000001
+															FcUVMid(87.5498700172335, -87.5498700172335, 50.6)
 															$begin 'FcTolVts'
-																TolVt(94.3380951166243, -94.3380951166243, 52.4, 0)
-																TolVt(67.1851947190609, -67.1851947190609, 52.4, 0)
-																TolVt(67.1851947190609, -67.1851947190609, 50, 0)
+																TolVt(94.3380951166243, -94.3380951166243, 51.2, 0)
+																TolVt(80.7616449178426, -80.7616449178426, 51.2, 0)
+																TolVt(80.7616449178426, -80.7616449178426, 50, 0)
 																TolVt(94.3380951166243, -94.3380951166243, 50, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
@@ -6511,10 +6639,10 @@ $begin 'AnsoftProject'
 													ID=1313
 													EdgeFaces(1311)
 													$begin 'EdTolVts'
-														TolVt(25.7487373415292, -25.7487373415292, 52.4, 0)
-														TolVt(52.9016377390926, -52.9016377390926, 52.4, 0)
+														TolVt(25.7487373415292, -25.7487373415292, 51.2, 0)
+														TolVt(39.3251875403109, -39.3251875403109, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(39.3251875403109, -39.3251875403109, 52.4)
+													EdgeMidPoint(32.53696244092, -32.53696244092, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
@@ -6522,49 +6650,49 @@ $begin 'AnsoftProject'
 													EdgeFaces(1311)
 													$begin 'EdTolVts'
 														TolVt(25.7487373415292, -25.7487373415292, 50, 0)
-														TolVt(25.7487373415292, -25.7487373415292, 52.4, 0)
+														TolVt(25.7487373415292, -25.7487373415292, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(25.7487373415292, -25.7487373415292, 51.2)
+													EdgeMidPoint(25.7487373415292, -25.7487373415292, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=1315
 													EdgeFaces(1311)
 													$begin 'EdTolVts'
-														TolVt(52.9016377390926, -52.9016377390926, 50, 0)
+														TolVt(39.3251875403109, -39.3251875403109, 50, 0)
 														TolVt(25.7487373415292, -25.7487373415292, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(39.3251875403109, -39.3251875403109, 50)
+													EdgeMidPoint(32.53696244092, -32.53696244092, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=1316
 													EdgeFaces(1311)
 													$begin 'EdTolVts'
-														TolVt(52.9016377390926, -52.9016377390926, 52.4, 0)
-														TolVt(52.9016377390926, -52.9016377390926, 50, 0)
+														TolVt(39.3251875403109, -39.3251875403109, 51.2, 0)
+														TolVt(39.3251875403109, -39.3251875403109, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(52.9016377390926, -52.9016377390926, 51.2)
+													EdgeMidPoint(39.3251875403109, -39.3251875403109, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=1317
 													EdgeFaces(1312)
 													$begin 'EdTolVts'
-														TolVt(67.1851947190609, -67.1851947190609, 52.4, 0)
-														TolVt(94.3380951166243, -94.3380951166243, 52.4, 0)
+														TolVt(80.7616449178426, -80.7616449178426, 51.2, 0)
+														TolVt(94.3380951166243, -94.3380951166243, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(80.7616449178426, -80.7616449178426, 52.4)
+													EdgeMidPoint(87.5498700172335, -87.5498700172335, 51.2)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=1318
 													EdgeFaces(1312)
 													$begin 'EdTolVts'
-														TolVt(67.1851947190609, -67.1851947190609, 50, 0)
-														TolVt(67.1851947190609, -67.1851947190609, 52.4, 0)
+														TolVt(80.7616449178426, -80.7616449178426, 50, 0)
+														TolVt(80.7616449178426, -80.7616449178426, 51.2, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(67.1851947190609, -67.1851947190609, 51.2)
+													EdgeMidPoint(80.7616449178426, -80.7616449178426, 50.6)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
@@ -6572,31 +6700,31 @@ $begin 'AnsoftProject'
 													EdgeFaces(1312)
 													$begin 'EdTolVts'
 														TolVt(94.3380951166243, -94.3380951166243, 50, 0)
-														TolVt(67.1851947190609, -67.1851947190609, 50, 0)
+														TolVt(80.7616449178426, -80.7616449178426, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(80.7616449178426, -80.7616449178426, 50)
+													EdgeMidPoint(87.5498700172335, -87.5498700172335, 50)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
 													ID=1320
 													EdgeFaces(1312)
 													$begin 'EdTolVts'
-														TolVt(94.3380951166243, -94.3380951166243, 52.4, 0)
+														TolVt(94.3380951166243, -94.3380951166243, 51.2, 0)
 														TolVt(94.3380951166243, -94.3380951166243, 50, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(94.3380951166243, -94.3380951166243, 51.2)
+													EdgeMidPoint(94.3380951166243, -94.3380951166243, 50.6)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=1321
-													VtPos(52.9016377390926, -52.9016377390926, 52.4)
+													VtPos(39.3251875403109, -39.3251875403109, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=1322
-													VtPos(25.7487373415292, -25.7487373415292, 52.4)
+													VtPos(25.7487373415292, -25.7487373415292, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
@@ -6606,22 +6734,22 @@ $begin 'AnsoftProject'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=1324
-													VtPos(52.9016377390926, -52.9016377390926, 50)
+													VtPos(39.3251875403109, -39.3251875403109, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=1325
-													VtPos(94.3380951166243, -94.3380951166243, 52.4)
+													VtPos(94.3380951166243, -94.3380951166243, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=1326
-													VtPos(67.1851947190609, -67.1851947190609, 52.4)
+													VtPos(80.7616449178426, -80.7616449178426, 51.2)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=1327
-													VtPos(67.1851947190609, -67.1851947190609, 50)
+													VtPos(80.7616449178426, -80.7616449178426, 50)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
@@ -6668,8 +6796,8 @@ $begin 'AnsoftProject'
 											FaceId=1311
 											EdgeId=1313
 											VertexId=1321
-											BoundingBoxLow[3: 25.7487373415292, -52.9016377390926, 50]
-											BoundingBoxHigh[3: 52.9016377390926, -25.7487373415292, 52.4]
+											BoundingBoxLow[3: 25.7487373415292, -39.3251875403109, 50]
+											BoundingBoxHigh[3: 39.3251875403109, -25.7487373415292, 51.2]
 										$end 'BodyGeomTopoForSeparate'
 									$end 'OperationIdentity'
 									SeparateFromOpnIDs[1: 1330]
@@ -6802,6 +6930,72 @@ $begin 'AnsoftProject'
 								$end 'Operation'
 							$end 'Operations'
 						$end 'GeometryPart'
+						$begin 'GeometryPart'
+							$begin 'Attributes'
+								Name='Box1_4'
+								Flags=''
+								Color='(255 255 0)'
+								Transparency=0
+								PartCoordinateSystem=1
+								UDMId=-1
+								GroupId=-1
+								MaterialValue='""'
+								SurfaceMaterialValue='""'
+								SolveInside=true
+								ShellElement=false
+								ShellElementThickness='0mm'
+								IsMaterialEditable=true
+								UseMaterialAppearance=false
+								IsLightweight=false
+								IsAlwaysHidden=false
+							$end 'Attributes'
+							$begin 'Operations'
+								$begin 'Operation'
+									OperationType='DuplicateBodyMirror'
+									ID=4226
+									$begin 'CloneFromParameters'
+										KernelVersion=13
+										SourceID=4197
+										WhichClone=0
+									$end 'CloneFromParameters'
+									ParentPartID=4227
+									ReferenceUDMID=-1
+									IsSuppressed=false
+									$begin 'OperationIdentity'
+										$begin 'Topology'
+											NumLumps=1
+											NumShells=1
+											NumFaces=6
+											NumWires=0
+											NumLoops=6
+											NumCoedges=24
+											NumEdges=12
+											NumVertices=8
+										$end 'Topology'
+										BodyID=4227
+										StartFaceID=4228
+										StartEdgeID=4234
+										StartVertexID=4246
+										NumNewFaces=6
+										NumNewEdges=12
+										NumNewVertices=8
+										FaceNameAndIDMap()
+										EdgeNameAndIDMap()
+										VertexNameAndIDMap()
+										$begin 'CloneFromOperationIdentityHelper'
+											CloneFaces('4198'='4228', '4199'='4229', '4200'='4230', '4201'='4231', '4202'='4232', '4203'='4233')
+											CloneEdges('4204'='4234', '4205'='4237', '4206'='4236', '4207'='4235', '4208'='4238', '4209'='4241', '4210'='4240', '4211'='4239', '4212'='4242', '4213'='4243', '4214'='4244', '4215'='4245')
+											CloneVertices('4216'='4247', '4217'='4246', '4218'='4249', '4219'='4248', '4220'='4251', '4221'='4250', '4222'='4253', '4223'='4252')
+											CloneIdentityHelperKernelType=0
+										$end 'CloneFromOperationIdentityHelper'
+										OriginalFaceIDs(4198, 4199, 4200, 4201, 4202, 4203)
+										OriginalEdgeIDs(4204, 4205, 4206, 4207, 4208, 4209, 4210, 4211, 4212, 4213, 4214, 4215)
+										OriginalVertexIDs(4216, 4217, 4218, 4219, 4220, 4221, 4222, 4223)
+									$end 'OperationIdentity'
+									PlaceHolderOpnId=4224
+								$end 'Operation'
+							$end 'Operations'
+						$end 'GeometryPart'
 					$end 'OperandParts'
 					$begin 'Planes'
 					$end 'Planes'
@@ -6817,7 +7011,7 @@ $begin 'AnsoftProject'
 							box(2, 3)
 						$end 'box'
 						$begin 'box1_'
-							box1_(1, 2, 3)
+							box1_(1, 2, 3, 4)
 						$end 'box1_'
 						$begin 'currp'
 							currp(1, 2)
@@ -6853,7 +7047,7 @@ $begin 'AnsoftProject'
 							global(-1)
 						$end 'global'
 						$begin 'middle_ferrite'
-							middle_ferrite(-1)
+							middle_ferrite(-1, 1)
 						$end 'middle_ferrite'
 						$begin 'model'
 							model(-1)
@@ -7201,6 +7395,22 @@ $begin 'AnsoftProject'
 					$end 'DependencyInformation'
 					$begin 'DependencyInformation'
 						NumParents=1
+						DependencyObject('GeometryBodyOperation', 4196)
+						DependencyObject('CoordinateSystem', 1)
+					$end 'DependencyInformation'
+					$begin 'DependencyInformation'
+						NumParents=1
+						DependencyObject('GeometryOperation', 4224)
+						DependencyObject('CoordinateSystem', 1)
+					$end 'DependencyInformation'
+					$begin 'DependencyInformation'
+						NumParents=2
+						DependencyObject('GeometryBodyOperation', 4225)
+						DependencyObject('GeometryBodyOperation', 4196)
+						DependencyObject('GeometryBodyOperation', 4226)
+					$end 'DependencyInformation'
+					$begin 'DependencyInformation'
+						NumParents=1
 						DependencyObject('GeometryBodyOperation', 9)
 						DependencyObject('CoordinateSystem', 5)
 					$end 'DependencyInformation'
@@ -7400,6 +7610,12 @@ $begin 'AnsoftProject'
 						NumParents=1
 						DependencyObject('GeometryBodyOperation', 4175)
 						DependencyObject('CoordinateSystem', 1)
+					$end 'DependencyInformation'
+					$begin 'DependencyInformation'
+						NumParents=2
+						DependencyObject('GeometryBodyOperation', 4226)
+						DependencyObject('GeometryOperation', 4224)
+						DependencyObject('GeometryBodyOperation', 4196)
 					$end 'DependencyInformation'
 					$begin 'DependencyInformation'
 						NumParents=1
@@ -7790,12 +8006,12 @@ $begin 'AnsoftProject'
 				$end 'Solution'
 			$end 'SimSetup'
 			$begin 'Version ID Map'
-				V=602
+				V=641
 				$begin 'Setup'
 					N='Setup1'
-					V=602
-					Soln(N='AdaptivePass', V=602)
-					Soln(N='LastAdaptive', V=602)
+					V=641
+					Soln(N='AdaptivePass', V=641)
+					Soln(N='LastAdaptive', V=641)
 				$end 'Setup'
 			$end 'Version ID Map'
 			$begin 'ID Map'
@@ -7846,7 +8062,7 @@ $begin 'AnsoftProject'
 				DesignInstanceID=1
 				$begin 'WindowPosition'
 					$begin 'EditorWindow'
-						Circuit(Editor3d(View('View Orientation Gadget'=1, WindowPos(3, -1, -1, -8, -31, 0, 0, 979, 291), OrientationMatrix(3.30310512275389e-09, 2.17061195684209e-08, 0.0108271380886436, 0, 0.0108271380886436, -2.12342565752976e-09, 3.06717007347856e-09, 0, -2.04264205549975e-09, 0.0108271380886436, 2.21779519193888e-08, 0, 1.61063837822439e-08, -0.286919116973877, -6.42407178878784, 1, 0, -1.80452346801758, 1.80452346801758, -1, 1, -5.0945291519165, 17.9426727294922), Drawings[3: 'Cylinder7', 'Cylinder8', 'Cylinder6'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=2, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=2, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=10, dYForGrid=10, dZForGrid=10, dRForGrid=10, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+						Circuit(Editor3d(View('View Orientation Gadget'=1, WindowPos(3, -1, -1, -8, -31, 0, 0, 979, 291), OrientationMatrix(-2.84526247007477e-09, 4.74210448686563e-09, 0.010827137157321, 0, 0.010827137157321, 1.65973834675981e-09, -2.84526580074385e-09, 0, 1.77828785030698e-09, 0.010827137157321, 4.74210182233037e-09, 0, -7.39448751119198e-08, -0.218708127737045, -6.42407131195068, 1, 0, -1.80452346801758, 1.80452346801758, -1, 1, -5.36222648620605, 18.2103691101074), Drawings[17: 'primary1', 'CurrP1', 'primary2', 'CurrP2', 'middle_ferrite', 'secondary1', 'CurrS1', 'secondary2', 'secondary3', 'secondary4', 'CurrS2', 'CurrS3', 'CurrS4', 'Cylinder6', 'Cylinder7', 'Cylinder8', 'middle_ferrite1'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=2, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=2, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=10, dYForGrid=10, dZForGrid=10, dRForGrid=10, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
 					$end 'EditorWindow'
 				$end 'WindowPosition'
 				$begin 'ReportSetup'
@@ -7935,56 +8151,55 @@ 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\
-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\
-AooooAKKKKACiiigAooooAKKKKAP/Z'
+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'
 	$begin 'DesignInfo'
 		DesignName='Maxwell3DDesign1'
 		Notes=''
@@ -8039,79 +8254,78 @@ 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\
-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\
-UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUU\
-UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU\
-UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/2Q=='
+U1s1FafgFFFFaGoUUUUAFFFFABRRRQAUV/NVY/wDB0h+w3qOlaPrVr+zr+282n68miPpkzeC/2bUa4/\
+4SKazt9HVom/al3QtLPqFop3hRH5uZCiqxHW/8RK37If8A0bH+25/4TH7L/wD9FdXs4fh3PsXS9vhcn\
+xOJotuPPToznHmSTceaKaulKLavdKSb0aP0Cr4V+IdH2arcKYqi6sVOKmoQcoS+GSUppuLs7PbR9mf0\
+UUV/Ov8A8RK37If/AEbH+25/4TH7L/8A9FdR/wARK37If/Rsf7bn/hMfsv8A/wBFdW3+qvE3/Qgxn/h\
+PV/8AkTP/AIhjx7/0TVf76X/yw/ooor+crU/+Dmj9jfR9N1DV9R/Zp/bcttP0uxu9Rv7j/hFP2ZJvIs\
+rGCS5upvKg/arZ5dsEUjbUVnbbhVJIB/o1rzsdleY5ZKnHMcDVwMqybiqtOUHJK12lJK6V1ex4Od8L5\
+/w4sK88yyplyxvP7Ln5ff8AZcntLcspfD7SF72+JBRX5/8A/Dx74If27/wj3/CK/FX7b/wsr/hVnm/2\
+H4R+y/8ACQf8PCf+Ha/2zf8A8Jzv/sb/AIXn/wATbzNnn/8ACJ/6d9n/ALY/4kVfoBSxuXY7L/q313D\
+Sw31ylGvS5vt0p35Jx1+GVnY8irhq9Dn9rSdP2dWrQlfpVo8ntaf+KHPDm/xIKK/nK0z/AIOaP2N9Y0\
+3T9X079mn9ty50/VLG01GwuP8AhFP2ZIfPsr6CO5tZvKn/AGq1eLdBLG211V13YZQQQLv/ABErfsh/9\
+Gx/tuf+Ex+y/wD/AEV1ejHhfiSUYyjkWLlGSTTVCo009U0+XVPoz7V+GHHqbT4ZxCa86X/yw/ooor+d\
+f/iJW/ZD/wCjY/23P/CY/Zf/APorqP8AiJW/ZD/6Nj/bc/8ACY/Zf/8Aorqf+qvE3/Qgxn/hPV/+RD/\
+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\
+8A24v/AKHej/hsv4Q/9Cf+1b/4gf8Atxf/AEO9fVtFFq3/AD8j/wCAP/5MOWv/AM/If+AS/wDlh8pf8\
+Nl/CH/oT/2rf/ED/wBuL/6Hej/hsv4Q/wDQn/tW/wDiB/7cX/0O9fVtFFq3/PyP/gD/APkw5a//AD8h\
+/wCAS/8Alh8pf8Nl/CH/AKE/9q3/AMQP/bi/+h3o/wCGy/hD/wBCf+1b/wCIH/txf/Q719W0UWrf8/I\
+/+AP/AOTDlr/8/If+AS/+WHyl/wANl/CH/oT/ANq3/wAQP/bi/wDod6P+Gy/hD/0J/wC1b/4gf+3F/w\
+DQ719W0UWrf8/I/wDgD/8Akw5a/wDz8h/4BL/5YfKX/DZfwh/6E/8Aat/8QP8A24v/AKHej/hsv4Q/9\
+Cf+1b/4gf8Atxf/AEO9fVtFFq3/AD8j/wCAP/5MOWv/AM/If+AS/wDlh8pf8Nl/CH/oT/2rf/ED/wBu\
+L/6Hej/hsv4Q/wDQn/tW/wDiB/7cX/0O9fVtFFq3/PyP/gD/APkw5a//AD8h/wCAS/8Alh8pf8Nl/CH\
+/AKE/9q3/AMQP/bi/+h3o/wCGy/hD/wBCf+1b/wCIH/txf/Q719W0UWrf8/I/+AP/AOTDlr/8/If+AS\
+/+WHyl/wANl/CH/oT/ANq3/wAQP/bi/wDod6P+Gy/hD/0J/wC1b/4gf+3F/wDQ719W0UWrf8/I/wDgD\
+/8Akw5a/wDz8h/4BL/5YfKX/DZfwh/6E/8Aat/8QP8A24v/AKHeur8EftM/Dn4g+KNL8IaD4b/aCsNW\
+1f7b9ku/HH7Jf7VXwy8LxfYNOu9Un/tTxv8AEj4M6TouibraymWD7bqFv9puHhs7bzbu4ggk+gqKaVW\
+6vOLX+F//ACb/AFGlWur1ItdbQa/HndvuYUUUVoahRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU\
+UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQA\
+UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ\
+AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRR\
+QB//Z'
 	$end 'DesignInfo'
 $end 'ProjectPreview'
