@@ -4,23 +4,25 @@ R1=0.000789831;
 X1=0.0126978;
 R2=0.00052717;
 X2=0.0112829;
-Rc=22.2001;
+% Rc=22.2001;
 Xm=0.359696;
 
 % Series 
-% R1=0.00315932;
-% X1=0.0510511;
-% R2=0.00210868;
-% X2=0.0460172;
-% Rc=88.7937;
-% Xm=1.52607;
+R1=0.00315932;
+X1=0.0510511;
+R2=0.00210868
+% R2=0.008
+X2=0.0451316
+% X2=0.02
+Rc=88.8006;
+Xm=1.43878;
 
 Jm= 2;
 fs=60;
 
-L1=X1/2/pi/fs;
-L2=X2/2/pi/fs;
-Lm=Xm/2/pi/fs;
+L1=X1/2/pi/fs
+L2=X2/2/pi/fs
+Lm=Xm/2/pi/fs
 s=-1:0.001:0;
 
 Z1= R1+1i*X1;
@@ -31,19 +33,22 @@ Z4=R2.*(1-s)./s;
 Zth=1/(1/Z1+1/Z2);
 Rth=real(Zth);
 Xth=imag(Zth);
-Zin6= Zth+Z3+Z4;
+Zin6= (Zth+Z3)*ones(size(Z4))+Z4;
 
-Vin=700;
-Vin=1400;
+% Vin=700;
+Vin=1400/sqrt(3);
 Vth= abs(Z2/(Z2+Z1)*Vin);
 ws=2*pi*fs;
-Te6= (3*Vth^2./((Rth+(R2./s)).^2+(Xth+X2).^2)).*(R2./(s*ws));
+Te6= 3*(3*Vth^2./((Rth+(R2./s)).^2+(Xth+X2).^2)).*(R2./(s*ws));
 w=1-s;
 figure();
 plot(fs*20*w,abs(Te6/1000))
-hold on;
-
+hold on
+plot(H_z,abs(Torque))
 smaxT= R2/(sqrt((Rth+R2)^2+(Xth+X2)^2))
+
+
+
 
 
 %%
@@ -52,6 +57,7 @@ X1=0.0510511;
 R2=0.00210868;
 X2=0.0460172;
 Rc=88.7937;
+Rc=1e6;
 Xm=1.52607;
 
 R1=R1/2;
@@ -65,6 +71,8 @@ X1=X1/2;
 
 Rc=(Rc)*0.5369;
 Xm=(Xm)*0.5369;
+% Rc=(Rc)*0.5;
+% Xm=(Xm)*0.5;
 R2=(R2)*0.5;
 X2=(X2)*0.5;
 
@@ -85,14 +93,15 @@ Rth=real(Zth);
 Xth=imag(Zth);
 Zin6= Zth+Z3+Z4;
 
-Vin=700;
+Vin=700/sqrt(3);
 % Vin=1400;
 Vth= abs(Z2/(Z2+Z1)*Vin);
 ws=2*pi*fs;
-Te6= 2*(3*Vth^2./((Rth+(R2./s)).^2+(Xth+X2).^2)).*(R2./(s*ws));
+Te6= 3*(6*Vth^2./((Rth+(R2./s)).^2+(Xth+X2).^2)).*(R2./(s*ws));
 w=1-s;
-% figure();
+figure();
 plot(fs*20*w,abs(Te6/1000))
+hold on;
 
 smaxT= R2/(sqrt((Rth+R2)^2+(Xth+X2)^2));
 % 2*(3*Vth^2./((Rth+(R2./smaxT)).^2+(Xth+X2).^2)).*(R2./(smaxT*ws))/1000
