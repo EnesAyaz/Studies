@@ -204,16 +204,59 @@ icirculate_top=inv(Z_final_top)*V_final_top;
 current_strand_top=icirculate_top+I_strand;
 
 % 
-figure();
-stem(icirculate_bottom)
-hold on;
-stem(icirculate_top)
+% figure();
+% stem(icirculate_bottom)
+% hold on;
+% stem(icirculate_top)
 % 
 % 
 %%
 
+figure1 = figure;
+subplot1 = subplot(2,1,1,'Parent',figure1);
+hold(subplot1,'on');
+stem(icirculate_bottom(1:end-1)+I_strand,'Color',[0 0 1],'DisplayName','Strand current with circulation')
+hold on;
+plot(ones([1,strand_number])*I_strand,'LineWidth',1,'LineStyle','--','Color',[1 0 0],'DisplayName','Average strand current')
+ylim([I_strand*0.5 I_strand*1.5])
 
+xlim([1 46])
+box(subplot1,'on');
+hold(subplot1,'off');
+set(subplot1,'XTick',1:5:46,'FontName','Times New Roman','FontSize',12);
 
+ylabel({'Strand Currents (A)'},'FontName','Times New Roman','FontSize',12);
+xlabel({'Slot number'},'FontName','Times New Roman','FontSize',12);
+title({'With $180^o$ Transposition'},'FontSize',15,'Interpreter','latex');
+% title({'Without Transposition'},'FontSize',15,'Interpreter','latex');
+
+legend1 = legend(subplot1,'show');
+set(legend1,...
+    'Location','Best');
+
+subplot2 = subplot(2,1,2,'Parent',figure1);
+hold(subplot2,'on');
+stem(icirculate_top(1:end-1)+I_strand,'Color',[0 0 1],'DisplayName','Strand current with circulation')
+hold on;
+plot(ones([1,strand_number])*I_strand,'LineWidth',1,'LineStyle','--','Color',[1 0 0],'DisplayName','Average strand current')
+ylim([I_strand*0.5 I_strand*1.5])
+
+box(subplot2,'on');
+hold(subplot2,'off');
+xlim([1 46])
+set(subplot2,'XTick',1:5:46,'FontName','Times New Roman','FontSize',12);
+ylabel({'Strand Currents (A)'},'FontName','Times New Roman','FontSize',12);
+xlabel({'Slot number'},'FontName','Times New Roman','FontSize',12);
+
+%%
+
+r_strand=real(Z_tot_top(1,1));
+P_loss_bottom= I_strand^2*r_strand*strand_number;
+P_loss_top= I_strand^2*r_strand*strand_number;
+
+rac_bottom= 100*sum((abs(current_strand_bottom(1:end-1)).^2*r_strand))/P_loss_bottom
+
+rac_top= 100*sum((abs(current_strand_top(1:end-1)).^2*r_strand))/P_loss_top
 
 
 

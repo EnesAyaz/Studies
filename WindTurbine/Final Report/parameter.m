@@ -18,7 +18,7 @@ Xma=2*Xm/0.9659;
 Power=4300e3;
 Torque=34500;
 pole=6;
-pp=pole/2;
+pp=pole/2;r
 Vll=700; 
 f=60;
 Stray_loss=29240;
@@ -36,6 +36,8 @@ L1a=X1a/2/pi/f;
 L2a=X2a/2/pi/f;
 Lma=Xma/2/pi/f;
 
-
-
+%%
+w=2*pi*2e3;
+L=200e-6;
+C=1/w^2/L*1e6
 
