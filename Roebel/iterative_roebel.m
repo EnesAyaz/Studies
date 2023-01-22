@@ -112,8 +112,7 @@ L2=flipud(L1);
 Ltop=[L1;L2]; % total inductance matrix; 
 
 ro_copper=1.72e-8; % Ωm
-R=ro_copper/(strand_height*strand_width);
-
+R
 f=50; 
 w=2*pi*f;
 
