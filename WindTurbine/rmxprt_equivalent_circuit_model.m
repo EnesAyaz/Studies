@@ -23,7 +23,7 @@ fs=60;
 L1=X1/2/pi/fs
 L2=X2/2/pi/fs
 Lm=Xm/2/pi/fs
-s=-1:0.001:0;
+s=-0.5:0.001:0;
 
 Z1= R1+1i*X1;
 Z2= 1/(1/Rc + 1/(1i*Xm));
@@ -65,11 +65,11 @@ figure1 = figure;
 axes1 = axes('Parent',figure1,...
     'Position',[0.13 0.111618122977346 0.775 0.815]);
 hold(axes1,'on');
-plot(fs*20*w,abs(Te6/1000),'DisplayName','Equivalent circuit model','LineWidth',1,...
+plot(fs*20*w,abs(Te6/1000),'DisplayName','Equivalent Circuit Model','LineWidth',1,...
     'Color',[1 0 0]);
 
 % Create plot
-plot(H_z,abs(Torque),'SeriesIndex',3,'DisplayName','3-phase rmxprt model',...
+plot(H_z,abs(Torque),'SeriesIndex',3,'DisplayName','Rmxprt Model',...
     'LineWidth',1,...
     'Color',[0 0 1]);
 

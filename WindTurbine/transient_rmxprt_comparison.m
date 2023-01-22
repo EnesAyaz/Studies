@@ -16,8 +16,11 @@ axes1 = axes('Parent',figure1,...
     'Position',[0.13 0.111618122977346 0.775 0.815]);
 hold(axes1,'on');
 
-plot(H_z,abs(Torque),'DisplayName','Combined 3-phase (rmxprt)','LineWidth',1,...
+plot(H_z,abs(Torque),'DisplayName','Rmxprt Model','LineWidth',1,...
     'Color',[1 0 0]);
+xlim([1200 1240])
+xlim([1200 1215])
+
 %%
 % speed=1200:2:1240;
 % Torque2=zeros(size(speed));
@@ -35,7 +38,7 @@ Torquea=[0 -10.3 -20.18 -29.75 -38.72 -47.35 -55.20 -62.34 -68.85 -74.27 -79.27 
 Torquea=[0 -10.97 -21.7 -31.87 -41.44 -50.16 -58.06 -64.99 -70.9 -75.86 -79.86 -83.08 -85.48 -87.07 -88.24 -88.82 -89.03 -88.88 -88.59 -88.09 -87.36]
 
 % plot(speed,abs(Torquea))
-plot(speed,abs(Torquea),'SeriesIndex',3,'DisplayName','6-phase (transient)',...
+plot(speed,abs(Torquea),'SeriesIndex',3,'DisplayName','Transient Model',...
     'LineWidth',1,...
     'Color',[0 0 1]);
 
@@ -57,8 +60,9 @@ legend1 = legend(axes1,'show');
 set(legend1,...
     'Position',[0.472049498551226 0.6084142394822 0.397973941134993 0.117179070998229],...
     'FontSize',15);
+xlim([1200 1215])
 
-
+yline(34.5,'LineWidth',2)
 % stem(speed,abs(Torquea),'Linestyle','none','Marker','x')
 
 %%

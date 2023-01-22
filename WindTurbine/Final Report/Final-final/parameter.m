@@ -6,7 +6,7 @@ X2=0.0112829;
 Rc=22.2001;
 Xm=0.359696;
 
-%% 2x3 model
+%% Enhanced 2x3 model
 R1a=2*R1;
 X1a=2*X1;
 R2a=2*R2/0.933;
@@ -37,7 +37,3 @@ L2a=X2a/2/pi/f;
 Lma=Xma/2/pi/f;
 
 %%
-w=2*pi*2e3;
-L=200e-6;
-C=1/w^2/L*1e6
-
