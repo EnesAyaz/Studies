@@ -1,6 +1,6 @@
 Iph=1860; %% phase current
 %%
-length=0.9;
+length=0.925*600;
 total_height=61.4e-3; % slot copper height for single copper
 insulation=0.21e-3;
 total_width=16e-3;
@@ -8,13 +8,13 @@ ro=2.0968e-8;
 
 height_strand_X=[];
 %%
-k=1.8; % endwinding ratio
+k=2.4; % endwinding ratio
 TopBottom=[];
 Pdc_tot=[];
 P_eddy_tot=[];
 strand=[];
 
-for numberOfverticalStrand=6:1:42
+for numberOfverticalStrand=6:1:66
     % numberOfverticalStrand=6;
 numberOfhorizontalStrand=2;
 
@@ -31,7 +31,8 @@ width_strand=7.69e-3;
 
 height_strand=(total_height/numberOfverticalStrand)-insulation;
 
-DC_resistance=ro*length*2/((width_strand*height_strand));
+% DC_resistance=ro*length*2/((width_strand*height_strand));
+DC_resistance=ro*length/((width_strand*height_strand));
 DC_resistance=DC_resistance/(numberOfverticalStrand*numberOfhorizontalStrand);
 
 Pdc=Iph^2*DC_resistance;
