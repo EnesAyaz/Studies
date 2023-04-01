@@ -5,7 +5,6 @@ total_height=61.4e-3; % slot copper height for single copper
 insulation=0.21e-3;
 total_width=16e-3;
 ro=2.0968e-8;
-
 height_strand_X=[];
 %%
 k=2.4; % endwinding ratio

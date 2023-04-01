@@ -18,6 +18,7 @@ P_eddy_tot=[];
 strand=[];
 height_strand_X=[];
 width_strand_X=[];
+
 copper_width_X=12e-3:0.5e-3:16e-3;
 
 for copper_width=copper_width_X
