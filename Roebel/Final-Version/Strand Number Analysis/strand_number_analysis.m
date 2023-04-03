@@ -1,9 +1,9 @@
 %% Parameters
 Iph=1860;% in A % phase current rms
 length=0.925*600;     % in m % Total copper length in active region
-total_height=61.4e-3; % in m % slot copper height for single copper
+total_height=64.08e-3; % in m % slot copper height for single coil without main isolation
 insulation=0.21e-3;   % in m % strand-to-strand insulation length
-total_width=16e-3;    % in m % total copper width 
+total_width=21.8e-3;    % in m % total copper width with isolation
 numberOfhorizontalStrand=2; % number of  horizontal strands 
 width_strand=7.69e-3; % in m % strand width 
 ro=2.0968e-8;         % in Ohm*m  % resistivity at 125 degree
@@ -55,7 +55,7 @@ DC_resistance=DC_resistance/(numberOfverticalStrand*numberOfhorizontalStrand);
 Pdc=Iph^2*DC_resistance;        % DC losses for the indexed strand
 
 
-volume=2*width_strand*height_strand*length; 
+volume=numberOfhorizontalStrand*width_strand*height_strand*length; 
                                 % strand volume for each vertical level
                                 % included 2 horizontal strand
 

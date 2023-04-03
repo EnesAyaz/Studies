@@ -1,9 +1,9 @@
 %% Parameters
 Iph=1860;% in A % phase current rms
 length=0.925*600; % in m % Total copper length in active region
-total_height=64.08e-3; % in m % slot copper height for single copper
+total_height=64.08e-3; % in m % slot copper height for single copper without main insulation
 insulation=0.21e-3;   % in m % strand-to-strand insulation length
-total_width=21.8e-3;    % in m % total slot width 
+total_width=22e-3;    % in m % total slot width 
 main_insulation=6e-3;   % in m  % total insulation between copper and slots
 copper_width=total_width-main_insulation; % in m % total copper width 
 width_strand=7.69e-3; % in m % strand width 
@@ -25,7 +25,7 @@ strand=[];           % array recording the number of vertical strands
 TopBottom=[];        % Eddy losses ratio of top to bottom coils
 
 
-numberOfverticalStrand=30;  % number of  vertical strands 
+numberOfverticalStrand=20;  % number of  vertical strands 
 numberOfhorizontalStrand=2; % number of  horizontal strands 
 
 range_of_slot_width=20e-3:0.5e-3:24e-3; % determine the slot width range for
@@ -69,7 +69,7 @@ DC_resistance=DC_resistance/(numberOfverticalStrand*numberOfhorizontalStrand);
 Pdc=Iph^2*DC_resistance;        % DC losses for the indexed strand
 
 
-volume=2*width_strand*height_strand*length; 
+volume=numberOfhorizontalStrand*width_strand*height_strand*length; 
                                 % strand volume for each vertical level
                                 % included 2 horizontal strand
 
